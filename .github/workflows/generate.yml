@@ -1,0 +1,34 @@
+name: Generate mapping file
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check-out the repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Retrieve the WPT repo
+        run: npm run get-wpt
+
+      - name: Generate web features mapping file
+        run: node index.js
+
+      - name: Delete the WPT repo
+        run: npm run delete-wpt
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --local user.name "${{ github.actor }}"
+          git add .
+          git commit -m "Regen mapping" --allow-empty
+          git push origin main
