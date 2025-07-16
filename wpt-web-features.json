@@ -56,12 +56,6 @@
       "testFiles": "**"
     }
   ],
-  "webhid": [
-    {
-      "testPath": "webhid",
-      "testFiles": "**"
-    }
-  ],
   "messageerror": [
     {
       "testPath": "webmessaging",
@@ -69,6 +63,12 @@
         "messageerror.html",
         "postMessage_CryptoKey_insecure.sub.html"
       ]
+    }
+  ],
+  "webhid": [
+    {
+      "testPath": "webhid",
+      "testFiles": "**"
     }
   ],
   "webrtc-sctp": [
@@ -892,6 +892,12 @@
       "testFiles": "**"
     }
   ],
+  "motion-path": [
+    {
+      "testPath": "css/motion",
+      "testFiles": "**"
+    }
+  ],
   "prefers-color-scheme": [
     {
       "testPath": "css/mediaqueries",
@@ -957,12 +963,6 @@
         "scripting.html",
         "scripting-*"
       ]
-    }
-  ],
-  "motion-path": [
-    {
-      "testPath": "css/motion",
-      "testFiles": "**"
     }
   ],
   "dir-pseudo": [
@@ -1095,17 +1095,6 @@
       ]
     }
   ],
-  "constructed-stylesheets": [
-    {
-      "testPath": "css/cssom",
-      "testFiles": [
-        "adoptedstylesheets-observablearray.html",
-        "CSSStyleSheet-constructable-*",
-        "CSSStyleSheet-constructable.html",
-        "CSSStyleSheet-template-adoption.html"
-      ]
-    }
-  ],
   "backdrop-filter": [
     {
       "testPath": "css/filter-effects",
@@ -1129,10 +1118,15 @@
       ]
     }
   ],
-  "custom-properties": [
+  "constructed-stylesheets": [
     {
-      "testPath": "css/css-variables",
-      "testFiles": "**"
+      "testPath": "css/cssom",
+      "testFiles": [
+        "adoptedstylesheets-observablearray.html",
+        "CSSStyleSheet-constructable-*",
+        "CSSStyleSheet-constructable.html",
+        "CSSStyleSheet-template-adoption.html"
+      ]
     }
   ],
   "view-transitions": [
@@ -1162,6 +1156,12 @@
       "testFiles": [
         "active-view-transition-*"
       ]
+    }
+  ],
+  "custom-properties": [
+    {
+      "testPath": "css/css-variables",
+      "testFiles": "**"
     }
   ],
   "abs-sign": [
@@ -1486,28 +1486,6 @@
       "testFiles": "**"
     }
   ],
-  "scrollbar-color": [
-    {
-      "testPath": "css/css-scrollbars",
-      "testFiles": [
-        "input-scrollbar-color.html",
-        "scrollbar-color-*",
-        "scrollbar-width-paint-003.html",
-        "transparent-on-root.html",
-        "viewport-scrollbar-body.html",
-        "viewport-scrollbar.html"
-      ]
-    }
-  ],
-  "scrollbar-width": [
-    {
-      "testPath": "css/css-scrollbars",
-      "testFiles": [
-        "scrollbar-width-*",
-        "textarea-scrollbar-width-none.html"
-      ]
-    }
-  ],
   "has-slotted": [
     {
       "testPath": "css/css-scoping",
@@ -1520,12 +1498,6 @@
       "testFiles": [
         "parse-has-slotted.tentative.html"
       ]
-    }
-  ],
-  "registered-custom-properties": [
-    {
-      "testPath": "css/css-properties-values-api",
-      "testFiles": "**"
     }
   ],
   "ruby-align": [
@@ -1554,6 +1526,12 @@
       "testFiles": [
         "ruby-position-*"
       ]
+    }
+  ],
+  "registered-custom-properties": [
+    {
+      "testPath": "css/css-properties-values-api",
+      "testFiles": "**"
     }
   ],
   "target-text": [
@@ -1617,14 +1595,26 @@
       ]
     }
   ],
-  "masonry": [
+  "scrollbar-color": [
     {
-      "testPath": "css/css-masonry",
-      "testFiles": "**"
-    },
+      "testPath": "css/css-scrollbars",
+      "testFiles": [
+        "input-scrollbar-color.html",
+        "scrollbar-color-*",
+        "scrollbar-width-paint-003.html",
+        "transparent-on-root.html",
+        "viewport-scrollbar-body.html",
+        "viewport-scrollbar.html"
+      ]
+    }
+  ],
+  "scrollbar-width": [
     {
-      "testPath": "css/css-grid/masonry",
-      "testFiles": "**"
+      "testPath": "css/css-scrollbars",
+      "testFiles": [
+        "scrollbar-width-*",
+        "textarea-scrollbar-width-none.html"
+      ]
     }
   ],
   "page-orientation": [
@@ -1648,6 +1638,16 @@
         "page-left-right-*",
         "pseudo-first-*"
       ]
+    }
+  ],
+  "masonry": [
+    {
+      "testPath": "css/css-masonry",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/css-grid/masonry",
+      "testFiles": "**"
     }
   ],
   "masks": [
@@ -1686,20 +1686,6 @@
       "testFiles": "**"
     }
   ],
-  "counter-set": [
-    {
-      "testPath": "css/css-lists",
-      "testFiles": [
-        "counter-set-*"
-      ]
-    }
-  ],
-  "highlight": [
-    {
-      "testPath": "css/css-highlight-api",
-      "testFiles": "**"
-    }
-  ],
   "scrollbar-gutter": [
     {
       "testPath": "css/css-overflow",
@@ -1725,26 +1711,24 @@
       ]
     }
   ],
+  "counter-set": [
+    {
+      "testPath": "css/css-lists",
+      "testFiles": [
+        "counter-set-*"
+      ]
+    }
+  ],
+  "highlight": [
+    {
+      "testPath": "css/css-highlight-api",
+      "testFiles": "**"
+    }
+  ],
   "grid": [
     {
       "testPath": "css/css-grid",
       "testFiles": "**"
-    }
-  ],
-  "font-metric-overrides": [
-    {
-      "testPath": "css/css-font-loading",
-      "testFiles": [
-        "fontface-override-descriptor-getter-setter.sub.html"
-      ]
-    },
-    {
-      "testPath": "css/css-fonts",
-      "testFiles": [
-        "ascent-descent-override.html",
-        "line-gap-override.html",
-        "metrics-override-normal-keyword.html"
-      ]
     }
   ],
   "conic-gradients": [
@@ -1769,6 +1753,22 @@
       ]
     }
   ],
+  "font-metric-overrides": [
+    {
+      "testPath": "css/css-font-loading",
+      "testFiles": [
+        "fontface-override-descriptor-getter-setter.sub.html"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts",
+      "testFiles": [
+        "ascent-descent-override.html",
+        "line-gap-override.html",
+        "metrics-override-normal-keyword.html"
+      ]
+    }
+  ],
   "linear-easing": [
     {
       "testPath": "css/css-easing",
@@ -1782,6 +1782,160 @@
       "testPath": "css/css-content",
       "testFiles": [
         "quotes-*"
+      ]
+    }
+  ],
+  "font-palette": [
+    {
+      "testPath": "css/css-fonts",
+      "testFiles": [
+        "font-palette.html",
+        "font-palette-*",
+        "palette-values-rule-*"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts/parsing",
+      "testFiles": [
+        "font-palette-*",
+        "font-palette-values-*"
+      ]
+    }
+  ],
+  "font-size-adjust": [
+    {
+      "testPath": "css/css-fonts",
+      "testFiles": [
+        "font-size-adjust-*",
+        "size-adjust-02.html",
+        "size-adjust-03.html"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts/animations",
+      "testFiles": [
+        "font-size-adjust-*"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts/parsing",
+      "testFiles": [
+        "font-size-adjust-*"
+      ]
+    }
+  ],
+  "font-synthesis": [
+    {
+      "testPath": "css/css-fonts",
+      "testFiles": [
+        "font-synthesis-0*.html"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts/parsing",
+      "testFiles": [
+        "font-synthesis-computed.html",
+        "font-synthesis-invalid.html",
+        "font-synthesis-valid.html"
+      ]
+    }
+  ],
+  "font-synthesis-position": [
+    {
+      "testPath": "css/css-fonts",
+      "testFiles": [
+        "font-synthesis-position*"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts/parsing",
+      "testFiles": [
+        "font-synthesis-position*"
+      ]
+    }
+  ],
+  "font-synthesis-small-caps": [
+    {
+      "testPath": "css/css-fonts",
+      "testFiles": [
+        "font-synthesis-small-caps*"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts/parsing",
+      "testFiles": [
+        "font-synthesis-small-caps*"
+      ]
+    }
+  ],
+  "font-synthesis-style": [
+    {
+      "testPath": "css/css-fonts",
+      "testFiles": [
+        "font-synthesis-style*"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts/parsing",
+      "testFiles": [
+        "font-synthesis-style*"
+      ]
+    }
+  ],
+  "font-synthesis-weight": [
+    {
+      "testPath": "css/css-fonts",
+      "testFiles": [
+        "font-synthesis-weight*"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts/parsing",
+      "testFiles": [
+        "font-synthesis-weight*"
+      ]
+    }
+  ],
+  "font-variant-alternates": [
+    {
+      "testPath": "css/css-fonts",
+      "testFiles": [
+        "alternates-order.html",
+        "font-variant-alternates-*"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts/parsing",
+      "testFiles": [
+        "font-variant-alternates-*"
+      ]
+    }
+  ],
+  "font-variant-emoji": [
+    {
+      "testPath": "css/css-fonts",
+      "testFiles": [
+        "font-variant-emoji-*"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts/parsing",
+      "testFiles": [
+        "font-variant-emoji-*"
+      ]
+    }
+  ],
+  "font-variant-position": [
+    {
+      "testPath": "css/css-fonts",
+      "testFiles": [
+        "font-variant-position-*"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts/parsing",
+      "testFiles": [
+        "font-variant-position-*"
       ]
     }
   ],
@@ -1903,34 +2057,6 @@
       ]
     }
   ],
-  "box-decoration-break": [
-    {
-      "testPath": "css/css-break",
-      "testFiles": [
-        "box-decoration-break-*"
-      ]
-    },
-    {
-      "testPath": "css/css-break/parsing",
-      "testFiles": [
-        "box-decoration-break-*"
-      ]
-    }
-  ],
-  "page-break-aliases": [
-    {
-      "testPath": "css/css-break",
-      "testFiles": [
-        "page-break-legacy-shorthands.html"
-      ]
-    }
-  ],
-  "flexbox": [
-    {
-      "testPath": "css/css-flexbox",
-      "testFiles": "**"
-    }
-  ],
   "animation-composition": [
     {
       "testPath": "css/css-animations",
@@ -1954,163 +2080,25 @@
       ]
     }
   ],
-  "anchor-positioning": [
+  "box-decoration-break": [
     {
-      "testPath": "css/css-anchor-position",
-      "testFiles": "**"
-    }
-  ],
-  "font-palette": [
-    {
-      "testPath": "css/css-fonts",
+      "testPath": "css/css-break",
       "testFiles": [
-        "font-palette.html",
-        "font-palette-*",
-        "palette-values-rule-*"
+        "box-decoration-break-*"
       ]
     },
     {
-      "testPath": "css/css-fonts/parsing",
+      "testPath": "css/css-break/parsing",
       "testFiles": [
-        "font-palette-*",
-        "font-palette-values-*"
+        "box-decoration-break-*"
       ]
     }
   ],
-  "font-size-adjust": [
+  "page-break-aliases": [
     {
-      "testPath": "css/css-fonts",
+      "testPath": "css/css-break",
       "testFiles": [
-        "font-size-adjust-*",
-        "size-adjust-02.html",
-        "size-adjust-03.html"
-      ]
-    },
-    {
-      "testPath": "css/css-fonts/parsing",
-      "testFiles": [
-        "font-size-adjust-*"
-      ]
-    },
-    {
-      "testPath": "css/css-fonts/animations",
-      "testFiles": [
-        "font-size-adjust-*"
-      ]
-    }
-  ],
-  "font-synthesis": [
-    {
-      "testPath": "css/css-fonts",
-      "testFiles": [
-        "font-synthesis-0*.html"
-      ]
-    },
-    {
-      "testPath": "css/css-fonts/parsing",
-      "testFiles": [
-        "font-synthesis-computed.html",
-        "font-synthesis-invalid.html",
-        "font-synthesis-valid.html"
-      ]
-    }
-  ],
-  "font-synthesis-position": [
-    {
-      "testPath": "css/css-fonts",
-      "testFiles": [
-        "font-synthesis-position*"
-      ]
-    },
-    {
-      "testPath": "css/css-fonts/parsing",
-      "testFiles": [
-        "font-synthesis-position*"
-      ]
-    }
-  ],
-  "font-synthesis-small-caps": [
-    {
-      "testPath": "css/css-fonts",
-      "testFiles": [
-        "font-synthesis-small-caps*"
-      ]
-    },
-    {
-      "testPath": "css/css-fonts/parsing",
-      "testFiles": [
-        "font-synthesis-small-caps*"
-      ]
-    }
-  ],
-  "font-synthesis-style": [
-    {
-      "testPath": "css/css-fonts",
-      "testFiles": [
-        "font-synthesis-style*"
-      ]
-    },
-    {
-      "testPath": "css/css-fonts/parsing",
-      "testFiles": [
-        "font-synthesis-style*"
-      ]
-    }
-  ],
-  "font-synthesis-weight": [
-    {
-      "testPath": "css/css-fonts",
-      "testFiles": [
-        "font-synthesis-weight*"
-      ]
-    },
-    {
-      "testPath": "css/css-fonts/parsing",
-      "testFiles": [
-        "font-synthesis-weight*"
-      ]
-    }
-  ],
-  "font-variant-alternates": [
-    {
-      "testPath": "css/css-fonts",
-      "testFiles": [
-        "alternates-order.html",
-        "font-variant-alternates-*"
-      ]
-    },
-    {
-      "testPath": "css/css-fonts/parsing",
-      "testFiles": [
-        "font-variant-alternates-*"
-      ]
-    }
-  ],
-  "font-variant-emoji": [
-    {
-      "testPath": "css/css-fonts",
-      "testFiles": [
-        "font-variant-emoji-*"
-      ]
-    },
-    {
-      "testPath": "css/css-fonts/parsing",
-      "testFiles": [
-        "font-variant-emoji-*"
-      ]
-    }
-  ],
-  "font-variant-position": [
-    {
-      "testPath": "css/css-fonts",
-      "testFiles": [
-        "font-variant-position-*"
-      ]
-    },
-    {
-      "testPath": "css/css-fonts/parsing",
-      "testFiles": [
-        "font-variant-position-*"
+        "page-break-legacy-shorthands.html"
       ]
     }
   ],
@@ -2159,6 +2147,18 @@
       ]
     }
   ],
+  "anchor-positioning": [
+    {
+      "testPath": "css/css-anchor-position",
+      "testFiles": "**"
+    }
+  ],
+  "flexbox": [
+    {
+      "testPath": "css/css-flexbox",
+      "testFiles": "**"
+    }
+  ],
   "webvtt": [
     {
       "testPath": "webvtt/parsing/file-parsing",
@@ -2179,6 +2179,10 @@
         "text.html",
         "vertical.html"
       ]
+    },
+    {
+      "testPath": "webvtt/rendering/cues-with-video/processing-model",
+      "testFiles": "**"
     },
     {
       "testPath": "webvtt/parsing/file-parsing/tests",
@@ -2217,10 +2221,6 @@
     {
       "testPath": "webvtt/parsing/cue-text-parsing/tests",
       "testFiles": "**"
-    },
-    {
-      "testPath": "webvtt/rendering/cues-with-video/processing-model",
-      "testFiles": "**"
     }
   ],
   "webvtt-regions": [
@@ -2253,11 +2253,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region",
+      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region_function",
       "testFiles": "**"
     },
     {
-      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region_function",
+      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region",
       "testFiles": "**"
     }
   ],
@@ -2341,11 +2341,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-constantsourcenode-interface",
+      "testPath": "webaudio/the-audio-api/the-convolvernode-interface",
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-convolvernode-interface",
+      "testPath": "webaudio/the-audio-api/the-constantsourcenode-interface",
       "testFiles": "**"
     },
     {
@@ -2361,15 +2361,15 @@
       "testFiles": "**"
     },
     {
+      "testPath": "webaudio/the-audio-api/the-audioparam-interface",
+      "testFiles": "**"
+    },
+    {
       "testPath": "webaudio/the-audio-api/the-audionode-interface",
       "testFiles": "**"
     },
     {
       "testPath": "webaudio/the-audio-api/the-audiocontext-interface",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "webaudio/the-audio-api/the-audioparam-interface",
       "testFiles": "**"
     },
     {
@@ -2466,15 +2466,15 @@
       "testFiles": "**"
     }
   ],
-  "blocking-render": [
-    {
-      "testPath": "html/dom/render-blocking",
-      "testFiles": "**"
-    }
-  ],
   "offscreen-canvas": [
     {
       "testPath": "html/canvas/offscreen",
+      "testFiles": "**"
+    }
+  ],
+  "blocking-render": [
+    {
+      "testPath": "html/dom/render-blocking",
       "testFiles": "**"
     }
   ],
@@ -2549,6 +2549,16 @@
       "testPath": "css/css-values/calc-size/animation",
       "testFiles": [
         "calc-size-*"
+      ]
+    }
+  ],
+  "vertical-form-controls": [
+    {
+      "testPath": "css/css-writing-modes/forms",
+      "testFiles": [
+        "*vertical*",
+        "*vlr*",
+        "*vrl*"
       ]
     }
   ],
@@ -2659,21 +2669,23 @@
       ]
     }
   ],
+  "contain-intrinsic-size": [
+    {
+      "testPath": "css/css-sizing/contain-intrinsic-size",
+      "testFiles": "**"
+    }
+  ],
+  "aspect-ratio": [
+    {
+      "testPath": "css/css-sizing/aspect-ratio",
+      "testFiles": "**"
+    }
+  ],
   "transform-box": [
     {
       "testPath": "css/css-transforms/transform-box",
       "testFiles": [
         "*"
-      ]
-    }
-  ],
-  "vertical-form-controls": [
-    {
-      "testPath": "css/css-writing-modes/forms",
-      "testFiles": [
-        "*vertical*",
-        "*vlr*",
-        "*vrl*"
       ]
     }
   ],
@@ -2700,27 +2712,15 @@
       "testFiles": "**"
     }
   ],
-  "contain-intrinsic-size": [
+  "overlay": [
     {
-      "testPath": "css/css-sizing/contain-intrinsic-size",
-      "testFiles": "**"
-    }
-  ],
-  "aspect-ratio": [
-    {
-      "testPath": "css/css-sizing/aspect-ratio",
+      "testPath": "css/css-position/overlay",
       "testFiles": "**"
     }
   ],
   "sticky-positioning": [
     {
       "testPath": "css/css-position/sticky",
-      "testFiles": "**"
-    }
-  ],
-  "overlay": [
-    {
-      "testPath": "css/css-position/overlay",
       "testFiles": "**"
     }
   ],
@@ -2784,15 +2784,15 @@
       ]
     }
   ],
-  "text-box": [
-    {
-      "testPath": "css/css-inline/text-box-trim",
-      "testFiles": "**"
-    }
-  ],
   "baseline-source": [
     {
       "testPath": "css/css-inline/baseline-source",
+      "testFiles": "**"
+    }
+  ],
+  "text-box": [
+    {
+      "testPath": "css/css-inline/text-box-trim",
       "testFiles": "**"
     }
   ],
@@ -2842,6 +2842,12 @@
       "testFiles": "**"
     }
   ],
+  "two-value-display": [
+    {
+      "testPath": "css/css-display/parsing",
+      "testFiles": "**"
+    }
+  ],
   "counter-style": [
     {
       "testPath": "css/css-counter-styles/cssom",
@@ -2872,10 +2878,36 @@
       "testFiles": "**"
     }
   ],
-  "two-value-display": [
+  "font-optical-sizing": [
     {
-      "testPath": "css/css-display/parsing",
-      "testFiles": "**"
+      "testPath": "css/css-fonts/variations",
+      "testFiles": [
+        "variable-opsz*"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts/parsing",
+      "testFiles": [
+        "font-optical-sizing-*"
+      ]
+    }
+  ],
+  "font-palette-animation": [
+    {
+      "testPath": "css/css-fonts/animations",
+      "testFiles": [
+        "font-palette-animation-not-specified-endpoints.html",
+        "font-palette-interpolation.html",
+        "multiple-elements-font-palette-animation.html"
+      ]
+    }
+  ],
+  "print-color-adjust": [
+    {
+      "testPath": "css/css-color-adjust/parsing",
+      "testFiles": [
+        "print-color-adjust.html"
+      ]
     }
   ],
   "container-queries": [
@@ -3030,14 +3062,6 @@
       ]
     }
   ],
-  "print-color-adjust": [
-    {
-      "testPath": "css/css-color-adjust/parsing",
-      "testFiles": [
-        "print-color-adjust.html"
-      ]
-    }
-  ],
   "content-visibility": [
     {
       "testPath": "css/css-contain/content-visibility",
@@ -3049,30 +3073,6 @@
       "testPath": "css/css-align/blocks",
       "testFiles": [
         "align-content-block-*"
-      ]
-    }
-  ],
-  "font-optical-sizing": [
-    {
-      "testPath": "css/css-fonts/variations",
-      "testFiles": [
-        "variable-opsz*"
-      ]
-    },
-    {
-      "testPath": "css/css-fonts/parsing",
-      "testFiles": [
-        "font-optical-sizing-*"
-      ]
-    }
-  ],
-  "font-palette-animation": [
-    {
-      "testPath": "css/css-fonts/animations",
-      "testFiles": [
-        "font-palette-animation-not-specified-endpoints.html",
-        "font-palette-interpolation.html",
-        "multiple-elements-font-palette-animation.html"
       ]
     }
   ],
@@ -3375,15 +3375,15 @@
       ]
     }
   ],
-  "container-scroll-state-queries": [
-    {
-      "testPath": "css/css-conditional/container-queries/scroll-state",
-      "testFiles": "**"
-    }
-  ],
   "color-scheme": [
     {
       "testPath": "css/css-color-adjust/rendering/dark-color-scheme",
+      "testFiles": "**"
+    }
+  ],
+  "container-scroll-state-queries": [
+    {
+      "testPath": "css/css-conditional/container-queries/scroll-state",
       "testFiles": "**"
     }
   ],
