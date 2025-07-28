@@ -56,12 +56,6 @@
       "testFiles": "**"
     }
   ],
-  "webhid": [
-    {
-      "testPath": "webhid",
-      "testFiles": "**"
-    }
-  ],
   "messageerror": [
     {
       "testPath": "webmessaging",
@@ -79,18 +73,24 @@
       ]
     }
   ],
-  "webauthn-public-key-easy": [
+  "webhid": [
     {
-      "testPath": "webauthn",
-      "testFiles": [
-        "createcredential-getpublickey.https.html"
-      ]
+      "testPath": "webhid",
+      "testFiles": "**"
     }
   ],
   "webcodecs": [
     {
       "testPath": "webcodecs",
       "testFiles": "**"
+    }
+  ],
+  "webauthn-public-key-easy": [
+    {
+      "testPath": "webauthn",
+      "testFiles": [
+        "createcredential-getpublickey.https.html"
+      ]
     }
   ],
   "web-locks": [
@@ -161,13 +161,6 @@
       "testFiles": "**"
     },
     {
-      "testPath": "streams/transform-streams",
-      "testFiles": [
-        "*",
-        "!cancel.any.js"
-      ]
-    },
-    {
       "testPath": "streams/readable-streams",
       "testFiles": [
         "*",
@@ -179,6 +172,13 @@
     {
       "testPath": "streams/piping",
       "testFiles": "**"
+    },
+    {
+      "testPath": "streams/transform-streams",
+      "testFiles": [
+        "*",
+        "!cancel.any.js"
+      ]
     },
     {
       "testPath": "streams/readable-streams/crashtests",
@@ -751,14 +751,6 @@
       "testFiles": "**"
     }
   ],
-  "transformstream-transformer-cancel": [
-    {
-      "testPath": "streams/transform-streams",
-      "testFiles": [
-        "cancel.any.js"
-      ]
-    }
-  ],
   "async-iterable-streams": [
     {
       "testPath": "streams/readable-streams",
@@ -785,6 +777,14 @@
     {
       "testPath": "streams/readable-byte-streams",
       "testFiles": "**"
+    }
+  ],
+  "transformstream-transformer-cancel": [
+    {
+      "testPath": "streams/transform-streams",
+      "testFiles": [
+        "cancel.any.js"
+      ]
     }
   ],
   "storage-buckets": [
@@ -896,6 +896,73 @@
     {
       "testPath": "css/motion",
       "testFiles": "**"
+    }
+  ],
+  "prefers-color-scheme": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "prefers-color-scheme.html",
+        "prefers-color-scheme-*"
+      ]
+    }
+  ],
+  "prefers-contrast": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "prefers-contrast.html"
+      ]
+    }
+  ],
+  "prefers-reduced-transparency": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "prefers-reduced-transparency.html"
+      ]
+    }
+  ],
+  "overflow": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "overflow-media-features.html"
+      ]
+    }
+  ],
+  "dynamic-range": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "dynamic-range.html"
+      ]
+    }
+  ],
+  "display-mode": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "display-mode.html",
+        "display-mode.tentative.html"
+      ]
+    }
+  ],
+  "update": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "update-media-feature.html"
+      ]
+    }
+  ],
+  "scripting": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "scripting.html",
+        "scripting-*"
+      ]
     }
   ],
   "dir-pseudo": [
@@ -1011,73 +1078,6 @@
       ]
     }
   ],
-  "prefers-color-scheme": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "prefers-color-scheme.html",
-        "prefers-color-scheme-*"
-      ]
-    }
-  ],
-  "prefers-contrast": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "prefers-contrast.html"
-      ]
-    }
-  ],
-  "prefers-reduced-transparency": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "prefers-reduced-transparency.html"
-      ]
-    }
-  ],
-  "overflow": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "overflow-media-features.html"
-      ]
-    }
-  ],
-  "dynamic-range": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "dynamic-range.html"
-      ]
-    }
-  ],
-  "display-mode": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "display-mode.html",
-        "display-mode.tentative.html"
-      ]
-    }
-  ],
-  "update": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "update-media-feature.html"
-      ]
-    }
-  ],
-  "scripting": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "scripting.html",
-        "scripting-*"
-      ]
-    }
-  ],
   "check-visibility": [
     {
       "testPath": "css/cssom-view",
@@ -1092,6 +1092,17 @@
       "testFiles": [
         "scrollIntoView-*",
         "scrollintoview.html"
+      ]
+    }
+  ],
+  "constructed-stylesheets": [
+    {
+      "testPath": "css/cssom",
+      "testFiles": [
+        "adoptedstylesheets-observablearray.html",
+        "CSSStyleSheet-constructable-*",
+        "CSSStyleSheet-constructable.html",
+        "CSSStyleSheet-template-adoption.html"
       ]
     }
   ],
@@ -1118,15 +1129,10 @@
       ]
     }
   ],
-  "constructed-stylesheets": [
+  "custom-properties": [
     {
-      "testPath": "css/cssom",
-      "testFiles": [
-        "adoptedstylesheets-observablearray.html",
-        "CSSStyleSheet-constructable-*",
-        "CSSStyleSheet-constructable.html",
-        "CSSStyleSheet-template-adoption.html"
-      ]
+      "testPath": "css/css-variables",
+      "testFiles": "**"
     }
   ],
   "view-transitions": [
@@ -1156,12 +1162,6 @@
       "testFiles": [
         "active-view-transition-*"
       ]
-    }
-  ],
-  "custom-properties": [
-    {
-      "testPath": "css/css-variables",
-      "testFiles": "**"
     }
   ],
   "abs-sign": [
@@ -1393,34 +1393,6 @@
       ]
     }
   ],
-  "text-emphasis": [
-    {
-      "testPath": "css/css-text-decor",
-      "testFiles": [
-        "text-emphasis-*"
-      ]
-    },
-    {
-      "testPath": "css/css-text-decor/parsing",
-      "testFiles": [
-        "*"
-      ]
-    }
-  ],
-  "text-underline-offset": [
-    {
-      "testPath": "css/css-text-decor",
-      "testFiles": [
-        "text-underline-offset-*"
-      ]
-    },
-    {
-      "testPath": "css/css-text-decor/animations",
-      "testFiles": [
-        "text-underline-offset-*"
-      ]
-    }
-  ],
   "nesting": [
     {
       "testPath": "css/css-syntax",
@@ -1488,6 +1460,34 @@
       ]
     }
   ],
+  "text-emphasis": [
+    {
+      "testPath": "css/css-text-decor",
+      "testFiles": [
+        "text-emphasis-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor/parsing",
+      "testFiles": [
+        "*"
+      ]
+    }
+  ],
+  "text-underline-offset": [
+    {
+      "testPath": "css/css-text-decor",
+      "testFiles": [
+        "text-underline-offset-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor/animations",
+      "testFiles": [
+        "text-underline-offset-*"
+      ]
+    }
+  ],
   "scroll-snap": [
     {
       "testPath": "css/css-scroll-snap",
@@ -1530,12 +1530,6 @@
       ]
     }
   ],
-  "registered-custom-properties": [
-    {
-      "testPath": "css/css-properties-values-api",
-      "testFiles": "**"
-    }
-  ],
   "ruby-align": [
     {
       "testPath": "css/css-ruby",
@@ -1562,6 +1556,12 @@
       "testFiles": [
         "ruby-position-*"
       ]
+    }
+  ],
+  "registered-custom-properties": [
+    {
+      "testPath": "css/css-properties-values-api",
+      "testFiles": "**"
     }
   ],
   "target-text": [
@@ -1657,29 +1657,6 @@
       "testFiles": "**"
     }
   ],
-  "page-orientation": [
-    {
-      "testPath": "css/css-page",
-      "testFiles": [
-        "page-orientation*"
-      ]
-    },
-    {
-      "testPath": "css/css-page/parsing",
-      "testFiles": [
-        "page-orientation-*"
-      ]
-    }
-  ],
-  "page-selectors": [
-    {
-      "testPath": "css/css-page",
-      "testFiles": [
-        "page-left-right-*",
-        "pseudo-first-*"
-      ]
-    }
-  ],
   "masks": [
     {
       "testPath": "css/css-masking",
@@ -1707,6 +1684,29 @@
         "mask-image-interpolation.html",
         "mask-no-interpolation.html",
         "mask-position-interpolation.html"
+      ]
+    }
+  ],
+  "page-orientation": [
+    {
+      "testPath": "css/css-page",
+      "testFiles": [
+        "page-orientation*"
+      ]
+    },
+    {
+      "testPath": "css/css-page/parsing",
+      "testFiles": [
+        "page-orientation-*"
+      ]
+    }
+  ],
+  "page-selectors": [
+    {
+      "testPath": "css/css-page",
+      "testFiles": [
+        "page-left-right-*",
+        "pseudo-first-*"
       ]
     }
   ],
@@ -1842,13 +1842,13 @@
       ]
     },
     {
-      "testPath": "css/css-fonts/animations",
+      "testPath": "css/css-fonts/parsing",
       "testFiles": [
         "font-size-adjust-*"
       ]
     },
     {
-      "testPath": "css/css-fonts/parsing",
+      "testPath": "css/css-fonts/animations",
       "testFiles": [
         "font-size-adjust-*"
       ]
@@ -2087,28 +2087,6 @@
       ]
     }
   ],
-  "box-decoration-break": [
-    {
-      "testPath": "css/css-break",
-      "testFiles": [
-        "box-decoration-break-*"
-      ]
-    },
-    {
-      "testPath": "css/css-break/parsing",
-      "testFiles": [
-        "box-decoration-break-*"
-      ]
-    }
-  ],
-  "page-break-aliases": [
-    {
-      "testPath": "css/css-break",
-      "testFiles": [
-        "page-break-legacy-shorthands.html"
-      ]
-    }
-  ],
   "animation-composition": [
     {
       "testPath": "css/css-animations",
@@ -2132,10 +2110,26 @@
       ]
     }
   ],
-  "flexbox": [
+  "box-decoration-break": [
     {
-      "testPath": "css/css-flexbox",
-      "testFiles": "**"
+      "testPath": "css/css-break",
+      "testFiles": [
+        "box-decoration-break-*"
+      ]
+    },
+    {
+      "testPath": "css/css-break/parsing",
+      "testFiles": [
+        "box-decoration-break-*"
+      ]
+    }
+  ],
+  "page-break-aliases": [
+    {
+      "testPath": "css/css-break",
+      "testFiles": [
+        "page-break-legacy-shorthands.html"
+      ]
     }
   ],
   "background-clip": [
@@ -2189,6 +2183,12 @@
       "testFiles": "**"
     }
   ],
+  "flexbox": [
+    {
+      "testPath": "css/css-flexbox",
+      "testFiles": "**"
+    }
+  ],
   "webvtt": [
     {
       "testPath": "webvtt/parsing/file-parsing",
@@ -2209,6 +2209,14 @@
         "text.html",
         "vertical.html"
       ]
+    },
+    {
+      "testPath": "webvtt/parsing/cue-text-parsing/tests",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "webvtt/rendering/cues-with-video/processing-model",
+      "testFiles": "**"
     },
     {
       "testPath": "webvtt/parsing/file-parsing/tests",
@@ -2243,14 +2251,6 @@
         "timings-too-short.html",
         "whitespace-chars.html"
       ]
-    },
-    {
-      "testPath": "webvtt/parsing/cue-text-parsing/tests",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "webvtt/rendering/cues-with-video/processing-model",
-      "testFiles": "**"
     }
   ],
   "webvtt-regions": [
@@ -2359,11 +2359,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-dynamicscompressornode-interface",
+      "testPath": "webaudio/the-audio-api/the-destinationnode-interface",
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-destinationnode-interface",
+      "testPath": "webaudio/the-audio-api/the-dynamicscompressornode-interface",
       "testFiles": "**"
     },
     {
@@ -2391,11 +2391,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-audioparam-interface",
+      "testPath": "webaudio/the-audio-api/the-audionode-interface",
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-audionode-interface",
+      "testPath": "webaudio/the-audio-api/the-audioparam-interface",
       "testFiles": "**"
     },
     {
@@ -2582,16 +2582,6 @@
       ]
     }
   ],
-  "vertical-form-controls": [
-    {
-      "testPath": "css/css-writing-modes/forms",
-      "testFiles": [
-        "*vertical*",
-        "*vlr*",
-        "*vrl*"
-      ]
-    }
-  ],
   "text-wrap-balance": [
     {
       "testPath": "css/css-text/white-space",
@@ -2699,6 +2689,16 @@
       ]
     }
   ],
+  "vertical-form-controls": [
+    {
+      "testPath": "css/css-writing-modes/forms",
+      "testFiles": [
+        "*vertical*",
+        "*vlr*",
+        "*vrl*"
+      ]
+    }
+  ],
   "transform-box": [
     {
       "testPath": "css/css-transforms/transform-box",
@@ -2742,15 +2742,15 @@
       "testFiles": "**"
     }
   ],
-  "sticky-positioning": [
-    {
-      "testPath": "css/css-position/sticky",
-      "testFiles": "**"
-    }
-  ],
   "overlay": [
     {
       "testPath": "css/css-position/overlay",
+      "testFiles": "**"
+    }
+  ],
+  "sticky-positioning": [
+    {
+      "testPath": "css/css-position/sticky",
       "testFiles": "**"
     }
   ],
@@ -3098,19 +3098,19 @@
       "testFiles": "**"
     }
   ],
-  "align-content-block": [
-    {
-      "testPath": "css/css-align/blocks",
-      "testFiles": [
-        "align-content-block-*"
-      ]
-    }
-  ],
   "background-clip-text": [
     {
       "testPath": "css/css-backgrounds/background-clip",
       "testFiles": [
         "clip-text-*"
+      ]
+    }
+  ],
+  "align-content-block": [
+    {
+      "testPath": "css/css-align/blocks",
+      "testFiles": [
+        "align-content-block-*"
       ]
     }
   ],
