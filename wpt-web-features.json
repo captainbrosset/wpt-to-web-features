@@ -193,12 +193,6 @@
       "testFiles": "**"
     }
   ],
-  "speculation-rules": [
-    {
-      "testPath": "speculation-rules",
-      "testFiles": "**"
-    }
-  ],
   "speech-recognition": [
     {
       "testPath": "speech-api",
@@ -213,6 +207,12 @@
       "testFiles": [
         "SpeechSynthesis*"
       ]
+    }
+  ],
+  "speculation-rules": [
+    {
+      "testPath": "speculation-rules",
+      "testFiles": "**"
     }
   ],
   "server-timing": [
@@ -250,6 +250,12 @@
       ]
     }
   ],
+  "scroll-driven-animations": [
+    {
+      "testPath": "scroll-animations",
+      "testFiles": "**"
+    }
+  ],
   "scroll-to-text-fragment": [
     {
       "testPath": "scroll-to-text-fragment",
@@ -274,12 +280,6 @@
         "content-visibility-048.html",
         "content-visibility-auto-text-fragment.html"
       ]
-    }
-  ],
-  "scroll-driven-animations": [
-    {
-      "testPath": "scroll-animations",
-      "testFiles": "**"
     }
   ],
   "screen-wake-lock": [
@@ -373,15 +373,15 @@
       "testFiles": "**"
     }
   ],
-  "layout-instability": [
-    {
-      "testPath": "layout-instability",
-      "testFiles": "**"
-    }
-  ],
   "largest-contentful-paint": [
     {
       "testPath": "largest-contentful-paint",
+      "testFiles": "**"
+    }
+  ],
+  "layout-instability": [
+    {
+      "testPath": "layout-instability",
       "testFiles": "**"
     }
   ],
@@ -529,6 +529,10 @@
       ]
     },
     {
+      "testPath": "custom-elements/reactions",
+      "testFiles": "**"
+    },
+    {
       "testPath": "custom-elements/parser",
       "testFiles": [
         "parser-constructs-custom-element-in-document-write.html",
@@ -541,10 +545,6 @@
         "parser-uses-constructed-element.html",
         "parser-uses-registry-of-owner-document.html"
       ]
-    },
-    {
-      "testPath": "custom-elements/reactions",
-      "testFiles": "**"
     },
     {
       "testPath": "custom-elements/htmlconstructor",
@@ -673,15 +673,15 @@
       "testFiles": "**"
     }
   ],
-  "avif": [
-    {
-      "testPath": "avif",
-      "testFiles": "**"
-    }
-  ],
   "background-fetch": [
     {
       "testPath": "background-fetch",
+      "testFiles": "**"
+    }
+  ],
+  "avif": [
+    {
+      "testPath": "avif",
       "testFiles": "**"
     }
   ],
@@ -745,18 +745,18 @@
       ]
     }
   ],
-  "transferable-streams": [
-    {
-      "testPath": "streams/transferable",
-      "testFiles": "**"
-    }
-  ],
   "transformstream-transformer-cancel": [
     {
       "testPath": "streams/transform-streams",
       "testFiles": [
         "cancel.any.js"
       ]
+    }
+  ],
+  "transferable-streams": [
+    {
+      "testPath": "streams/transferable",
+      "testFiles": "**"
     }
   ],
   "async-iterable-streams": [
@@ -1307,20 +1307,6 @@
       ]
     }
   ],
-  "css-typed-om": [
-    {
-      "testPath": "css/css-typed-om",
-      "testFiles": "**"
-    }
-  ],
-  "numeric-factory-functions": [
-    {
-      "testPath": "css/css-typed-om",
-      "testFiles": [
-        "factory-*"
-      ]
-    }
-  ],
   "starting-style": [
     {
       "testPath": "css/css-transitions",
@@ -1346,6 +1332,101 @@
       "testPath": "css/css-transitions/parsing",
       "testFiles": [
         "transition-behavior.html"
+      ]
+    }
+  ],
+  "individual-transforms": [
+    {
+      "testPath": "css/css-transforms",
+      "testFiles": [
+        "transform-and-individual-transform-properties-computed-style.html"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/parsing",
+      "testFiles": [
+        "rotate-parsing-computed.html",
+        "rotate-parsing-valid.html"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/individual-transform",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/css-transforms/animation",
+      "testFiles": [
+        "rotate-animation-on-svg.html",
+        "rotate-animation-with-will-change-transform-001.html",
+        "scale-and-rotate-both-specified-on-animation-keyframes.html",
+        "scale-animation-on-svg.html",
+        "translate-animation-on-svg.html"
+      ]
+    }
+  ],
+  "transforms3d": [
+    {
+      "testPath": "css/css-transforms",
+      "testFiles": [
+        "*3d*",
+        "backface-visibility-*",
+        "perspective-*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/parsing",
+      "testFiles": [
+        "backface-visibility-*",
+        "perspective-*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/animation",
+      "testFiles": [
+        "backface-visibility-*",
+        "perspective-*"
+      ]
+    }
+  ],
+  "css-typed-om": [
+    {
+      "testPath": "css/css-typed-om",
+      "testFiles": "**"
+    }
+  ],
+  "numeric-factory-functions": [
+    {
+      "testPath": "css/css-typed-om",
+      "testFiles": [
+        "factory-*"
+      ]
+    }
+  ],
+  "text-emphasis": [
+    {
+      "testPath": "css/css-text-decor",
+      "testFiles": [
+        "text-emphasis-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor/parsing",
+      "testFiles": [
+        "*"
+      ]
+    }
+  ],
+  "text-underline-offset": [
+    {
+      "testPath": "css/css-text-decor",
+      "testFiles": [
+        "text-underline-offset-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor/animations",
+      "testFiles": [
+        "text-underline-offset-*"
       ]
     }
   ],
@@ -1449,6 +1530,12 @@
       ]
     }
   ],
+  "registered-custom-properties": [
+    {
+      "testPath": "css/css-properties-values-api",
+      "testFiles": "**"
+    }
+  ],
   "ruby-align": [
     {
       "testPath": "css/css-ruby",
@@ -1475,12 +1562,6 @@
       "testFiles": [
         "ruby-position-*"
       ]
-    }
-  ],
-  "registered-custom-properties": [
-    {
-      "testPath": "css/css-properties-values-api",
-      "testFiles": "**"
     }
   ],
   "target-text": [
@@ -1544,54 +1625,6 @@
       ]
     }
   ],
-  "page-orientation": [
-    {
-      "testPath": "css/css-page",
-      "testFiles": [
-        "page-orientation*"
-      ]
-    },
-    {
-      "testPath": "css/css-page/parsing",
-      "testFiles": [
-        "page-orientation-*"
-      ]
-    }
-  ],
-  "page-selectors": [
-    {
-      "testPath": "css/css-page",
-      "testFiles": [
-        "page-left-right-*",
-        "pseudo-first-*"
-      ]
-    }
-  ],
-  "scrollbar-gutter": [
-    {
-      "testPath": "css/css-overflow",
-      "testFiles": [
-        "scrollbar-gutter-*"
-      ]
-    },
-    {
-      "testPath": "css/css-overflow/parsing",
-      "testFiles": [
-        "scrollbar-gutter-*"
-      ]
-    }
-  ],
-  "overflow-shorthand": [
-    {
-      "testPath": "css/css-overflow",
-      "testFiles": [
-        "overflow-*",
-        "!overflow-auto-scrollbar-gutter-intrinsic-*",
-        "!overflow-scroll-*",
-        "!overflow-no-interpolation.html"
-      ]
-    }
-  ],
   "function": [
     {
       "testPath": "css/css-mixins",
@@ -1622,6 +1655,29 @@
     {
       "testPath": "css/css-grid/masonry",
       "testFiles": "**"
+    }
+  ],
+  "page-orientation": [
+    {
+      "testPath": "css/css-page",
+      "testFiles": [
+        "page-orientation*"
+      ]
+    },
+    {
+      "testPath": "css/css-page/parsing",
+      "testFiles": [
+        "page-orientation-*"
+      ]
+    }
+  ],
+  "page-selectors": [
+    {
+      "testPath": "css/css-page",
+      "testFiles": [
+        "page-left-right-*",
+        "pseudo-first-*"
+      ]
     }
   ],
   "masks": [
@@ -1668,63 +1724,35 @@
       ]
     }
   ],
-  "individual-transforms": [
-    {
-      "testPath": "css/css-transforms",
-      "testFiles": [
-        "transform-and-individual-transform-properties-computed-style.html"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/parsing",
-      "testFiles": [
-        "rotate-parsing-computed.html",
-        "rotate-parsing-valid.html"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/individual-transform",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-transforms/animation",
-      "testFiles": [
-        "rotate-animation-on-svg.html",
-        "rotate-animation-with-will-change-transform-001.html",
-        "scale-and-rotate-both-specified-on-animation-keyframes.html",
-        "scale-animation-on-svg.html",
-        "translate-animation-on-svg.html"
-      ]
-    }
-  ],
-  "transforms3d": [
-    {
-      "testPath": "css/css-transforms",
-      "testFiles": [
-        "*3d*",
-        "backface-visibility-*",
-        "perspective-*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/parsing",
-      "testFiles": [
-        "backface-visibility-*",
-        "perspective-*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/animation",
-      "testFiles": [
-        "backface-visibility-*",
-        "perspective-*"
-      ]
-    }
-  ],
   "highlight": [
     {
       "testPath": "css/css-highlight-api",
       "testFiles": "**"
+    }
+  ],
+  "scrollbar-gutter": [
+    {
+      "testPath": "css/css-overflow",
+      "testFiles": [
+        "scrollbar-gutter-*"
+      ]
+    },
+    {
+      "testPath": "css/css-overflow/parsing",
+      "testFiles": [
+        "scrollbar-gutter-*"
+      ]
+    }
+  ],
+  "overflow-shorthand": [
+    {
+      "testPath": "css/css-overflow",
+      "testFiles": [
+        "overflow-*",
+        "!overflow-auto-scrollbar-gutter-intrinsic-*",
+        "!overflow-scroll-*",
+        "!overflow-no-interpolation.html"
+      ]
     }
   ],
   "grid": [
@@ -1776,34 +1804,6 @@
       "testPath": "css/css-easing",
       "testFiles": [
         "linear-timing-*"
-      ]
-    }
-  ],
-  "text-emphasis": [
-    {
-      "testPath": "css/css-text-decor",
-      "testFiles": [
-        "text-emphasis-*"
-      ]
-    },
-    {
-      "testPath": "css/css-text-decor/parsing",
-      "testFiles": [
-        "*"
-      ]
-    }
-  ],
-  "text-underline-offset": [
-    {
-      "testPath": "css/css-text-decor",
-      "testFiles": [
-        "text-underline-offset-*"
-      ]
-    },
-    {
-      "testPath": "css/css-text-decor/animations",
-      "testFiles": [
-        "text-underline-offset-*"
       ]
     }
   ],
@@ -1969,6 +1969,14 @@
       ]
     }
   ],
+  "contain-inline-size": [
+    {
+      "testPath": "css/css-contain",
+      "testFiles": [
+        "contain-inline-size-*"
+      ]
+    }
+  ],
   "cascade-layers": [
     {
       "testPath": "css/css-cascade",
@@ -1997,14 +2005,6 @@
       "testPath": "css/css-cascade",
       "testFiles": [
         "revert-val-*"
-      ]
-    }
-  ],
-  "contain-inline-size": [
-    {
-      "testPath": "css/css-contain",
-      "testFiles": [
-        "contain-inline-size-*"
       ]
     }
   ],
@@ -2110,28 +2110,6 @@
       ]
     }
   ],
-  "box-decoration-break": [
-    {
-      "testPath": "css/css-break",
-      "testFiles": [
-        "box-decoration-break-*"
-      ]
-    },
-    {
-      "testPath": "css/css-break/parsing",
-      "testFiles": [
-        "box-decoration-break-*"
-      ]
-    }
-  ],
-  "page-break-aliases": [
-    {
-      "testPath": "css/css-break",
-      "testFiles": [
-        "page-break-legacy-shorthands.html"
-      ]
-    }
-  ],
   "background-clip": [
     {
       "testPath": "css/css-backgrounds",
@@ -2177,15 +2155,37 @@
       ]
     }
   ],
-  "flexbox": [
+  "box-decoration-break": [
     {
-      "testPath": "css/css-flexbox",
-      "testFiles": "**"
+      "testPath": "css/css-break",
+      "testFiles": [
+        "box-decoration-break-*"
+      ]
+    },
+    {
+      "testPath": "css/css-break/parsing",
+      "testFiles": [
+        "box-decoration-break-*"
+      ]
+    }
+  ],
+  "page-break-aliases": [
+    {
+      "testPath": "css/css-break",
+      "testFiles": [
+        "page-break-legacy-shorthands.html"
+      ]
     }
   ],
   "anchor-positioning": [
     {
       "testPath": "css/css-anchor-position",
+      "testFiles": "**"
+    }
+  ],
+  "flexbox": [
+    {
+      "testPath": "css/css-flexbox",
       "testFiles": "**"
     }
   ],
@@ -2371,11 +2371,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-constantsourcenode-interface",
+      "testPath": "webaudio/the-audio-api/the-convolvernode-interface",
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-convolvernode-interface",
+      "testPath": "webaudio/the-audio-api/the-constantsourcenode-interface",
       "testFiles": "**"
     },
     {
@@ -2592,6 +2592,20 @@
       ]
     }
   ],
+  "transform-box": [
+    {
+      "testPath": "css/css-transforms/transform-box",
+      "testFiles": [
+        "*"
+      ]
+    }
+  ],
+  "text-indent": [
+    {
+      "testPath": "css/css-text/text-indent",
+      "testFiles": "**"
+    }
+  ],
   "text-wrap-balance": [
     {
       "testPath": "css/css-text/white-space",
@@ -2625,19 +2639,13 @@
   ],
   "text-spacing-trim": [
     {
-      "testPath": "css/css-text/text-spacing-trim",
-      "testFiles": "**"
-    },
-    {
       "testPath": "css/css-text/parsing",
       "testFiles": [
         "text-spacing-trim-*"
       ]
-    }
-  ],
-  "text-indent": [
+    },
     {
-      "testPath": "css/css-text/text-indent",
+      "testPath": "css/css-text/text-spacing-trim",
       "testFiles": "**"
     }
   ],
@@ -2699,12 +2707,6 @@
       ]
     }
   ],
-  "contain-intrinsic-size": [
-    {
-      "testPath": "css/css-sizing/contain-intrinsic-size",
-      "testFiles": "**"
-    }
-  ],
   "scroll-snap-events": [
     {
       "testPath": "css/css-scroll-snap/snap-events",
@@ -2725,6 +2727,12 @@
   "scroll-initial-target": [
     {
       "testPath": "css/css-scroll-snap/scroll-initial-target",
+      "testFiles": "**"
+    }
+  ],
+  "contain-intrinsic-size": [
+    {
+      "testPath": "css/css-sizing/contain-intrinsic-size",
       "testFiles": "**"
     }
   ],
@@ -2784,14 +2792,6 @@
       "testFiles": "**"
     }
   ],
-  "transform-box": [
-    {
-      "testPath": "css/css-transforms/transform-box",
-      "testFiles": [
-        "*"
-      ]
-    }
-  ],
   "alignment-baseline": [
     {
       "testPath": "css/css-inline/parsing",
@@ -2814,15 +2814,15 @@
       ]
     }
   ],
-  "baseline-source": [
-    {
-      "testPath": "css/css-inline/baseline-source",
-      "testFiles": "**"
-    }
-  ],
   "text-box": [
     {
       "testPath": "css/css-inline/text-box-trim",
+      "testFiles": "**"
+    }
+  ],
+  "baseline-source": [
+    {
+      "testPath": "css/css-inline/baseline-source",
       "testFiles": "**"
     }
   ],
