@@ -56,11 +56,12 @@
       "testFiles": "**"
     }
   ],
-  "webrtc-sctp": [
+  "messageerror": [
     {
-      "testPath": "webrtc",
+      "testPath": "webmessaging",
       "testFiles": [
-        "RTCSctpTransport-*"
+        "messageerror.html",
+        "postMessage_CryptoKey_insecure.sub.html"
       ]
     }
   ],
@@ -70,12 +71,11 @@
       "testFiles": "**"
     }
   ],
-  "messageerror": [
+  "webrtc-sctp": [
     {
-      "testPath": "webmessaging",
+      "testPath": "webrtc",
       "testFiles": [
-        "messageerror.html",
-        "postMessage_CryptoKey_insecure.sub.html"
+        "RTCSctpTransport-*"
       ]
     }
   ],
@@ -403,15 +403,15 @@
       "testFiles": "**"
     }
   ],
-  "import-maps": [
-    {
-      "testPath": "import-maps",
-      "testFiles": "**"
-    }
-  ],
   "inert": [
     {
       "testPath": "inert",
+      "testFiles": "**"
+    }
+  ],
+  "import-maps": [
+    {
+      "testPath": "import-maps",
       "testFiles": "**"
     }
   ],
@@ -529,10 +529,6 @@
       ]
     },
     {
-      "testPath": "custom-elements/reactions",
-      "testFiles": "**"
-    },
-    {
       "testPath": "custom-elements/parser",
       "testFiles": [
         "parser-constructs-custom-element-in-document-write.html",
@@ -545,6 +541,10 @@
         "parser-uses-constructed-element.html",
         "parser-uses-registry-of-owner-document.html"
       ]
+    },
+    {
+      "testPath": "custom-elements/reactions",
+      "testFiles": "**"
     },
     {
       "testPath": "custom-elements/htmlconstructor",
@@ -745,18 +745,18 @@
       ]
     }
   ],
+  "transferable-streams": [
+    {
+      "testPath": "streams/transferable",
+      "testFiles": "**"
+    }
+  ],
   "transformstream-transformer-cancel": [
     {
       "testPath": "streams/transform-streams",
       "testFiles": [
         "cancel.any.js"
       ]
-    }
-  ],
-  "transferable-streams": [
-    {
-      "testPath": "streams/transferable",
-      "testFiles": "**"
     }
   ],
   "async-iterable-streams": [
@@ -1393,20 +1393,6 @@
       ]
     }
   ],
-  "nesting": [
-    {
-      "testPath": "css/css-syntax",
-      "testFiles": [
-        "custom-property-rule-ambiguity.html",
-        "trailing-braces.html",
-        "var-with-blocks.html"
-      ]
-    },
-    {
-      "testPath": "css/css-nesting",
-      "testFiles": "**"
-    }
-  ],
   "text-emphasis": [
     {
       "testPath": "css/css-text-decor",
@@ -1435,9 +1421,17 @@
       ]
     }
   ],
-  "scroll-snap": [
+  "nesting": [
     {
-      "testPath": "css/css-scroll-snap",
+      "testPath": "css/css-syntax",
+      "testFiles": [
+        "custom-property-rule-ambiguity.html",
+        "trailing-braces.html",
+        "var-with-blocks.html"
+      ]
+    },
+    {
+      "testPath": "css/css-nesting",
       "testFiles": "**"
     }
   ],
@@ -1460,6 +1454,54 @@
       "testFiles": [
         "scrollbar-width-*",
         "textarea-scrollbar-width-none.html"
+      ]
+    }
+  ],
+  "scroll-snap": [
+    {
+      "testPath": "css/css-scroll-snap",
+      "testFiles": "**"
+    }
+  ],
+  "has-slotted": [
+    {
+      "testPath": "css/css-scoping",
+      "testFiles": [
+        "has-slotted-*"
+      ]
+    },
+    {
+      "testPath": "css/selectors/parsing",
+      "testFiles": [
+        "parse-has-slotted.tentative.html"
+      ]
+    }
+  ],
+  "ruby-align": [
+    {
+      "testPath": "css/css-ruby",
+      "testFiles": [
+        "ruby-align-*"
+      ]
+    },
+    {
+      "testPath": "css/css-ruby/parsing",
+      "testFiles": [
+        "ruby-align-*"
+      ]
+    }
+  ],
+  "ruby-position": [
+    {
+      "testPath": "css/css-ruby",
+      "testFiles": [
+        "ruby-position*"
+      ]
+    },
+    {
+      "testPath": "css/css-ruby/parsing",
+      "testFiles": [
+        "ruby-position-*"
       ]
     }
   ],
@@ -1516,52 +1558,10 @@
       ]
     }
   ],
-  "has-slotted": [
-    {
-      "testPath": "css/css-scoping",
-      "testFiles": [
-        "has-slotted-*"
-      ]
-    },
-    {
-      "testPath": "css/selectors/parsing",
-      "testFiles": [
-        "parse-has-slotted.tentative.html"
-      ]
-    }
-  ],
   "registered-custom-properties": [
     {
       "testPath": "css/css-properties-values-api",
       "testFiles": "**"
-    }
-  ],
-  "ruby-align": [
-    {
-      "testPath": "css/css-ruby",
-      "testFiles": [
-        "ruby-align-*"
-      ]
-    },
-    {
-      "testPath": "css/css-ruby/parsing",
-      "testFiles": [
-        "ruby-align-*"
-      ]
-    }
-  ],
-  "ruby-position": [
-    {
-      "testPath": "css/css-ruby",
-      "testFiles": [
-        "ruby-position*"
-      ]
-    },
-    {
-      "testPath": "css/css-ruby/parsing",
-      "testFiles": [
-        "ruby-position-*"
-      ]
     }
   ],
   "target-text": [
@@ -1622,29 +1622,6 @@
       "testPath": "css/css-pseudo",
       "testFiles": [
         "first-line-*"
-      ]
-    }
-  ],
-  "page-orientation": [
-    {
-      "testPath": "css/css-page",
-      "testFiles": [
-        "page-orientation*"
-      ]
-    },
-    {
-      "testPath": "css/css-page/parsing",
-      "testFiles": [
-        "page-orientation-*"
-      ]
-    }
-  ],
-  "page-selectors": [
-    {
-      "testPath": "css/css-page",
-      "testFiles": [
-        "page-left-right-*",
-        "pseudo-first-*"
       ]
     }
   ],
@@ -1716,26 +1693,6 @@
       "testFiles": "**"
     }
   ],
-  "counter-set": [
-    {
-      "testPath": "css/css-lists",
-      "testFiles": [
-        "counter-set-*"
-      ]
-    }
-  ],
-  "highlight": [
-    {
-      "testPath": "css/css-highlight-api",
-      "testFiles": "**"
-    }
-  ],
-  "grid": [
-    {
-      "testPath": "css/css-grid",
-      "testFiles": "**"
-    }
-  ],
   "scrollbar-gutter": [
     {
       "testPath": "css/css-overflow",
@@ -1761,20 +1718,24 @@
       ]
     }
   ],
-  "font-metric-overrides": [
+  "counter-set": [
     {
-      "testPath": "css/css-font-loading",
+      "testPath": "css/css-lists",
       "testFiles": [
-        "fontface-override-descriptor-getter-setter.sub.html"
+        "counter-set-*"
       ]
-    },
+    }
+  ],
+  "highlight": [
     {
-      "testPath": "css/css-fonts",
-      "testFiles": [
-        "ascent-descent-override.html",
-        "line-gap-override.html",
-        "metrics-override-normal-keyword.html"
-      ]
+      "testPath": "css/css-highlight-api",
+      "testFiles": "**"
+    }
+  ],
+  "grid": [
+    {
+      "testPath": "css/css-grid",
+      "testFiles": "**"
     }
   ],
   "conic-gradients": [
@@ -1799,19 +1760,27 @@
       ]
     }
   ],
+  "font-metric-overrides": [
+    {
+      "testPath": "css/css-font-loading",
+      "testFiles": [
+        "fontface-override-descriptor-getter-setter.sub.html"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts",
+      "testFiles": [
+        "ascent-descent-override.html",
+        "line-gap-override.html",
+        "metrics-override-normal-keyword.html"
+      ]
+    }
+  ],
   "linear-easing": [
     {
       "testPath": "css/css-easing",
       "testFiles": [
         "linear-timing-*"
-      ]
-    }
-  ],
-  "quotes": [
-    {
-      "testPath": "css/css-content",
-      "testFiles": [
-        "quotes-*"
       ]
     }
   ],
@@ -1969,6 +1938,14 @@
       ]
     }
   ],
+  "quotes": [
+    {
+      "testPath": "css/css-content",
+      "testFiles": [
+        "quotes-*"
+      ]
+    }
+  ],
   "contain-inline-size": [
     {
       "testPath": "css/css-contain",
@@ -2087,27 +2064,10 @@
       ]
     }
   ],
-  "animation-composition": [
+  "flexbox": [
     {
-      "testPath": "css/css-animations",
-      "testFiles": [
-        "animation-composition.html",
-        "animation-composition-*"
-      ]
-    },
-    {
-      "testPath": "css/css-animations/parsing",
-      "testFiles": [
-        "animation-composition-*"
-      ]
-    }
-  ],
-  "display-animation": [
-    {
-      "testPath": "css/css-animations",
-      "testFiles": [
-        "display-interpolation.html"
-      ]
+      "testPath": "css/css-flexbox",
+      "testFiles": "**"
     }
   ],
   "box-decoration-break": [
@@ -2129,6 +2089,29 @@
       "testPath": "css/css-break",
       "testFiles": [
         "page-break-legacy-shorthands.html"
+      ]
+    }
+  ],
+  "animation-composition": [
+    {
+      "testPath": "css/css-animations",
+      "testFiles": [
+        "animation-composition.html",
+        "animation-composition-*"
+      ]
+    },
+    {
+      "testPath": "css/css-animations/parsing",
+      "testFiles": [
+        "animation-composition-*"
+      ]
+    }
+  ],
+  "display-animation": [
+    {
+      "testPath": "css/css-animations",
+      "testFiles": [
+        "display-interpolation.html"
       ]
     }
   ],
@@ -2183,10 +2166,27 @@
       "testFiles": "**"
     }
   ],
-  "flexbox": [
+  "page-orientation": [
     {
-      "testPath": "css/css-flexbox",
-      "testFiles": "**"
+      "testPath": "css/css-page",
+      "testFiles": [
+        "page-orientation*"
+      ]
+    },
+    {
+      "testPath": "css/css-page/parsing",
+      "testFiles": [
+        "page-orientation-*"
+      ]
+    }
+  ],
+  "page-selectors": [
+    {
+      "testPath": "css/css-page",
+      "testFiles": [
+        "page-left-right-*",
+        "pseudo-first-*"
+      ]
     }
   ],
   "webvtt": [
@@ -2212,10 +2212,6 @@
     },
     {
       "testPath": "webvtt/rendering/cues-with-video/processing-model",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "webvtt/parsing/cue-text-parsing/tests",
       "testFiles": "**"
     },
     {
@@ -2251,6 +2247,10 @@
         "timings-too-short.html",
         "whitespace-chars.html"
       ]
+    },
+    {
+      "testPath": "webvtt/parsing/cue-text-parsing/tests",
+      "testFiles": "**"
     }
   ],
   "webvtt-regions": [
@@ -2283,11 +2283,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region_function",
+      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region",
       "testFiles": "**"
     },
     {
-      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region",
+      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region_function",
       "testFiles": "**"
     }
   ],
@@ -2331,11 +2331,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-pannernode-interface",
+      "testPath": "webaudio/the-audio-api/the-oscillatornode-interface",
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-oscillatornode-interface",
+      "testPath": "webaudio/the-audio-api/the-pannernode-interface",
       "testFiles": "**"
     },
     {
@@ -2395,11 +2395,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-audiocontext-interface",
+      "testPath": "webaudio/the-audio-api/the-audioparam-interface",
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-audioparam-interface",
+      "testPath": "webaudio/the-audio-api/the-audiocontext-interface",
       "testFiles": "**"
     },
     {
@@ -2451,6 +2451,20 @@
       "testFiles": "**"
     }
   ],
+  "field-sizing": [
+    {
+      "testPath": "html/rendering/widgets",
+      "testFiles": [
+        "field-sizing-*"
+      ]
+    },
+    {
+      "testPath": "css/css-ui/parsing",
+      "testFiles": [
+        "field-sizing-*"
+      ]
+    }
+  ],
   "details": [
     {
       "testPath": "html/rendering/the-details-element",
@@ -2467,20 +2481,6 @@
         "details-pseudo-elements-004.html",
         "details-pseudo-elements-005.html",
         "details-pseudo-elements-006.html"
-      ]
-    }
-  ],
-  "field-sizing": [
-    {
-      "testPath": "html/rendering/widgets",
-      "testFiles": [
-        "field-sizing-*"
-      ]
-    },
-    {
-      "testPath": "css/css-ui/parsing",
-      "testFiles": [
-        "field-sizing-*"
       ]
     }
   ],
@@ -2592,6 +2592,24 @@
       ]
     }
   ],
+  "text-spacing-trim": [
+    {
+      "testPath": "css/css-text/text-spacing-trim",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/css-text/parsing",
+      "testFiles": [
+        "text-spacing-trim-*"
+      ]
+    }
+  ],
+  "text-indent": [
+    {
+      "testPath": "css/css-text/text-indent",
+      "testFiles": "**"
+    }
+  ],
   "text-wrap-balance": [
     {
       "testPath": "css/css-text/white-space",
@@ -2621,24 +2639,6 @@
       "testFiles": [
         "white-space-collapse-*"
       ]
-    }
-  ],
-  "text-spacing-trim": [
-    {
-      "testPath": "css/css-text/text-spacing-trim",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-text/parsing",
-      "testFiles": [
-        "text-spacing-trim-*"
-      ]
-    }
-  ],
-  "text-indent": [
-    {
-      "testPath": "css/css-text/text-indent",
-      "testFiles": "**"
     }
   ],
   "text-wrap-pretty": [
@@ -2699,6 +2699,18 @@
       ]
     }
   ],
+  "contain-intrinsic-size": [
+    {
+      "testPath": "css/css-sizing/contain-intrinsic-size",
+      "testFiles": "**"
+    }
+  ],
+  "aspect-ratio": [
+    {
+      "testPath": "css/css-sizing/aspect-ratio",
+      "testFiles": "**"
+    }
+  ],
   "scroll-snap-events": [
     {
       "testPath": "css/css-scroll-snap/snap-events",
@@ -2730,25 +2742,19 @@
       ]
     }
   ],
-  "overlay": [
-    {
-      "testPath": "css/css-position/overlay",
-      "testFiles": "**"
-    }
-  ],
   "sticky-positioning": [
     {
       "testPath": "css/css-position/sticky",
       "testFiles": "**"
     }
   ],
-  "clip-path-boxes": [
+  "overlay": [
     {
-      "testPath": "css/css-masking/hit-test",
-      "testFiles": [
-        "clip-path-svg-geometry-box.html"
-      ]
-    },
+      "testPath": "css/css-position/overlay",
+      "testFiles": "**"
+    }
+  ],
+  "clip-path-boxes": [
     {
       "testPath": "css/css-masking/clip-path-svg-content",
       "testFiles": [
@@ -2771,6 +2777,12 @@
         "clip-path-viewBox-1b.html",
         "clip-path-viewBox-1c.html",
         "clip-path-viewBox-1d.html"
+      ]
+    },
+    {
+      "testPath": "css/css-masking/hit-test",
+      "testFiles": [
+        "clip-path-svg-geometry-box.html"
       ]
     }
   ],
@@ -2820,18 +2832,6 @@
       "testFiles": "**"
     }
   ],
-  "contain-intrinsic-size": [
-    {
-      "testPath": "css/css-sizing/contain-intrinsic-size",
-      "testFiles": "**"
-    }
-  ],
-  "aspect-ratio": [
-    {
-      "testPath": "css/css-sizing/aspect-ratio",
-      "testFiles": "**"
-    }
-  ],
   "subgrid": [
     {
       "testPath": "css/css-grid/subgrid",
@@ -2872,6 +2872,12 @@
       "testFiles": "**"
     }
   ],
+  "two-value-display": [
+    {
+      "testPath": "css/css-display/parsing",
+      "testFiles": "**"
+    }
+  ],
   "counter-style": [
     {
       "testPath": "css/css-counter-styles/cssom",
@@ -2902,10 +2908,28 @@
       "testFiles": "**"
     }
   ],
-  "two-value-display": [
+  "font-optical-sizing": [
     {
-      "testPath": "css/css-display/parsing",
-      "testFiles": "**"
+      "testPath": "css/css-fonts/variations",
+      "testFiles": [
+        "variable-opsz*"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts/parsing",
+      "testFiles": [
+        "font-optical-sizing-*"
+      ]
+    }
+  ],
+  "font-palette-animation": [
+    {
+      "testPath": "css/css-fonts/animations",
+      "testFiles": [
+        "font-palette-animation-not-specified-endpoints.html",
+        "font-palette-interpolation.html",
+        "multiple-elements-font-palette-animation.html"
+      ]
     }
   ],
   "print-color-adjust": [
@@ -3068,30 +3092,6 @@
       ]
     }
   ],
-  "font-optical-sizing": [
-    {
-      "testPath": "css/css-fonts/variations",
-      "testFiles": [
-        "variable-opsz*"
-      ]
-    },
-    {
-      "testPath": "css/css-fonts/parsing",
-      "testFiles": [
-        "font-optical-sizing-*"
-      ]
-    }
-  ],
-  "font-palette-animation": [
-    {
-      "testPath": "css/css-fonts/animations",
-      "testFiles": [
-        "font-palette-animation-not-specified-endpoints.html",
-        "font-palette-interpolation.html",
-        "multiple-elements-font-palette-animation.html"
-      ]
-    }
-  ],
   "content-visibility": [
     {
       "testPath": "css/css-contain/content-visibility",
@@ -3163,6 +3163,14 @@
       ]
     }
   ],
+  "details-name": [
+    {
+      "testPath": "html/semantics/interactive-elements/the-details-element",
+      "testFiles": [
+        "name-attribute.html"
+      ]
+    }
+  ],
   "dialog": [
     {
       "testPath": "html/semantics/interactive-elements/the-dialog-element",
@@ -3175,14 +3183,6 @@
       "testFiles": [
         "dialog-requestclose.html",
         "dialog-requestclose-*"
-      ]
-    }
-  ],
-  "details-name": [
-    {
-      "testPath": "html/semantics/interactive-elements/the-details-element",
-      "testFiles": [
-        "name-attribute.html"
       ]
     }
   ],
@@ -3211,9 +3211,13 @@
       ]
     },
     {
-      "testPath": "html/semantics/forms/the-form-element",
+      "testPath": "html/semantics/forms/the-input-element",
       "testFiles": [
-        "form-checkvalidity.html"
+        "input-checkvalidity.html",
+        "input-setcustomvalidity.html",
+        "input-validationmessage.html",
+        "input-validity.html",
+        "input-willvalidate.html"
       ]
     },
     {
@@ -3227,13 +3231,9 @@
       ]
     },
     {
-      "testPath": "html/semantics/forms/the-input-element",
+      "testPath": "html/semantics/forms/the-form-element",
       "testFiles": [
-        "input-checkvalidity.html",
-        "input-setcustomvalidity.html",
-        "input-validationmessage.html",
-        "input-validity.html",
-        "input-willvalidate.html"
+        "form-checkvalidity.html"
       ]
     },
     {
@@ -3259,18 +3259,18 @@
       ]
     }
   ],
+  "progress": [
+    {
+      "testPath": "html/semantics/forms/the-progress-element",
+      "testFiles": "**"
+    }
+  ],
   "show-picker-select": [
     {
       "testPath": "html/semantics/forms/the-select-element",
       "testFiles": [
         "show-picker-*"
       ]
-    }
-  ],
-  "progress": [
-    {
-      "testPath": "html/semantics/forms/the-progress-element",
-      "testFiles": "**"
     }
   ],
   "meter": [
