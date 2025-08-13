@@ -65,18 +65,18 @@
       ]
     }
   ],
+  "webhid": [
+    {
+      "testPath": "webhid",
+      "testFiles": "**"
+    }
+  ],
   "webrtc-sctp": [
     {
       "testPath": "webrtc",
       "testFiles": [
         "RTCSctpTransport-*"
       ]
-    }
-  ],
-  "webhid": [
-    {
-      "testPath": "webhid",
-      "testFiles": "**"
     }
   ],
   "webauthn-public-key-easy": [
@@ -193,12 +193,6 @@
       "testFiles": "**"
     }
   ],
-  "speculation-rules": [
-    {
-      "testPath": "speculation-rules",
-      "testFiles": "**"
-    }
-  ],
   "speech-recognition": [
     {
       "testPath": "speech-api",
@@ -213,6 +207,12 @@
       "testFiles": [
         "SpeechSynthesis*"
       ]
+    }
+  ],
+  "speculation-rules": [
+    {
+      "testPath": "speculation-rules",
+      "testFiles": "**"
     }
   ],
   "server-timing": [
@@ -256,12 +256,6 @@
       "testFiles": "**"
     }
   ],
-  "screen-wake-lock": [
-    {
-      "testPath": "screen-wake-lock",
-      "testFiles": "**"
-    }
-  ],
   "scroll-to-text-fragment": [
     {
       "testPath": "scroll-to-text-fragment",
@@ -286,6 +280,12 @@
         "content-visibility-048.html",
         "content-visibility-auto-text-fragment.html"
       ]
+    }
+  ],
+  "screen-wake-lock": [
+    {
+      "testPath": "screen-wake-lock",
+      "testFiles": "**"
     }
   ],
   "scheduler": [
@@ -373,15 +373,15 @@
       "testFiles": "**"
     }
   ],
-  "largest-contentful-paint": [
-    {
-      "testPath": "largest-contentful-paint",
-      "testFiles": "**"
-    }
-  ],
   "layout-instability": [
     {
       "testPath": "layout-instability",
+      "testFiles": "**"
+    }
+  ],
+  "largest-contentful-paint": [
+    {
+      "testPath": "largest-contentful-paint",
       "testFiles": "**"
     }
   ],
@@ -529,6 +529,10 @@
       ]
     },
     {
+      "testPath": "custom-elements/reactions",
+      "testFiles": "**"
+    },
+    {
       "testPath": "custom-elements/parser",
       "testFiles": [
         "parser-constructs-custom-element-in-document-write.html",
@@ -541,10 +545,6 @@
         "parser-uses-constructed-element.html",
         "parser-uses-registry-of-owner-document.html"
       ]
-    },
-    {
-      "testPath": "custom-elements/reactions",
-      "testFiles": "**"
     },
     {
       "testPath": "custom-elements/htmlconstructor",
@@ -759,12 +759,6 @@
       "testFiles": "**"
     }
   ],
-  "readable-byte-streams": [
-    {
-      "testPath": "streams/readable-byte-streams",
-      "testFiles": "**"
-    }
-  ],
   "async-iterable-streams": [
     {
       "testPath": "streams/readable-streams",
@@ -785,6 +779,12 @@
       "testFiles": [
         "from-cross-realm.https.html"
       ]
+    }
+  ],
+  "readable-byte-streams": [
+    {
+      "testPath": "streams/readable-byte-streams",
+      "testFiles": "**"
     }
   ],
   "storage-buckets": [
@@ -1483,6 +1483,59 @@
       "testFiles": "**"
     }
   ],
+  "individual-transforms": [
+    {
+      "testPath": "css/css-transforms",
+      "testFiles": [
+        "transform-and-individual-transform-properties-computed-style.html"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/parsing",
+      "testFiles": [
+        "rotate-parsing-computed.html",
+        "rotate-parsing-valid.html"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/individual-transform",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/css-transforms/animation",
+      "testFiles": [
+        "rotate-animation-on-svg.html",
+        "rotate-animation-with-will-change-transform-001.html",
+        "scale-and-rotate-both-specified-on-animation-keyframes.html",
+        "scale-animation-on-svg.html",
+        "translate-animation-on-svg.html"
+      ]
+    }
+  ],
+  "transforms3d": [
+    {
+      "testPath": "css/css-transforms",
+      "testFiles": [
+        "*3d*",
+        "backface-visibility-*",
+        "perspective-*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/parsing",
+      "testFiles": [
+        "backface-visibility-*",
+        "perspective-*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/animation",
+      "testFiles": [
+        "backface-visibility-*",
+        "perspective-*"
+      ]
+    }
+  ],
   "target-text": [
     {
       "testPath": "css/css-pseudo",
@@ -1541,59 +1594,6 @@
       "testPath": "css/css-pseudo",
       "testFiles": [
         "first-line-*"
-      ]
-    }
-  ],
-  "individual-transforms": [
-    {
-      "testPath": "css/css-transforms",
-      "testFiles": [
-        "transform-and-individual-transform-properties-computed-style.html"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/parsing",
-      "testFiles": [
-        "rotate-parsing-computed.html",
-        "rotate-parsing-valid.html"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/individual-transform",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-transforms/animation",
-      "testFiles": [
-        "rotate-animation-on-svg.html",
-        "rotate-animation-with-will-change-transform-001.html",
-        "scale-and-rotate-both-specified-on-animation-keyframes.html",
-        "scale-animation-on-svg.html",
-        "translate-animation-on-svg.html"
-      ]
-    }
-  ],
-  "transforms3d": [
-    {
-      "testPath": "css/css-transforms",
-      "testFiles": [
-        "*3d*",
-        "backface-visibility-*",
-        "perspective-*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/parsing",
-      "testFiles": [
-        "backface-visibility-*",
-        "perspective-*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/animation",
-      "testFiles": [
-        "backface-visibility-*",
-        "perspective-*"
       ]
     }
   ],
@@ -1688,14 +1688,6 @@
       "testFiles": "**"
     }
   ],
-  "counter-set": [
-    {
-      "testPath": "css/css-lists",
-      "testFiles": [
-        "counter-set-*"
-      ]
-    }
-  ],
   "scrollbar-gutter": [
     {
       "testPath": "css/css-overflow",
@@ -1718,6 +1710,14 @@
         "!overflow-auto-scrollbar-gutter-intrinsic-*",
         "!overflow-scroll-*",
         "!overflow-no-interpolation.html"
+      ]
+    }
+  ],
+  "counter-set": [
+    {
+      "testPath": "css/css-lists",
+      "testFiles": [
+        "counter-set-*"
       ]
     }
   ],
@@ -1779,14 +1779,6 @@
       ]
     }
   ],
-  "quotes": [
-    {
-      "testPath": "css/css-content",
-      "testFiles": [
-        "quotes-*"
-      ]
-    }
-  ],
   "font-palette": [
     {
       "testPath": "css/css-fonts",
@@ -1814,13 +1806,13 @@
       ]
     },
     {
-      "testPath": "css/css-fonts/animations",
+      "testPath": "css/css-fonts/parsing",
       "testFiles": [
         "font-size-adjust-*"
       ]
     },
     {
-      "testPath": "css/css-fonts/parsing",
+      "testPath": "css/css-fonts/animations",
       "testFiles": [
         "font-size-adjust-*"
       ]
@@ -1938,6 +1930,14 @@
       "testPath": "css/css-fonts/parsing",
       "testFiles": [
         "font-variant-position-*"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "testPath": "css/css-content",
+      "testFiles": [
+        "quotes-*"
       ]
     }
   ],
@@ -2065,31 +2065,48 @@
       "testFiles": "**"
     }
   ],
-  "text-emphasis": [
+  "animation-composition": [
     {
-      "testPath": "css/css-text-decor",
+      "testPath": "css/css-animations",
       "testFiles": [
-        "text-emphasis-*"
+        "animation-composition.html",
+        "animation-composition-*"
       ]
     },
     {
-      "testPath": "css/css-text-decor/parsing",
+      "testPath": "css/css-animations/parsing",
       "testFiles": [
-        "*"
+        "animation-composition-*"
       ]
     }
   ],
-  "text-underline-offset": [
+  "display-animation": [
     {
-      "testPath": "css/css-text-decor",
+      "testPath": "css/css-animations",
       "testFiles": [
-        "text-underline-offset-*"
+        "display-interpolation.html"
+      ]
+    }
+  ],
+  "box-decoration-break": [
+    {
+      "testPath": "css/css-break",
+      "testFiles": [
+        "box-decoration-break-*"
       ]
     },
     {
-      "testPath": "css/css-text-decor/animations",
+      "testPath": "css/css-break/parsing",
       "testFiles": [
-        "text-underline-offset-*"
+        "box-decoration-break-*"
+      ]
+    }
+  ],
+  "page-break-aliases": [
+    {
+      "testPath": "css/css-break",
+      "testFiles": [
+        "page-break-legacy-shorthands.html"
       ]
     }
   ],
@@ -2144,48 +2161,31 @@
       "testFiles": "**"
     }
   ],
-  "box-decoration-break": [
+  "text-emphasis": [
     {
-      "testPath": "css/css-break",
+      "testPath": "css/css-text-decor",
       "testFiles": [
-        "box-decoration-break-*"
+        "text-emphasis-*"
       ]
     },
     {
-      "testPath": "css/css-break/parsing",
+      "testPath": "css/css-text-decor/parsing",
       "testFiles": [
-        "box-decoration-break-*"
+        "*"
       ]
     }
   ],
-  "page-break-aliases": [
+  "text-underline-offset": [
     {
-      "testPath": "css/css-break",
+      "testPath": "css/css-text-decor",
       "testFiles": [
-        "page-break-legacy-shorthands.html"
-      ]
-    }
-  ],
-  "animation-composition": [
-    {
-      "testPath": "css/css-animations",
-      "testFiles": [
-        "animation-composition.html",
-        "animation-composition-*"
+        "text-underline-offset-*"
       ]
     },
     {
-      "testPath": "css/css-animations/parsing",
+      "testPath": "css/css-text-decor/animations",
       "testFiles": [
-        "animation-composition-*"
-      ]
-    }
-  ],
-  "display-animation": [
-    {
-      "testPath": "css/css-animations",
-      "testFiles": [
-        "display-interpolation.html"
+        "text-underline-offset-*"
       ]
     }
   ],
@@ -2209,10 +2209,6 @@
         "text.html",
         "vertical.html"
       ]
-    },
-    {
-      "testPath": "webvtt/parsing/cue-text-parsing/tests",
-      "testFiles": "**"
     },
     {
       "testPath": "webvtt/rendering/cues-with-video/processing-model",
@@ -2251,6 +2247,10 @@
         "timings-too-short.html",
         "whitespace-chars.html"
       ]
+    },
+    {
+      "testPath": "webvtt/parsing/cue-text-parsing/tests",
+      "testFiles": "**"
     }
   ],
   "webvtt-regions": [
@@ -2283,11 +2283,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region_function",
+      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region",
       "testFiles": "**"
     },
     {
-      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region",
+      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region_function",
       "testFiles": "**"
     }
   ],
@@ -2319,11 +2319,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-stereopanner-interface",
+      "testPath": "webaudio/the-audio-api/the-scriptprocessornode-interface",
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-scriptprocessornode-interface",
+      "testPath": "webaudio/the-audio-api/the-stereopanner-interface",
       "testFiles": "**"
     },
     {
@@ -2395,11 +2395,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-audiocontext-interface",
+      "testPath": "webaudio/the-audio-api/the-audioparam-interface",
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-audioparam-interface",
+      "testPath": "webaudio/the-audio-api/the-audiocontext-interface",
       "testFiles": "**"
     },
     {
@@ -2451,20 +2451,6 @@
       "testFiles": "**"
     }
   ],
-  "field-sizing": [
-    {
-      "testPath": "html/rendering/widgets",
-      "testFiles": [
-        "field-sizing-*"
-      ]
-    },
-    {
-      "testPath": "css/css-ui/parsing",
-      "testFiles": [
-        "field-sizing-*"
-      ]
-    }
-  ],
   "details": [
     {
       "testPath": "html/rendering/the-details-element",
@@ -2481,6 +2467,20 @@
         "details-pseudo-elements-004.html",
         "details-pseudo-elements-005.html",
         "details-pseudo-elements-006.html"
+      ]
+    }
+  ],
+  "field-sizing": [
+    {
+      "testPath": "html/rendering/widgets",
+      "testFiles": [
+        "field-sizing-*"
+      ]
+    },
+    {
+      "testPath": "css/css-ui/parsing",
+      "testFiles": [
+        "field-sizing-*"
       ]
     }
   ],
@@ -2592,24 +2592,6 @@
       ]
     }
   ],
-  "text-spacing-trim": [
-    {
-      "testPath": "css/css-text/text-spacing-trim",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-text/parsing",
-      "testFiles": [
-        "text-spacing-trim-*"
-      ]
-    }
-  ],
-  "text-indent": [
-    {
-      "testPath": "css/css-text/text-indent",
-      "testFiles": "**"
-    }
-  ],
   "text-wrap-balance": [
     {
       "testPath": "css/css-text/white-space",
@@ -2639,6 +2621,24 @@
       "testFiles": [
         "white-space-collapse-*"
       ]
+    }
+  ],
+  "text-spacing-trim": [
+    {
+      "testPath": "css/css-text/text-spacing-trim",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/css-text/parsing",
+      "testFiles": [
+        "text-spacing-trim-*"
+      ]
+    }
+  ],
+  "text-indent": [
+    {
+      "testPath": "css/css-text/text-indent",
+      "testFiles": "**"
     }
   ],
   "text-wrap-pretty": [
@@ -2734,10 +2734,12 @@
       "testFiles": "**"
     }
   ],
-  "sticky-positioning": [
+  "transform-box": [
     {
-      "testPath": "css/css-position/sticky",
-      "testFiles": "**"
+      "testPath": "css/css-transforms/transform-box",
+      "testFiles": [
+        "*"
+      ]
     }
   ],
   "overlay": [
@@ -2746,12 +2748,10 @@
       "testFiles": "**"
     }
   ],
-  "transform-box": [
+  "sticky-positioning": [
     {
-      "testPath": "css/css-transforms/transform-box",
-      "testFiles": [
-        "*"
-      ]
+      "testPath": "css/css-position/sticky",
+      "testFiles": "**"
     }
   ],
   "clip-path-boxes": [
@@ -2792,12 +2792,6 @@
       "testFiles": "**"
     }
   ],
-  "text-box": [
-    {
-      "testPath": "css/css-inline/text-box-trim",
-      "testFiles": "**"
-    }
-  ],
   "alignment-baseline": [
     {
       "testPath": "css/css-inline/parsing",
@@ -2823,6 +2817,12 @@
   "baseline-source": [
     {
       "testPath": "css/css-inline/baseline-source",
+      "testFiles": "**"
+    }
+  ],
+  "text-box": [
+    {
+      "testPath": "css/css-inline/text-box-trim",
       "testFiles": "**"
     }
   ],
@@ -3098,19 +3098,19 @@
       "testFiles": "**"
     }
   ],
-  "background-clip-text": [
-    {
-      "testPath": "css/css-backgrounds/background-clip",
-      "testFiles": [
-        "clip-text-*"
-      ]
-    }
-  ],
   "align-content-block": [
     {
       "testPath": "css/css-align/blocks",
       "testFiles": [
         "align-content-block-*"
+      ]
+    }
+  ],
+  "background-clip-text": [
+    {
+      "testPath": "css/css-backgrounds/background-clip",
+      "testFiles": [
+        "clip-text-*"
       ]
     }
   ],
@@ -3211,16 +3211,6 @@
       ]
     },
     {
-      "testPath": "html/semantics/forms/the-input-element",
-      "testFiles": [
-        "input-checkvalidity.html",
-        "input-setcustomvalidity.html",
-        "input-validationmessage.html",
-        "input-validity.html",
-        "input-willvalidate.html"
-      ]
-    },
-    {
       "testPath": "html/semantics/forms/the-form-element",
       "testFiles": [
         "form-checkvalidity.html"
@@ -3257,6 +3247,16 @@
       "testFiles": [
         "object-setcustomvalidity.html"
       ]
+    },
+    {
+      "testPath": "html/semantics/forms/the-input-element",
+      "testFiles": [
+        "input-checkvalidity.html",
+        "input-setcustomvalidity.html",
+        "input-validationmessage.html",
+        "input-validity.html",
+        "input-willvalidate.html"
+      ]
     }
   ],
   "show-picker-select": [
@@ -3277,14 +3277,6 @@
     {
       "testPath": "html/semantics/forms/the-meter-element",
       "testFiles": "**"
-    }
-  ],
-  "show-picker-input": [
-    {
-      "testPath": "html/semantics/forms/the-input-element",
-      "testFiles": [
-        "show-picker-*"
-      ]
     }
   ],
   "datalist": [
@@ -3325,6 +3317,14 @@
       "testPath": "html/semantics/embedded-content/media-elements",
       "testFiles": [
         "preserves-pitch.html"
+      ]
+    }
+  ],
+  "show-picker-input": [
+    {
+      "testPath": "html/semantics/forms/the-input-element",
+      "testFiles": [
+        "show-picker-*"
       ]
     }
   ],
