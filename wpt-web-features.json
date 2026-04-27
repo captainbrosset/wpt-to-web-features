@@ -252,17 +252,17 @@
       "testFiles": "**"
     },
     {
-      "testPath": "workers/semantics/multiple-workers",
-      "testFiles": [
-        "004.html",
-        "008.html"
-      ]
-    },
-    {
       "testPath": "workers/semantics/interface-objects",
       "testFiles": [
         "003.any.js",
         "004.any.js"
+      ]
+    },
+    {
+      "testPath": "workers/semantics/multiple-workers",
+      "testFiles": [
+        "004.html",
+        "008.html"
       ]
     },
     {
@@ -338,18 +338,18 @@
       "testFiles": "**"
     },
     {
+      "testPath": "workers/semantics/interface-objects",
+      "testFiles": [
+        "001.worker.js",
+        "002.worker.js"
+      ]
+    },
+    {
       "testPath": "workers/semantics/multiple-workers",
       "testFiles": [
         "*",
         "!004.html",
         "!008.html"
-      ]
-    },
-    {
-      "testPath": "workers/semantics/interface-objects",
-      "testFiles": [
-        "001.worker.js",
-        "002.worker.js"
       ]
     },
     {
@@ -723,6 +723,24 @@
       ]
     }
   ],
+  "webhid": [
+    {
+      "testPath": "webhid",
+      "testFiles": "**"
+    }
+  ],
+  "webgpu": [
+    {
+      "testPath": "webgpu",
+      "testFiles": "**"
+    }
+  ],
+  "webgl": [
+    {
+      "testPath": "webgl",
+      "testFiles": "**"
+    }
+  ],
   "webrtc": [
     {
       "testPath": "webrtc",
@@ -750,24 +768,6 @@
       "testFiles": [
         "RTCSctpTransport-*"
       ]
-    }
-  ],
-  "webhid": [
-    {
-      "testPath": "webhid",
-      "testFiles": "**"
-    }
-  ],
-  "webgpu": [
-    {
-      "testPath": "webgpu",
-      "testFiles": "**"
-    }
-  ],
-  "webgl": [
-    {
-      "testPath": "webgl",
-      "testFiles": "**"
     }
   ],
   "webauthn": [
@@ -798,6 +798,12 @@
       ]
     }
   ],
+  "webcodecs": [
+    {
+      "testPath": "webcodecs",
+      "testFiles": "**"
+    }
+  ],
   "share": [
     {
       "testPath": "web-share",
@@ -807,12 +813,6 @@
   "web-otp": [
     {
       "testPath": "web-otp",
-      "testFiles": "**"
-    }
-  ],
-  "webcodecs": [
-    {
-      "testPath": "webcodecs",
       "testFiles": "**"
     }
   ],
@@ -884,12 +884,6 @@
       "testFiles": "**"
     }
   ],
-  "urlpattern": [
-    {
-      "testPath": "urlpattern",
-      "testFiles": "**"
-    }
-  ],
   "performance": [
     {
       "testPath": "user-timing",
@@ -901,6 +895,12 @@
     },
     {
       "testPath": "hr-time",
+      "testFiles": "**"
+    }
+  ],
+  "urlpattern": [
+    {
+      "testPath": "urlpattern",
       "testFiles": "**"
     }
   ],
@@ -1053,6 +1053,23 @@
       ]
     }
   ],
+  "shared-storage": [
+    {
+      "testPath": "shared-storage",
+      "testFiles": [
+        "*",
+        "!web-locks*"
+      ]
+    }
+  ],
+  "shared-storage-locks": [
+    {
+      "testPath": "shared-storage",
+      "testFiles": [
+        "web-locks*"
+      ]
+    }
+  ],
   "service-workers": [
     {
       "testPath": "service-workers",
@@ -1073,11 +1090,11 @@
       ]
     },
     {
-      "testPath": "service-workers/service-worker/navigation-preload",
+      "testPath": "service-workers/service-worker/tentative",
       "testFiles": "**"
     },
     {
-      "testPath": "service-workers/service-worker/multi-globals",
+      "testPath": "service-workers/service-worker/navigation-preload",
       "testFiles": "**"
     },
     {
@@ -1088,7 +1105,7 @@
       ]
     },
     {
-      "testPath": "service-workers/service-worker/tentative",
+      "testPath": "service-workers/service-worker/multi-globals",
       "testFiles": "**"
     }
   ],
@@ -1098,32 +1115,9 @@
       "testFiles": "**"
     }
   ],
-  "shared-storage": [
-    {
-      "testPath": "shared-storage",
-      "testFiles": [
-        "*",
-        "!web-locks*"
-      ]
-    }
-  ],
-  "shared-storage-locks": [
-    {
-      "testPath": "shared-storage",
-      "testFiles": [
-        "web-locks*"
-      ]
-    }
-  ],
   "serial": [
     {
       "testPath": "serial",
-      "testFiles": "**"
-    }
-  ],
-  "secure-payment-confirmation": [
-    {
-      "testPath": "secure-payment-confirmation",
       "testFiles": "**"
     }
   ],
@@ -1235,6 +1229,12 @@
       ]
     }
   ],
+  "secure-payment-confirmation": [
+    {
+      "testPath": "secure-payment-confirmation",
+      "testFiles": "**"
+    }
+  ],
   "is-secure-context": [
     {
       "testPath": "secure-contexts",
@@ -1256,31 +1256,6 @@
   "selection-api": [
     {
       "testPath": "selection",
-      "testFiles": "**"
-    }
-  ],
-  "screen-orientation": [
-    {
-      "testPath": "screen-orientation",
-      "testFiles": [
-        "*",
-        "!active-lock.html",
-        "!lock*"
-      ]
-    }
-  ],
-  "screen-orientation-lock": [
-    {
-      "testPath": "screen-orientation",
-      "testFiles": [
-        "active-lock.html",
-        "lock*"
-      ]
-    }
-  ],
-  "screen-wake-lock": [
-    {
-      "testPath": "screen-wake-lock",
       "testFiles": "**"
     }
   ],
@@ -1310,15 +1285,40 @@
       ]
     }
   ],
-  "screen-capture": [
+  "screen-wake-lock": [
     {
-      "testPath": "screen-capture",
+      "testPath": "screen-wake-lock",
       "testFiles": "**"
+    }
+  ],
+  "screen-orientation": [
+    {
+      "testPath": "screen-orientation",
+      "testFiles": [
+        "*",
+        "!active-lock.html",
+        "!lock*"
+      ]
+    }
+  ],
+  "screen-orientation-lock": [
+    {
+      "testPath": "screen-orientation",
+      "testFiles": [
+        "active-lock.html",
+        "lock*"
+      ]
     }
   ],
   "savedata": [
     {
       "testPath": "savedata",
+      "testFiles": "**"
+    }
+  ],
+  "screen-capture": [
+    {
+      "testPath": "screen-capture",
       "testFiles": "**"
     }
   ],
@@ -1334,39 +1334,21 @@
       "testFiles": "**"
     }
   ],
-  "resize-observer": [
-    {
-      "testPath": "resize-observer",
-      "testFiles": "**"
-    }
-  ],
   "requestidlecallback": [
     {
       "testPath": "requestidlecallback",
       "testFiles": "**"
     }
   ],
+  "resize-observer": [
+    {
+      "testPath": "resize-observer",
+      "testFiles": "**"
+    }
+  ],
   "remote-playback": [
     {
       "testPath": "remote-playback",
-      "testFiles": "**"
-    }
-  ],
-  "reporting": [
-    {
-      "testPath": "reporting",
-      "testFiles": "**"
-    }
-  ],
-  "referrer-policy": [
-    {
-      "testPath": "referrer-policy",
-      "testFiles": "**"
-    }
-  ],
-  "push": [
-    {
-      "testPath": "push-api",
       "testFiles": "**"
     }
   ],
@@ -1401,6 +1383,24 @@
       ]
     }
   ],
+  "reporting": [
+    {
+      "testPath": "reporting",
+      "testFiles": "**"
+    }
+  ],
+  "referrer-policy": [
+    {
+      "testPath": "referrer-policy",
+      "testFiles": "**"
+    }
+  ],
+  "push": [
+    {
+      "testPath": "push-api",
+      "testFiles": "**"
+    }
+  ],
   "private-click-measurement": [
     {
       "testPath": "private-click-measurement",
@@ -1429,6 +1429,12 @@
   "pointer-lock": [
     {
       "testPath": "pointerlock",
+      "testFiles": "**"
+    }
+  ],
+  "png": [
+    {
+      "testPath": "png",
       "testFiles": "**"
     }
   ],
@@ -1481,12 +1487,6 @@
         "subresource-integrity*",
         "supported-as-values.html"
       ]
-    }
-  ],
-  "png": [
-    {
-      "testPath": "png",
-      "testFiles": "**"
     }
   ],
   "picture-in-picture": [
@@ -1563,21 +1563,15 @@
       ]
     }
   ],
-  "permissions": [
+  "periodic-background-sync": [
     {
-      "testPath": "permissions",
+      "testPath": "periodic-background-sync",
       "testFiles": "**"
     }
   ],
   "permissions-policy": [
     {
       "testPath": "permissions-policy",
-      "testFiles": "**"
-    }
-  ],
-  "periodic-background-sync": [
-    {
-      "testPath": "periodic-background-sync",
       "testFiles": "**"
     }
   ],
@@ -1625,6 +1619,12 @@
   "orientation-sensor": [
     {
       "testPath": "orientation-sensor",
+      "testFiles": "**"
+    }
+  ],
+  "permissions": [
+    {
+      "testPath": "permissions",
       "testFiles": "**"
     }
   ],
@@ -1781,15 +1781,15 @@
       ]
     }
   ],
-  "mathml": [
-    {
-      "testPath": "mathml",
-      "testFiles": "**"
-    }
-  ],
   "measure-memory": [
     {
       "testPath": "measure-memory",
+      "testFiles": "**"
+    }
+  ],
+  "mathml": [
+    {
+      "testPath": "mathml",
       "testFiles": "**"
     }
   ],
@@ -1817,15 +1817,15 @@
       "testFiles": "**"
     }
   ],
-  "keyboard-map": [
-    {
-      "testPath": "keyboard-map",
-      "testFiles": "**"
-    }
-  ],
   "layout-instability": [
     {
       "testPath": "layout-instability",
+      "testFiles": "**"
+    }
+  ],
+  "keyboard-map": [
+    {
+      "testPath": "keyboard-map",
       "testFiles": "**"
     }
   ],
@@ -1835,15 +1835,15 @@
       "testFiles": "**"
     }
   ],
-  "is-input-pending": [
-    {
-      "testPath": "is-input-pending",
-      "testFiles": "**"
-    }
-  ],
   "profiler": [
     {
       "testPath": "js-self-profiling",
+      "testFiles": "**"
+    }
+  ],
+  "is-input-pending": [
+    {
+      "testPath": "is-input-pending",
       "testFiles": "**"
     }
   ],
@@ -1949,15 +1949,15 @@
       "testFiles": "**"
     }
   ],
-  "imagebitmaprenderingcontext": [
-    {
-      "testPath": "imagebitmap-renderingcontext",
-      "testFiles": "**"
-    }
-  ],
   "idle-detection": [
     {
       "testPath": "idle-detection",
+      "testFiles": "**"
+    }
+  ],
+  "imagebitmaprenderingcontext": [
+    {
+      "testPath": "imagebitmap-renderingcontext",
       "testFiles": "**"
     }
   ],
@@ -2194,18 +2194,18 @@
       "testFiles": "**"
     }
   ],
+  "event-timing": [
+    {
+      "testPath": "event-timing",
+      "testFiles": "**"
+    }
+  ],
   "input-file-webkitdirectory": [
     {
       "testPath": "entries-api",
       "testFiles": [
         "file-webkitRelativePath-manual.html"
       ]
-    }
-  ],
-  "event-timing": [
-    {
-      "testPath": "event-timing",
-      "testFiles": "**"
     }
   ],
   "fencedframe": [
@@ -2232,12 +2232,6 @@
       "testFiles": "**"
     }
   ],
-  "xpath": [
-    {
-      "testPath": "domxpath",
-      "testFiles": "**"
-    }
-  ],
   "domparser": [
     {
       "testPath": "domparsing",
@@ -2256,6 +2250,12 @@
         "XMLSerializer-serializeToString.html",
         "xml-serialization.xhtml"
       ]
+    }
+  ],
+  "xpath": [
+    {
+      "testPath": "domxpath",
+      "testFiles": "**"
     }
   ],
   "document-picture-in-picture": [
@@ -2307,6 +2307,144 @@
     {
       "testPath": "delegated-ink",
       "testFiles": "**"
+    }
+  ],
+  "credential-management": [
+    {
+      "testPath": "credential-management",
+      "testFiles": [
+        "*",
+        "!federatedcredential-framed-get.sub.https.html",
+        "!passwordcredential-framed-get.sub.https.html"
+      ]
+    }
+  ],
+  "federated-credentials": [
+    {
+      "testPath": "credential-management",
+      "testFiles": [
+        "federatedcredential-framed-get.sub.https.html"
+      ]
+    }
+  ],
+  "password-credentials": [
+    {
+      "testPath": "credential-management",
+      "testFiles": [
+        "passwordcredential-framed-get.sub.https.html"
+      ]
+    }
+  ],
+  "cors": [
+    {
+      "testPath": "cors",
+      "testFiles": "**"
+    }
+  ],
+  "cookie-enabled": [
+    {
+      "testPath": "cookies",
+      "testFiles": [
+        "cookie-enabled-noncookie-frame.html"
+      ]
+    },
+    {
+      "testPath": "html/webappapis/system-state-and-capabilities/the-navigator-object",
+      "testFiles": [
+        "navigatorcookies-cookieenabled-*"
+      ]
+    }
+  ],
+  "cookies": [
+    {
+      "testPath": "cookies",
+      "testFiles": [
+        "*",
+        "!cookie-enabled-noncookie-frame.html"
+      ]
+    },
+    {
+      "testPath": "cookies/value",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "cookies/third-party-cookies",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "cookies/size",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "cookies/secure",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "cookies/schemeful-same-site",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "cookies/samesite",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "cookies/prefix",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "cookies/path",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "cookies/name",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "cookies/domain",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "cookies/attributes",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/dom/documents/resource-metadata-management",
+      "testFiles": [
+        "document-cookie.html"
+      ]
+    }
+  ],
+  "contenteditable-plaintextonly": [
+    {
+      "testPath": "contenteditable",
+      "testFiles": [
+        "plaintext-only.html"
+      ]
+    }
+  ],
+  "cookie-store": [
+    {
+      "testPath": "cookiestore",
+      "testFiles": "**"
+    }
+  ],
+  "content-index": [
+    {
+      "testPath": "content-index",
+      "testFiles": "**"
+    }
+  ],
+  "csp": [
+    {
+      "testPath": "content-security-policy",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/browsers/sandboxing",
+      "testFiles": [
+        "sandbox-inherited-from-required-csp.html",
+        "window-open-blank-from-different-initiator.html"
+      ]
     }
   ],
   "autonomous-custom-elements": [
@@ -2427,144 +2565,6 @@
       ]
     }
   ],
-  "credential-management": [
-    {
-      "testPath": "credential-management",
-      "testFiles": [
-        "*",
-        "!federatedcredential-framed-get.sub.https.html",
-        "!passwordcredential-framed-get.sub.https.html"
-      ]
-    }
-  ],
-  "federated-credentials": [
-    {
-      "testPath": "credential-management",
-      "testFiles": [
-        "federatedcredential-framed-get.sub.https.html"
-      ]
-    }
-  ],
-  "password-credentials": [
-    {
-      "testPath": "credential-management",
-      "testFiles": [
-        "passwordcredential-framed-get.sub.https.html"
-      ]
-    }
-  ],
-  "cors": [
-    {
-      "testPath": "cors",
-      "testFiles": "**"
-    }
-  ],
-  "cookie-store": [
-    {
-      "testPath": "cookiestore",
-      "testFiles": "**"
-    }
-  ],
-  "contenteditable-plaintextonly": [
-    {
-      "testPath": "contenteditable",
-      "testFiles": [
-        "plaintext-only.html"
-      ]
-    }
-  ],
-  "cookie-enabled": [
-    {
-      "testPath": "cookies",
-      "testFiles": [
-        "cookie-enabled-noncookie-frame.html"
-      ]
-    },
-    {
-      "testPath": "html/webappapis/system-state-and-capabilities/the-navigator-object",
-      "testFiles": [
-        "navigatorcookies-cookieenabled-*"
-      ]
-    }
-  ],
-  "cookies": [
-    {
-      "testPath": "cookies",
-      "testFiles": [
-        "*",
-        "!cookie-enabled-noncookie-frame.html"
-      ]
-    },
-    {
-      "testPath": "cookies/value",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "cookies/third-party-cookies",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "cookies/size",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "cookies/secure",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "cookies/schemeful-same-site",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "cookies/samesite",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "cookies/path",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "cookies/prefix",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "cookies/name",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "cookies/domain",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "cookies/attributes",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/dom/documents/resource-metadata-management",
-      "testFiles": [
-        "document-cookie.html"
-      ]
-    }
-  ],
-  "content-index": [
-    {
-      "testPath": "content-index",
-      "testFiles": "**"
-    }
-  ],
-  "csp": [
-    {
-      "testPath": "content-security-policy",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/browsers/sandboxing",
-      "testFiles": [
-        "sandbox-inherited-from-required-csp.html",
-        "window-open-blank-from-different-initiator.html"
-      ]
-    }
-  ],
   "contact-picker": [
     {
       "testPath": "contacts",
@@ -2587,6 +2587,25 @@
     {
       "testPath": "compression",
       "testFiles": "**"
+    }
+  ],
+  "closewatcher": [
+    {
+      "testPath": "close-watcher",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/semantics/popovers",
+      "testFiles": [
+        "popover-close-request.html"
+      ]
+    },
+    {
+      "testPath": "html/semantics/interactive-elements/the-dialog-element",
+      "testFiles": [
+        "dialog-cancel-events.html",
+        "dialog-canceling.html"
+      ]
     }
   ],
   "text-stroke-fill": [
@@ -2642,25 +2661,6 @@
         "gradient-to-transparent.html",
         "legacy-color-gradient.html",
         "linear-gradient-relative-currentcolor-stop.html"
-      ]
-    }
-  ],
-  "closewatcher": [
-    {
-      "testPath": "close-watcher",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/semantics/popovers",
-      "testFiles": [
-        "popover-close-request.html"
-      ]
-    },
-    {
-      "testPath": "html/semantics/interactive-elements/the-dialog-element",
-      "testFiles": [
-        "dialog-cancel-events.html",
-        "dialog-canceling.html"
       ]
     }
   ],
@@ -2750,15 +2750,15 @@
       "testFiles": "**"
     }
   ],
-  "badging": [
-    {
-      "testPath": "badging",
-      "testFiles": "**"
-    }
-  ],
   "background-sync": [
     {
       "testPath": "background-sync",
+      "testFiles": "**"
+    }
+  ],
+  "badging": [
+    {
+      "testPath": "badging",
       "testFiles": "**"
     }
   ],
@@ -2810,6 +2810,12 @@
       "testFiles": "**"
     }
   ],
+  "xslt": [
+    {
+      "testPath": "xml/xslt",
+      "testFiles": "**"
+    }
+  ],
   "indexeddb": [
     {
       "testPath": "IndexedDB",
@@ -2831,12 +2837,6 @@
         "idbindex_getAllRecords.any.js",
         "idbobjectstore_getAllRecords.any.js"
       ]
-    }
-  ],
-  "xslt": [
-    {
-      "testPath": "xml/xslt",
-      "testFiles": "**"
     }
   ],
   "js-modules-workers": [
@@ -3234,6 +3234,16 @@
       ]
     },
     {
+      "testPath": "svg/coordinate-systems",
+      "testFiles": [
+        "abspos.html",
+        "out-of-flow-svg-root.html",
+        "outer-svg-intrinsic-size-001.html",
+        "outer-svg-intrinsic-size-002.html",
+        "viewBox-*"
+      ]
+    },
+    {
       "testPath": "svg/import",
       "testFiles": [
         "*",
@@ -3242,16 +3252,6 @@
         "!painting-stroke-08-t-manual.svg",
         "!animate-interact-pevents-*",
         "!interact-pevents-*"
-      ]
-    },
-    {
-      "testPath": "svg/coordinate-systems",
-      "testFiles": [
-        "abspos.html",
-        "out-of-flow-svg-root.html",
-        "outer-svg-intrinsic-size-001.html",
-        "outer-svg-intrinsic-size-002.html",
-        "viewBox-*"
       ]
     },
     {
@@ -3392,18 +3392,18 @@
       "testFiles": "**"
     }
   ],
-  "transferable-streams": [
-    {
-      "testPath": "streams/transferable",
-      "testFiles": "**"
-    }
-  ],
   "transformstream-transformer-cancel": [
     {
       "testPath": "streams/transform-streams",
       "testFiles": [
         "cancel.any.js"
       ]
+    }
+  ],
+  "transferable-streams": [
+    {
+      "testPath": "streams/transferable",
+      "testFiles": "**"
     }
   ],
   "async-iterable-streams": [
@@ -3566,6 +3566,126 @@
       ]
     }
   ],
+  "edit-context": [
+    {
+      "testPath": "editing/edit-context",
+      "testFiles": "**"
+    }
+  ],
+  "execcommand": [
+    {
+      "testPath": "editing/other",
+      "testFiles": [
+        "exec-command-*",
+        "inserthtml-do-not-preserve-inline-styles.html",
+        "legacy-edit-command.html",
+        "non-html-document.html",
+        "restoration.html"
+      ]
+    },
+    {
+      "testPath": "editing/crashtests",
+      "testFiles": [
+        "execCommand-*.html",
+        "queryCommand*.html"
+      ]
+    }
+  ],
+  "observable": [
+    {
+      "testPath": "dom/observable",
+      "testFiles": "**"
+    }
+  ],
+  "aborting": [
+    {
+      "testPath": "dom/abort",
+      "testFiles": "**"
+    }
+  ],
+  "abortsignal-any": [
+    {
+      "testPath": "dom/abort",
+      "testFiles": [
+        "abort-signal-any.any.js"
+      ]
+    }
+  ],
+  "dataset": [
+    {
+      "testPath": "dom/collections",
+      "testFiles": [
+        "domstringmap-supported-property-names.html"
+      ]
+    },
+    {
+      "testPath": "html/dom/elements/global-attributes",
+      "testFiles": [
+        "dataset-*",
+        "custom-attrs.html",
+        "data_unicode_attr.html"
+      ]
+    }
+  ],
+  "change-event": [
+    {
+      "testPath": "dom/events",
+      "testFiles": [
+        "legacy-pre-activation-behavior.window.js"
+      ]
+    },
+    {
+      "testPath": "html/semantics/forms",
+      "testFiles": [
+        "input-change-event-properties.html"
+      ]
+    },
+    {
+      "testPath": "html/semantics/forms/the-textarea-element",
+      "testFiles": [
+        "change-to-empty-value.html"
+      ]
+    },
+    {
+      "testPath": "html/semantics/forms/the-input-element",
+      "testFiles": [
+        "change-to-empty-value.html"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "testPath": "dom/events",
+      "testFiles": [
+        "*",
+        "!legacy-pre-activation-behavior.window.js",
+        "!no-focus-events-at-clicking-editable-content-in-link.html",
+        "!Event-dispatch-click.html",
+        "!Event-dispatch-click.tentative.html",
+        "!mouse-event-retarget.html"
+      ]
+    },
+    {
+      "testPath": "dom/nodes",
+      "testFiles": [
+        "Document-createEvent.https.html"
+      ]
+    }
+  ],
+  "mutationobserver": [
+    {
+      "testPath": "dom/nodes",
+      "testFiles": [
+        "MutationObserver-*"
+      ]
+    },
+    {
+      "testPath": "css/cssom",
+      "testFiles": [
+        "MutationObserver-style.html"
+      ]
+    }
+  ],
   "fetch": [
     {
       "testPath": "fetch/stale-while-revalidate",
@@ -3619,11 +3739,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "fetch/corb",
+      "testPath": "fetch/content-type",
       "testFiles": "**"
     },
     {
-      "testPath": "fetch/content-type",
+      "testPath": "fetch/corb",
       "testFiles": "**"
     },
     {
@@ -3755,350 +3875,10 @@
       "testFiles": "**"
     }
   ],
-  "execcommand": [
+  "motion-path": [
     {
-      "testPath": "editing/other",
-      "testFiles": [
-        "exec-command-*",
-        "inserthtml-do-not-preserve-inline-styles.html",
-        "legacy-edit-command.html",
-        "non-html-document.html",
-        "restoration.html"
-      ]
-    },
-    {
-      "testPath": "editing/crashtests",
-      "testFiles": [
-        "execCommand-*.html",
-        "queryCommand*.html"
-      ]
-    }
-  ],
-  "edit-context": [
-    {
-      "testPath": "editing/edit-context",
+      "testPath": "css/motion",
       "testFiles": "**"
-    }
-  ],
-  "observable": [
-    {
-      "testPath": "dom/observable",
-      "testFiles": "**"
-    }
-  ],
-  "dataset": [
-    {
-      "testPath": "dom/collections",
-      "testFiles": [
-        "domstringmap-supported-property-names.html"
-      ]
-    },
-    {
-      "testPath": "html/dom/elements/global-attributes",
-      "testFiles": [
-        "dataset-*",
-        "custom-attrs.html",
-        "data_unicode_attr.html"
-      ]
-    }
-  ],
-  "aborting": [
-    {
-      "testPath": "dom/abort",
-      "testFiles": "**"
-    }
-  ],
-  "abortsignal-any": [
-    {
-      "testPath": "dom/abort",
-      "testFiles": [
-        "abort-signal-any.any.js"
-      ]
-    }
-  ],
-  "change-event": [
-    {
-      "testPath": "dom/events",
-      "testFiles": [
-        "legacy-pre-activation-behavior.window.js"
-      ]
-    },
-    {
-      "testPath": "html/semantics/forms",
-      "testFiles": [
-        "input-change-event-properties.html"
-      ]
-    },
-    {
-      "testPath": "html/semantics/forms/the-input-element",
-      "testFiles": [
-        "change-to-empty-value.html"
-      ]
-    },
-    {
-      "testPath": "html/semantics/forms/the-textarea-element",
-      "testFiles": [
-        "change-to-empty-value.html"
-      ]
-    }
-  ],
-  "events": [
-    {
-      "testPath": "dom/events",
-      "testFiles": [
-        "*",
-        "!legacy-pre-activation-behavior.window.js",
-        "!no-focus-events-at-clicking-editable-content-in-link.html",
-        "!Event-dispatch-click.html",
-        "!Event-dispatch-click.tentative.html",
-        "!mouse-event-retarget.html"
-      ]
-    },
-    {
-      "testPath": "dom/nodes",
-      "testFiles": [
-        "Document-createEvent.https.html"
-      ]
-    }
-  ],
-  "mutationobserver": [
-    {
-      "testPath": "dom/nodes",
-      "testFiles": [
-        "MutationObserver-*"
-      ]
-    },
-    {
-      "testPath": "css/cssom",
-      "testFiles": [
-        "MutationObserver-style.html"
-      ]
-    }
-  ],
-  "state": [
-    {
-      "testPath": "custom-elements/state",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/selectors/parsing",
-      "testFiles": [
-        "parse-state.html"
-      ]
-    },
-    {
-      "testPath": "css/selectors/invalidation",
-      "testFiles": [
-        "state-in-has.html"
-      ]
-    }
-  ],
-  "form-associated-custom-elements": [
-    {
-      "testPath": "custom-elements/form-associated",
-      "testFiles": "**"
-    }
-  ],
-  "dom-geometry": [
-    {
-      "testPath": "css/geometry",
-      "testFiles": "**"
-    }
-  ],
-  "custom-media-queries": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "at-custom-media-*"
-      ]
-    }
-  ],
-  "prefers-color-scheme": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "prefers-color-scheme.html",
-        "prefers-color-scheme-*"
-      ]
-    }
-  ],
-  "prefers-contrast": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "prefers-contrast.html"
-      ]
-    }
-  ],
-  "prefers-reduced-transparency": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "prefers-reduced-transparency.html"
-      ]
-    }
-  ],
-  "overflow": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "overflow-media-features.html"
-      ]
-    }
-  ],
-  "dynamic-range": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "dynamic-range.html"
-      ]
-    }
-  ],
-  "display-mode": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "display-mode.html",
-        "display-mode.tentative.html"
-      ]
-    }
-  ],
-  "update": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "update-media-feature.html"
-      ]
-    }
-  ],
-  "scripting": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "scripting.html",
-        "scripting-*"
-      ]
-    }
-  ],
-  "color-gamut": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "mq-gamut-*"
-      ]
-    }
-  ],
-  "matchmedia": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "match-media-parsing.html",
-        "media-query-matches-in-iframe.html"
-      ]
-    },
-    {
-      "testPath": "css/cssom",
-      "testFiles": [
-        "mediaquery-sort-dedup.html"
-      ]
-    },
-    {
-      "testPath": "css/cssom-view",
-      "testFiles": [
-        "matchMedia*",
-        "MediaQueryList*"
-      ]
-    }
-  ],
-  "prefers-reduced-data": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "prefers-reduced-data.html",
-        "preferences-reducedData.tentative.https.html"
-      ]
-    }
-  ],
-  "prefers-reduced-motion": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "prefers-reduced-motion.html",
-        "preferences-reducedMotion.tentative.https.html"
-      ]
-    }
-  ],
-  "inverted-colors": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "inverted-colors.html"
-      ]
-    }
-  ],
-  "media-query-range-syntax": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "mq-range-*",
-        "mq-negative-range-*"
-      ]
-    }
-  ],
-  "device-queries": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "device-aspect-ratio-*"
-      ]
-    }
-  ],
-  "media-queries": [
-    {
-      "testPath": "css/mediaqueries",
-      "testFiles": [
-        "media-queries-*.xht",
-        "min-width-*.xht",
-        "min-width-*.html",
-        "aspect-ratio-*.html",
-        "mq-calc-*.html",
-        "relative-units-*.html",
-        "mq-deprecated-*.html",
-        "mq-invalid-media-type-*.html",
-        "match-media-parsing.html",
-        "negation-*.html",
-        "mq-case-insensitive-*.html",
-        "media-query-matches-in-iframe.html",
-        "mq-dynamic-empty-children.html",
-        "duplicate-media-stylesheet-crash.html",
-        "viewport-script-dynamic.html"
-      ]
-    }
-  ],
-  "paint-order": [
-    {
-      "testPath": "css/fill-stroke",
-      "testFiles": [
-        "paint-order-*"
-      ]
-    },
-    {
-      "testPath": "svg/painting/scripted",
-      "testFiles": [
-        "paint-order-*"
-      ]
-    },
-    {
-      "testPath": "svg/painting/parsing",
-      "testFiles": [
-        "paint-order-*"
-      ]
-    },
-    {
-      "testPath": "svg/painting/reftests",
-      "testFiles": [
-        "paint-order-*"
-      ]
     }
   ],
   "selectors": [
@@ -4179,6 +3959,10 @@
       ]
     },
     {
+      "testPath": "css/selectors/attribute-selectors",
+      "testFiles": "**"
+    },
+    {
       "testPath": "css/selectors/invalidation",
       "testFiles": [
         "attribute.html",
@@ -4211,10 +3995,6 @@
         "!css3-modsel-14[0-3]*",
         "!css3-modsel-172b*"
       ]
-    },
-    {
-      "testPath": "css/selectors/attribute-selectors",
-      "testFiles": "**"
     }
   ],
   "dir-pseudo": [
@@ -4800,6 +4580,375 @@
       ]
     }
   ],
+  "dom-geometry": [
+    {
+      "testPath": "css/geometry",
+      "testFiles": "**"
+    }
+  ],
+  "custom-media-queries": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "at-custom-media-*"
+      ]
+    }
+  ],
+  "prefers-color-scheme": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "prefers-color-scheme.html",
+        "prefers-color-scheme-*"
+      ]
+    }
+  ],
+  "prefers-contrast": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "prefers-contrast.html"
+      ]
+    }
+  ],
+  "prefers-reduced-transparency": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "prefers-reduced-transparency.html"
+      ]
+    }
+  ],
+  "overflow": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "overflow-media-features.html"
+      ]
+    }
+  ],
+  "dynamic-range": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "dynamic-range.html"
+      ]
+    }
+  ],
+  "display-mode": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "display-mode.html",
+        "display-mode.tentative.html"
+      ]
+    }
+  ],
+  "update": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "update-media-feature.html"
+      ]
+    }
+  ],
+  "scripting": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "scripting.html",
+        "scripting-*"
+      ]
+    }
+  ],
+  "color-gamut": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "mq-gamut-*"
+      ]
+    }
+  ],
+  "matchmedia": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "match-media-parsing.html",
+        "media-query-matches-in-iframe.html"
+      ]
+    },
+    {
+      "testPath": "css/cssom-view",
+      "testFiles": [
+        "matchMedia*",
+        "MediaQueryList*"
+      ]
+    },
+    {
+      "testPath": "css/cssom",
+      "testFiles": [
+        "mediaquery-sort-dedup.html"
+      ]
+    }
+  ],
+  "prefers-reduced-data": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "prefers-reduced-data.html",
+        "preferences-reducedData.tentative.https.html"
+      ]
+    }
+  ],
+  "prefers-reduced-motion": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "prefers-reduced-motion.html",
+        "preferences-reducedMotion.tentative.https.html"
+      ]
+    }
+  ],
+  "inverted-colors": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "inverted-colors.html"
+      ]
+    }
+  ],
+  "media-query-range-syntax": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "mq-range-*",
+        "mq-negative-range-*"
+      ]
+    }
+  ],
+  "device-queries": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "device-aspect-ratio-*"
+      ]
+    }
+  ],
+  "media-queries": [
+    {
+      "testPath": "css/mediaqueries",
+      "testFiles": [
+        "media-queries-*.xht",
+        "min-width-*.xht",
+        "min-width-*.html",
+        "aspect-ratio-*.html",
+        "mq-calc-*.html",
+        "relative-units-*.html",
+        "mq-deprecated-*.html",
+        "mq-invalid-media-type-*.html",
+        "match-media-parsing.html",
+        "negation-*.html",
+        "mq-case-insensitive-*.html",
+        "media-query-matches-in-iframe.html",
+        "mq-dynamic-empty-children.html",
+        "duplicate-media-stylesheet-crash.html",
+        "viewport-script-dynamic.html"
+      ]
+    }
+  ],
+  "paint-order": [
+    {
+      "testPath": "css/fill-stroke",
+      "testFiles": [
+        "paint-order-*"
+      ]
+    },
+    {
+      "testPath": "svg/painting/scripted",
+      "testFiles": [
+        "paint-order-*"
+      ]
+    },
+    {
+      "testPath": "svg/painting/parsing",
+      "testFiles": [
+        "paint-order-*"
+      ]
+    },
+    {
+      "testPath": "svg/painting/reftests",
+      "testFiles": [
+        "paint-order-*"
+      ]
+    }
+  ],
+  "check-visibility": [
+    {
+      "testPath": "css/cssom-view",
+      "testFiles": [
+        "checkVisibility.html"
+      ]
+    }
+  ],
+  "element-from-point": [
+    {
+      "testPath": "css/cssom-view",
+      "testFiles": [
+        "elementFromPoint*",
+        "elementsFromPoint*",
+        "negativeMargins.html"
+      ]
+    }
+  ],
+  "getboxquads": [
+    {
+      "testPath": "css/cssom-view",
+      "testFiles": [
+        "cssom-getBoxQuads-*"
+      ]
+    }
+  ],
+  "screen": [
+    {
+      "testPath": "css/cssom-view",
+      "testFiles": [
+        "Screen-pixelDepth-Screen-colorDepth001.html",
+        "cssom-view-window-screen-interface.html",
+        "window-screen*"
+      ]
+    }
+  ],
+  "scroll-elements": [
+    {
+      "testPath": "css/cssom-view",
+      "testFiles": [
+        "dom-element-scroll*",
+        "elementScroll*",
+        "scroll-no-layout-box.html",
+        "scroll-offsets-fractional-zoom.html",
+        "scroll-zoom.html",
+        "scrollLeftTop.html",
+        "scrollLeft-of-scroller-with-wider-scrollbar.html",
+        "scrollTop-display-change.html",
+        "scrollWidthHeight*",
+        "scrolling-no-browsing-context.html",
+        "scrolling-quirks-vs-nonquirks.html",
+        "table-scroll-props.html",
+        "window-scrollBy-display-change.html"
+      ]
+    },
+    {
+      "testPath": "dom/events/scrolling",
+      "testFiles": [
+        "scroll-*"
+      ]
+    }
+  ],
+  "scroll-into-view": [
+    {
+      "testPath": "css/cssom-view",
+      "testFiles": [
+        "scrollIntoView-*",
+        "scrollintoview.html",
+        "!scrollIntoView-container.html"
+      ]
+    }
+  ],
+  "scroll-into-view-container": [
+    {
+      "testPath": "css/cssom-view",
+      "testFiles": [
+        "scrollIntoView-container.html"
+      ]
+    }
+  ],
+  "scroll-behavior": [
+    {
+      "testPath": "css/cssom-view",
+      "testFiles": [
+        "scroll-behavior-*"
+      ]
+    },
+    {
+      "testPath": "css/cssom-view/parsing",
+      "testFiles": [
+        "scroll-behavior-*"
+      ]
+    }
+  ],
+  "backdrop-filter": [
+    {
+      "testPath": "css/filter-effects",
+      "testFiles": [
+        "backdrop-filter-*",
+        "backdrop-filters-*",
+        "css-backdrop-filters-*",
+        "repaint-added-backdrop-filter.html"
+      ]
+    },
+    {
+      "testPath": "css/filter-effects/animation",
+      "testFiles": [
+        "backdrop-filter-*"
+      ]
+    },
+    {
+      "testPath": "css/filter-effects/parsing",
+      "testFiles": [
+        "backdrop-filter-*"
+      ]
+    }
+  ],
+  "filter": [
+    {
+      "testPath": "css/filter-effects",
+      "testFiles": [
+        "background-image-blur-repaint.html",
+        "blur-*",
+        "clip-under-filter-*",
+        "css-reference-large-svg-*",
+        "css-filters-*",
+        "drop-shadow-*",
+        "dynamic-filter-changes-001.html",
+        "empty-element-with-filter*",
+        "filter-*",
+        "!filter-chained-url-url-001.html",
+        "!filter-effect-remove-unattached.html",
+        "!filter-external-*",
+        "!filter-region-*",
+        "!filter-subregion-*",
+        "!filter-svg-*",
+        "!filter-turbulence-*",
+        "filtered-*",
+        "filters-*",
+        "fixed-pos-filter-*",
+        "hidpi-invert-filter-*",
+        "inheritance.html",
+        "remove-filter-repaint.html",
+        "root-element-with-opacity-filter-001.html",
+        "visibility-hidden-element-with-filter-*.html",
+        "will-change-blur-filter-under-clip.html"
+      ]
+    },
+    {
+      "testPath": "css/filter-effects/animation",
+      "testFiles": [
+        "filter-*"
+      ]
+    },
+    {
+      "testPath": "css/filter-effects/parsing",
+      "testFiles": [
+        "filter-*"
+      ]
+    },
+    {
+      "testPath": "css/css-typed-om/the-stylepropertymap/properties",
+      "testFiles": [
+        "filter.html"
+      ]
+    }
+  ],
   "constructed-stylesheets": [
     {
       "testPath": "css/cssom",
@@ -5084,183 +5233,10 @@
       ]
     }
   ],
-  "check-visibility": [
-    {
-      "testPath": "css/cssom-view",
-      "testFiles": [
-        "checkVisibility.html"
-      ]
-    }
-  ],
-  "element-from-point": [
-    {
-      "testPath": "css/cssom-view",
-      "testFiles": [
-        "elementFromPoint*",
-        "elementsFromPoint*",
-        "negativeMargins.html"
-      ]
-    }
-  ],
-  "getboxquads": [
-    {
-      "testPath": "css/cssom-view",
-      "testFiles": [
-        "cssom-getBoxQuads-*"
-      ]
-    }
-  ],
-  "screen": [
-    {
-      "testPath": "css/cssom-view",
-      "testFiles": [
-        "Screen-pixelDepth-Screen-colorDepth001.html",
-        "cssom-view-window-screen-interface.html",
-        "window-screen*"
-      ]
-    }
-  ],
-  "scroll-elements": [
-    {
-      "testPath": "css/cssom-view",
-      "testFiles": [
-        "dom-element-scroll*",
-        "elementScroll*",
-        "scroll-no-layout-box.html",
-        "scroll-offsets-fractional-zoom.html",
-        "scroll-zoom.html",
-        "scrollLeftTop.html",
-        "scrollLeft-of-scroller-with-wider-scrollbar.html",
-        "scrollTop-display-change.html",
-        "scrollWidthHeight*",
-        "scrolling-no-browsing-context.html",
-        "scrolling-quirks-vs-nonquirks.html",
-        "table-scroll-props.html",
-        "window-scrollBy-display-change.html"
-      ]
-    },
-    {
-      "testPath": "dom/events/scrolling",
-      "testFiles": [
-        "scroll-*"
-      ]
-    }
-  ],
-  "scroll-into-view": [
-    {
-      "testPath": "css/cssom-view",
-      "testFiles": [
-        "scrollIntoView-*",
-        "scrollintoview.html",
-        "!scrollIntoView-container.html"
-      ]
-    }
-  ],
-  "scroll-into-view-container": [
-    {
-      "testPath": "css/cssom-view",
-      "testFiles": [
-        "scrollIntoView-container.html"
-      ]
-    }
-  ],
-  "scroll-behavior": [
-    {
-      "testPath": "css/cssom-view",
-      "testFiles": [
-        "scroll-behavior-*"
-      ]
-    },
-    {
-      "testPath": "css/cssom-view/parsing",
-      "testFiles": [
-        "scroll-behavior-*"
-      ]
-    }
-  ],
   "will-change": [
     {
       "testPath": "css/css-will-change",
       "testFiles": "**"
-    }
-  ],
-  "motion-path": [
-    {
-      "testPath": "css/motion",
-      "testFiles": "**"
-    }
-  ],
-  "backdrop-filter": [
-    {
-      "testPath": "css/filter-effects",
-      "testFiles": [
-        "backdrop-filter-*",
-        "backdrop-filters-*",
-        "css-backdrop-filters-*",
-        "repaint-added-backdrop-filter.html"
-      ]
-    },
-    {
-      "testPath": "css/filter-effects/parsing",
-      "testFiles": [
-        "backdrop-filter-*"
-      ]
-    },
-    {
-      "testPath": "css/filter-effects/animation",
-      "testFiles": [
-        "backdrop-filter-*"
-      ]
-    }
-  ],
-  "filter": [
-    {
-      "testPath": "css/filter-effects",
-      "testFiles": [
-        "background-image-blur-repaint.html",
-        "blur-*",
-        "clip-under-filter-*",
-        "css-reference-large-svg-*",
-        "css-filters-*",
-        "drop-shadow-*",
-        "dynamic-filter-changes-001.html",
-        "empty-element-with-filter*",
-        "filter-*",
-        "!filter-chained-url-url-001.html",
-        "!filter-effect-remove-unattached.html",
-        "!filter-external-*",
-        "!filter-region-*",
-        "!filter-subregion-*",
-        "!filter-svg-*",
-        "!filter-turbulence-*",
-        "filtered-*",
-        "filters-*",
-        "fixed-pos-filter-*",
-        "hidpi-invert-filter-*",
-        "inheritance.html",
-        "remove-filter-repaint.html",
-        "root-element-with-opacity-filter-001.html",
-        "visibility-hidden-element-with-filter-*.html",
-        "will-change-blur-filter-under-clip.html"
-      ]
-    },
-    {
-      "testPath": "css/filter-effects/parsing",
-      "testFiles": [
-        "filter-*"
-      ]
-    },
-    {
-      "testPath": "css/filter-effects/animation",
-      "testFiles": [
-        "filter-*"
-      ]
-    },
-    {
-      "testPath": "css/css-typed-om/the-stylepropertymap/properties",
-      "testFiles": [
-        "filter.html"
-      ]
     }
   ],
   "view-transitions": [
@@ -5333,20 +5309,6 @@
       "testPath": "css/css-masking/clip-path/animations",
       "testFiles": [
         "clip-path-animation-unset.html"
-      ]
-    }
-  ],
-  "css-typed-om": [
-    {
-      "testPath": "css/css-typed-om",
-      "testFiles": "**"
-    }
-  ],
-  "numeric-factory-functions": [
-    {
-      "testPath": "css/css-typed-om",
-      "testFiles": [
-        "factory-*"
       ]
     }
   ],
@@ -5584,16 +5546,16 @@
       ]
     },
     {
-      "testPath": "css/css-borders/tentative/border-radius-side-shorthands",
-      "testFiles": "**"
-    },
-    {
       "testPath": "css/css-borders/tentative/parsing",
       "testFiles": [
         "border-*-radius-*",
         "!border-block-*-radius-*",
         "!border-inline-*-radius-*"
       ]
+    },
+    {
+      "testPath": "css/css-borders/tentative/border-radius-side-shorthands",
+      "testFiles": "**"
     }
   ],
   "q-unit": [
@@ -5629,6 +5591,230 @@
       ]
     }
   ],
+  "clip": [
+    {
+      "testPath": "css/css-writing-modes",
+      "testFiles": [
+        "clip-rect-*"
+      ]
+    },
+    {
+      "testPath": "css/css-transitions",
+      "testFiles": [
+        "transition-property-017-manual.html"
+      ]
+    },
+    {
+      "testPath": "mathml/relations/css-styling",
+      "testFiles": [
+        "clip.html"
+      ]
+    },
+    {
+      "testPath": "css/css-masking/clip",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/css-masking/animations",
+      "testFiles": [
+        "clip-*",
+        "!clip-path-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/visufx",
+      "testFiles": [
+        "clip-*",
+        "clipping-001.xht",
+        "clipping-009.xht",
+        "clipping-010.xht",
+        "clipping-011.xht",
+        "clipping-012.xht",
+        "clipping-013.xht",
+        "clipping-014.xht",
+        "clipping-016.xht",
+        "clipping-017.xht",
+        "shape-spaces-001.xht"
+      ]
+    }
+  ],
+  "layout-direction-override": [
+    {
+      "testPath": "css/css-writing-modes",
+      "testFiles": [
+        "bidi-*"
+      ]
+    },
+    {
+      "testPath": "html/rendering/bidi-rendering",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/css-writing-modes/parsing",
+      "testFiles": [
+        "direction-*",
+        "unicode-bidi-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text/bidi",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/CSS2/visuren",
+      "testFiles": [
+        "bidi-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/bidi-text",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/CSS2/i18n/visuren",
+      "testFiles": [
+        "direction-unicode-bidi-*"
+      ]
+    }
+  ],
+  "text-combine-upright": [
+    {
+      "testPath": "css/css-writing-modes",
+      "testFiles": [
+        "text-combine-upright-*"
+      ]
+    },
+    {
+      "testPath": "css/css-writing-modes/parsing",
+      "testFiles": [
+        "text-combine-upright-*"
+      ]
+    }
+  ],
+  "text-orientation": [
+    {
+      "testPath": "css/css-writing-modes",
+      "testFiles": [
+        "text-orientation-*"
+      ]
+    },
+    {
+      "testPath": "css/css-writing-modes/parsing",
+      "testFiles": [
+        "text-orientation-*",
+        "text-combine-upright-*"
+      ]
+    }
+  ],
+  "text-shadow": [
+    {
+      "testPath": "css/css-writing-modes",
+      "testFiles": [
+        "text-shadow-*"
+      ]
+    },
+    {
+      "testPath": "css/css-pseudo",
+      "testFiles": [
+        "highlight-painting-shadows-*",
+        "marker-text-shadow.html",
+        "svg-text-selection-shadow.html",
+        "target-text-shadow-*"
+      ]
+    },
+    {
+      "testPath": "svg/painting/reftests",
+      "testFiles": [
+        "text-shadow-*"
+      ]
+    },
+    {
+      "testPath": "css/css-transitions/animations",
+      "testFiles": [
+        "text-shadow-*"
+      ]
+    },
+    {
+      "testPath": "css/css-pseudo/highlight-cascade",
+      "testFiles": [
+        "highlight-currentcolor-painting-text-shadow-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor/text-shadow",
+      "testFiles": "**"
+    }
+  ],
+  "text-underline-position": [
+    {
+      "testPath": "css/css-writing-modes",
+      "testFiles": [
+        "text-underline-position-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor",
+      "testFiles": [
+        "text-underline-position-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor/parsing",
+      "testFiles": [
+        "text-underline-position-*"
+      ]
+    }
+  ],
+  "writing-mode": [
+    {
+      "testPath": "css/css-writing-modes",
+      "testFiles": [
+        "*",
+        "!writing-mode-parsing-svg1-001.html"
+      ]
+    },
+    {
+      "testPath": "css/css-writing-modes/parsing",
+      "testFiles": [
+        "writing-mode-*"
+      ]
+    },
+    {
+      "testPath": "css/css-writing-modes/crashtests",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/css-writing-modes/forms",
+      "testFiles": [
+        "*",
+        "!*vertical*",
+        "!*vlr*",
+        "!*vrl*"
+      ]
+    }
+  ],
+  "writing-mode-svg-values": [
+    {
+      "testPath": "css/css-writing-modes",
+      "testFiles": [
+        "writing-mode-parsing-svg1-001.html"
+      ]
+    }
+  ],
+  "css-typed-om": [
+    {
+      "testPath": "css/css-typed-om",
+      "testFiles": "**"
+    }
+  ],
+  "numeric-factory-functions": [
+    {
+      "testPath": "css/css-typed-om",
+      "testFiles": [
+        "factory-*"
+      ]
+    }
+  ],
   "transitions": [
     {
       "testPath": "css/css-transitions",
@@ -5653,6 +5839,14 @@
       ]
     },
     {
+      "testPath": "css/css-transitions/parsing",
+      "testFiles": [
+        "*",
+        "!starting-style-*",
+        "!transition-behavior.html"
+      ]
+    },
+    {
       "testPath": "css/css-transitions/crashtests",
       "testFiles": [
         "*"
@@ -5665,14 +5859,6 @@
         "move-after-transition.html",
         "transition-end-event-shorthands.html",
         "transition-timing-function.html"
-      ]
-    },
-    {
-      "testPath": "css/css-transitions/parsing",
-      "testFiles": [
-        "*",
-        "!starting-style-*",
-        "!transition-behavior.html"
       ]
     }
   ],
@@ -5767,53 +5953,6 @@
       "testPath": "css/css-easing",
       "testFiles": [
         "cubic-bezier-timing-functions-output.html"
-      ]
-    }
-  ],
-  "clip": [
-    {
-      "testPath": "css/css-transitions",
-      "testFiles": [
-        "transition-property-017-manual.html"
-      ]
-    },
-    {
-      "testPath": "css/css-writing-modes",
-      "testFiles": [
-        "clip-rect-*"
-      ]
-    },
-    {
-      "testPath": "mathml/relations/css-styling",
-      "testFiles": [
-        "clip.html"
-      ]
-    },
-    {
-      "testPath": "css/css-masking/clip",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-masking/animations",
-      "testFiles": [
-        "clip-*",
-        "!clip-path-*"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/visufx",
-      "testFiles": [
-        "clip-*",
-        "clipping-001.xht",
-        "clipping-009.xht",
-        "clipping-010.xht",
-        "clipping-011.xht",
-        "clipping-012.xht",
-        "clipping-013.xht",
-        "clipping-014.xht",
-        "clipping-016.xht",
-        "clipping-017.xht",
-        "shape-spaces-001.xht"
       ]
     }
   ],
@@ -6068,15 +6207,15 @@
       ]
     },
     {
-      "testPath": "css/css-ui/crashtests",
-      "testFiles": [
-        "text-overflow-ellipsis-multiline-crash.html"
-      ]
-    },
-    {
       "testPath": "css/css-ui/parsing",
       "testFiles": [
         "text-overflow-*"
+      ]
+    },
+    {
+      "testPath": "css/css-ui/crashtests",
+      "testFiles": [
+        "text-overflow-ellipsis-multiline-crash.html"
       ]
     },
     {
@@ -6120,6 +6259,32 @@
       ]
     }
   ],
+  "nesting": [
+    {
+      "testPath": "css/css-syntax",
+      "testFiles": [
+        "custom-property-rule-ambiguity.html",
+        "trailing-braces.html",
+        "var-with-blocks.html"
+      ]
+    },
+    {
+      "testPath": "css/css-nesting",
+      "testFiles": "**"
+    }
+  ],
+  "style-attr": [
+    {
+      "testPath": "css/css-style-attr",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/dom/elements/global-attributes",
+      "testFiles": [
+        "style-01.html"
+      ]
+    }
+  ],
   "display-table": [
     {
       "testPath": "css/css-tables",
@@ -6139,11 +6304,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "css/css-tables/paint",
+      "testPath": "css/css-tables/parsing",
       "testFiles": "**"
     },
     {
-      "testPath": "css/css-tables/parsing",
+      "testPath": "css/css-tables/paint",
       "testFiles": "**"
     },
     {
@@ -6178,14 +6343,14 @@
       ]
     },
     {
+      "testPath": "css/css-backgrounds/box-shadow",
+      "testFiles": "**"
+    },
+    {
       "testPath": "css/css-backgrounds/parsing",
       "testFiles": [
         "box-shadow-*"
       ]
-    },
-    {
-      "testPath": "css/css-backgrounds/box-shadow",
-      "testFiles": "**"
     },
     {
       "testPath": "css/css-typed-om/the-stylepropertymap/properties",
@@ -6198,380 +6363,6 @@
       "testFiles": [
         "box-shadow-*"
       ]
-    }
-  ],
-  "text-emphasis": [
-    {
-      "testPath": "css/css-text-decor",
-      "testFiles": [
-        "text-emphasis-*"
-      ]
-    },
-    {
-      "testPath": "css/css-text-decor/parsing",
-      "testFiles": [
-        "*",
-        "!text-decoration-*",
-        "!text-underline-position-*"
-      ]
-    }
-  ],
-  "text-underline-offset": [
-    {
-      "testPath": "css/css-text-decor",
-      "testFiles": [
-        "text-underline-offset-*"
-      ]
-    },
-    {
-      "testPath": "css/css-text-decor/animations",
-      "testFiles": [
-        "text-underline-offset-*"
-      ]
-    }
-  ],
-  "text-decoration": [
-    {
-      "testPath": "css/css-text-decor",
-      "testFiles": [
-        "*text-decoration-*",
-        "!text-decoration-line-014.xht",
-        "!text-decoration-color-selection-*"
-      ]
-    },
-    {
-      "testPath": "css/css-text-decor/parsing",
-      "testFiles": [
-        "text-decoration-*"
-      ]
-    },
-    {
-      "testPath": "css/css-text-decor/invalidation",
-      "testFiles": [
-        "text-decoration-*"
-      ]
-    },
-    {
-      "testPath": "css/css-text-decor/decorating-box",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-text-decor/crashtests",
-      "testFiles": [
-        "*text-decoration-*"
-      ]
-    },
-    {
-      "testPath": "css/css-text-decor/animations",
-      "testFiles": [
-        "text-decoration-*"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/text",
-      "testFiles": [
-        "bidi-text-decoration-underline-001.xht",
-        "painting-order-underline-001.xht",
-        "text-decoration-001.xht",
-        "text-decoration-002.xht",
-        "text-decoration-003.xht",
-        "text-decoration-005.xht",
-        "text-decoration-006.xht",
-        "text-decoration-008.xht",
-        "text-decoration-009.xht",
-        "text-decoration-011.xht",
-        "text-decoration-012.xht",
-        "text-decoration-017.xht",
-        "text-decoration-019.xht",
-        "text-decoration-023.xht",
-        "text-decoration-025.xht",
-        "text-decoration-029.xht",
-        "text-decoration-031.xht",
-        "text-decoration-066.xht",
-        "text-decoration-067.xht",
-        "text-decoration-068.xht",
-        "text-decoration-069.xht",
-        "text-decoration-applies-to-*"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/css1",
-      "testFiles": [
-        "c543-txt-decor-000.xht"
-      ]
-    }
-  ],
-  "text-decoration-line-blink": [
-    {
-      "testPath": "css/css-text-decor",
-      "testFiles": [
-        "text-decoration-line-014.xht"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/text",
-      "testFiles": [
-        "text-decoration-004.xht",
-        "text-decoration-007.xht",
-        "text-decoration-010.xht",
-        "text-decoration-013.xht",
-        "text-decoration-014.xht",
-        "text-decoration-015.xht",
-        "text-decoration-016.xht",
-        "text-decoration-018.xht",
-        "text-decoration-020.xht",
-        "text-decoration-021.xht",
-        "text-decoration-022.xht",
-        "text-decoration-024.xht",
-        "text-decoration-026.xht",
-        "text-decoration-027.xht",
-        "text-decoration-028.xht",
-        "text-decoration-030.xht",
-        "text-decoration-032.xht",
-        "text-decoration-033.xht",
-        "text-decoration-034.xht",
-        "text-decoration-035.xht",
-        "text-decoration-036.xht",
-        "text-decoration-037.xht",
-        "text-decoration-038.xht",
-        "text-decoration-039.xht",
-        "text-decoration-040.xht",
-        "text-decoration-041.xht",
-        "text-decoration-042.xht",
-        "text-decoration-043.xht",
-        "text-decoration-044.xht",
-        "text-decoration-045.xht",
-        "text-decoration-046.xht",
-        "text-decoration-047.xht",
-        "text-decoration-048.xht",
-        "text-decoration-049.xht",
-        "text-decoration-050.xht",
-        "text-decoration-051.xht",
-        "text-decoration-052.xht",
-        "text-decoration-053.xht",
-        "text-decoration-054.xht",
-        "text-decoration-055.xht",
-        "text-decoration-056.xht",
-        "text-decoration-057.xht",
-        "text-decoration-058.xht",
-        "text-decoration-059.xht",
-        "text-decoration-060.xht",
-        "text-decoration-061.xht",
-        "text-decoration-062.xht",
-        "text-decoration-063.xht",
-        "text-decoration-064.xht",
-        "text-decoration-065.xht"
-      ]
-    }
-  ],
-  "text-decoration-selection": [
-    {
-      "testPath": "css/css-text-decor",
-      "testFiles": [
-        "text-decoration-color-selection-*"
-      ]
-    },
-    {
-      "testPath": "css/css-pseudo",
-      "testFiles": [
-        "active-selection-014.html",
-        "active-selection-021.html"
-      ]
-    },
-    {
-      "testPath": "css/css-text-decor/invalidation",
-      "testFiles": [
-        "selection-pseudo-with-decoration-invalidation-*"
-      ]
-    }
-  ],
-  "text-underline-position": [
-    {
-      "testPath": "css/css-text-decor",
-      "testFiles": [
-        "text-underline-position-*"
-      ]
-    },
-    {
-      "testPath": "css/css-writing-modes",
-      "testFiles": [
-        "text-underline-position-*"
-      ]
-    },
-    {
-      "testPath": "css/css-text-decor/parsing",
-      "testFiles": [
-        "text-underline-position-*"
-      ]
-    }
-  ],
-  "layout-direction-override": [
-    {
-      "testPath": "css/css-writing-modes",
-      "testFiles": [
-        "bidi-*"
-      ]
-    },
-    {
-      "testPath": "html/rendering/bidi-rendering",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-text/bidi",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-writing-modes/parsing",
-      "testFiles": [
-        "direction-*",
-        "unicode-bidi-*"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/visuren",
-      "testFiles": [
-        "bidi-*"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/bidi-text",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/CSS2/i18n/visuren",
-      "testFiles": [
-        "direction-unicode-bidi-*"
-      ]
-    }
-  ],
-  "text-combine-upright": [
-    {
-      "testPath": "css/css-writing-modes",
-      "testFiles": [
-        "text-combine-upright-*"
-      ]
-    },
-    {
-      "testPath": "css/css-writing-modes/parsing",
-      "testFiles": [
-        "text-combine-upright-*"
-      ]
-    }
-  ],
-  "text-orientation": [
-    {
-      "testPath": "css/css-writing-modes",
-      "testFiles": [
-        "text-orientation-*"
-      ]
-    },
-    {
-      "testPath": "css/css-writing-modes/parsing",
-      "testFiles": [
-        "text-orientation-*",
-        "text-combine-upright-*"
-      ]
-    }
-  ],
-  "text-shadow": [
-    {
-      "testPath": "css/css-writing-modes",
-      "testFiles": [
-        "text-shadow-*"
-      ]
-    },
-    {
-      "testPath": "css/css-pseudo",
-      "testFiles": [
-        "highlight-painting-shadows-*",
-        "marker-text-shadow.html",
-        "svg-text-selection-shadow.html",
-        "target-text-shadow-*"
-      ]
-    },
-    {
-      "testPath": "svg/painting/reftests",
-      "testFiles": [
-        "text-shadow-*"
-      ]
-    },
-    {
-      "testPath": "css/css-transitions/animations",
-      "testFiles": [
-        "text-shadow-*"
-      ]
-    },
-    {
-      "testPath": "css/css-text-decor/text-shadow",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-pseudo/highlight-cascade",
-      "testFiles": [
-        "highlight-currentcolor-painting-text-shadow-*"
-      ]
-    }
-  ],
-  "writing-mode": [
-    {
-      "testPath": "css/css-writing-modes",
-      "testFiles": [
-        "*",
-        "!writing-mode-parsing-svg1-001.html"
-      ]
-    },
-    {
-      "testPath": "css/css-writing-modes/parsing",
-      "testFiles": [
-        "writing-mode-*"
-      ]
-    },
-    {
-      "testPath": "css/css-writing-modes/crashtests",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-writing-modes/forms",
-      "testFiles": [
-        "*",
-        "!*vertical*",
-        "!*vlr*",
-        "!*vrl*"
-      ]
-    }
-  ],
-  "writing-mode-svg-values": [
-    {
-      "testPath": "css/css-writing-modes",
-      "testFiles": [
-        "writing-mode-parsing-svg1-001.html"
-      ]
-    }
-  ],
-  "style-attr": [
-    {
-      "testPath": "css/css-style-attr",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/dom/elements/global-attributes",
-      "testFiles": [
-        "style-01.html"
-      ]
-    }
-  ],
-  "nesting": [
-    {
-      "testPath": "css/css-syntax",
-      "testFiles": [
-        "custom-property-rule-ambiguity.html",
-        "trailing-braces.html",
-        "var-with-blocks.html"
-      ]
-    },
-    {
-      "testPath": "css/css-nesting",
-      "testFiles": "**"
     }
   ],
   "text-size-adjust": [
@@ -6608,6 +6399,12 @@
       ]
     },
     {
+      "testPath": "css/css-shapes/spec-examples",
+      "testFiles": [
+        "shape-outside-*"
+      ]
+    },
+    {
       "testPath": "css/css-shapes/shape-outside",
       "testFiles": "**"
     },
@@ -6626,283 +6423,6 @@
         "shape-margin-*",
         "shape-outside-*"
       ]
-    },
-    {
-      "testPath": "css/css-shapes/spec-examples",
-      "testFiles": [
-        "shape-outside-*"
-      ]
-    }
-  ],
-  "individual-transforms": [
-    {
-      "testPath": "css/css-transforms",
-      "testFiles": [
-        "transform-and-individual-transform-properties-computed-style.html"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/parsing",
-      "testFiles": [
-        "rotate-parsing-computed.html",
-        "rotate-parsing-valid.html"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/individual-transform",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-transforms/animation",
-      "testFiles": [
-        "rotate-animation-on-svg.html",
-        "rotate-animation-with-will-change-transform-001.html",
-        "scale-and-rotate-both-specified-on-animation-keyframes.html",
-        "scale-animation-on-svg.html",
-        "translate-animation-on-svg.html"
-      ]
-    }
-  ],
-  "transforms3d": [
-    {
-      "testPath": "css/css-transforms",
-      "testFiles": [
-        "*3d*",
-        "backface-visibility-*",
-        "perspective-*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/parsing",
-      "testFiles": [
-        "backface-visibility-*",
-        "perspective-*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/crashtests",
-      "testFiles": [
-        "large-scale3d-001.html",
-        "preserve3d-*",
-        "w-crossing-zero-001.html",
-        "w-negative-*",
-        "zero-perspective-001.html",
-        "fragmented-block-in-inline-with-perspective.html"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/animation",
-      "testFiles": [
-        "backface-visibility-*",
-        "perspective-*"
-      ]
-    }
-  ],
-  "transforms2d": [
-    {
-      "testPath": "css/css-transforms",
-      "testFiles": [
-        "*",
-        "!*3d*",
-        "!backface-visibility-*",
-        "!perspective-*",
-        "!transform-with-sign-function.html",
-        "!transform-and-individual-transform-properties-computed-style.html"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/translate",
-      "testFiles": [
-        "*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/transform-origin",
-      "testFiles": [
-        "*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/transform-list-separation",
-      "testFiles": [
-        "*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/skewY",
-      "testFiles": [
-        "*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/skewX",
-      "testFiles": [
-        "*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/scale",
-      "testFiles": [
-        "*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/rotate",
-      "testFiles": [
-        "*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/patternTransform",
-      "testFiles": [
-        "*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/parsing",
-      "testFiles": [
-        "*",
-        "!rotate-parsing-computed.html",
-        "!rotate-parsing-valid.html",
-        "!backface-visibility-*",
-        "!perspective-*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/inline-styles",
-      "testFiles": [
-        "*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/matrix",
-      "testFiles": [
-        "*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/gradientTransform",
-      "testFiles": [
-        "*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/group",
-      "testFiles": [
-        "*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/external-styles",
-      "testFiles": [
-        "*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/document-styles",
-      "testFiles": [
-        "*"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/crashtests",
-      "testFiles": [
-        "*",
-        "!large-scale3d-001.html",
-        "!preserve3d-*",
-        "!w-crossing-zero-001.html",
-        "!w-negative-*",
-        "!zero-perspective-001.html",
-        "!fragmented-block-in-inline-with-perspective.html"
-      ]
-    },
-    {
-      "testPath": "css/css-transforms/animation",
-      "testFiles": [
-        "*",
-        "!rotate-animation-on-svg.html",
-        "!rotate-animation-with-will-change-transform-001.html",
-        "!scale-and-rotate-both-specified-on-animation-keyframes.html",
-        "!scale-animation-on-svg.html",
-        "!translate-animation-on-svg.html",
-        "!backface-visibility-*",
-        "!perspective-*"
-      ]
-    }
-  ],
-  "scrollbar-color": [
-    {
-      "testPath": "css/css-scrollbars",
-      "testFiles": [
-        "input-scrollbar-color.html",
-        "scrollbar-color-*",
-        "scrollbar-width-paint-003.html",
-        "transparent-on-root.html",
-        "viewport-scrollbar-body.html",
-        "viewport-scrollbar.html"
-      ]
-    }
-  ],
-  "scrollbar-width": [
-    {
-      "testPath": "css/css-scrollbars",
-      "testFiles": [
-        "scrollbar-width-*",
-        "textarea-scrollbar-width-none.html"
-      ]
-    }
-  ],
-  "has-slotted": [
-    {
-      "testPath": "css/css-shadow",
-      "testFiles": [
-        "has-slotted-*"
-      ]
-    },
-    {
-      "testPath": "css/selectors/parsing",
-      "testFiles": [
-        "parse-has-slotted.tentative.html"
-      ]
-    }
-  ],
-  "host-context": [
-    {
-      "testPath": "css/css-shadow",
-      "testFiles": [
-        "host-context-*",
-        "host-in-host-context-selector.html"
-      ]
-    }
-  ],
-  "scroll-snap": [
-    {
-      "testPath": "css/css-scroll-snap",
-      "testFiles": "**"
-    }
-  ],
-  "overflow-anchor": [
-    {
-      "testPath": "css/css-scroll-anchoring",
-      "testFiles": [
-        "opt-out*"
-      ]
-    },
-    {
-      "testPath": "css/css-scroll-anchoring/parsing",
-      "testFiles": "**"
-    }
-  ],
-  "rhythmic-sizing": [
-    {
-      "testPath": "css/css-rhythm",
-      "testFiles": "**"
-    }
-  ],
-  "registered-custom-properties": [
-    {
-      "testPath": "css/css-properties-values-api",
-      "testFiles": "**"
     }
   ],
   "min-max-content": [
@@ -7001,6 +6521,15 @@
       ]
     },
     {
+      "testPath": "css/CSS2/page-box",
+      "testFiles": [
+        "page-container-000.xht",
+        "page-container-002.xht",
+        "page-container-004.xht",
+        "page-container-010.xht"
+      ]
+    },
+    {
       "testPath": "css/CSS2/positioning",
       "testFiles": [
         "*width*",
@@ -7008,12 +6537,10 @@
       ]
     },
     {
-      "testPath": "css/CSS2/page-box",
+      "testPath": "css/CSS2/normal-flow",
       "testFiles": [
-        "page-container-000.xht",
-        "page-container-002.xht",
-        "page-container-004.xht",
-        "page-container-010.xht"
+        "*width*",
+        "*height*"
       ]
     },
     {
@@ -7025,17 +6552,79 @@
       ]
     },
     {
-      "testPath": "css/CSS2/normal-flow",
-      "testFiles": [
-        "*width*",
-        "*height*"
-      ]
-    },
-    {
       "testPath": "css/CSS2/csswg-issues/submitted/css2.1",
       "testFiles": [
         "anonymous-boxes-001.xht"
       ]
+    }
+  ],
+  "has-slotted": [
+    {
+      "testPath": "css/css-shadow",
+      "testFiles": [
+        "has-slotted-*"
+      ]
+    },
+    {
+      "testPath": "css/selectors/parsing",
+      "testFiles": [
+        "parse-has-slotted.tentative.html"
+      ]
+    }
+  ],
+  "host-context": [
+    {
+      "testPath": "css/css-shadow",
+      "testFiles": [
+        "host-context-*",
+        "host-in-host-context-selector.html"
+      ]
+    }
+  ],
+  "scrollbar-color": [
+    {
+      "testPath": "css/css-scrollbars",
+      "testFiles": [
+        "input-scrollbar-color.html",
+        "scrollbar-color-*",
+        "scrollbar-width-paint-003.html",
+        "transparent-on-root.html",
+        "viewport-scrollbar-body.html",
+        "viewport-scrollbar.html"
+      ]
+    }
+  ],
+  "scrollbar-width": [
+    {
+      "testPath": "css/css-scrollbars",
+      "testFiles": [
+        "scrollbar-width-*",
+        "textarea-scrollbar-width-none.html"
+      ]
+    }
+  ],
+  "scroll-snap": [
+    {
+      "testPath": "css/css-scroll-snap",
+      "testFiles": "**"
+    }
+  ],
+  "overflow-anchor": [
+    {
+      "testPath": "css/css-scroll-anchoring",
+      "testFiles": [
+        "opt-out*"
+      ]
+    },
+    {
+      "testPath": "css/css-scroll-anchoring/parsing",
+      "testFiles": "**"
+    }
+  ],
+  "rhythmic-sizing": [
+    {
+      "testPath": "css/css-rhythm",
+      "testFiles": "**"
     }
   ],
   "display-ruby": [
@@ -7083,6 +6672,12 @@
       "testFiles": [
         "ruby-overhang*"
       ]
+    }
+  ],
+  "registered-custom-properties": [
+    {
+      "testPath": "css/css-properties-values-api",
+      "testFiles": "**"
     }
   ],
   "absolute-positioning": [
@@ -7150,11 +6745,11 @@
       ]
     },
     {
-      "testPath": "css/CSS2/zindex",
+      "testPath": "css/CSS2/zorder",
       "testFiles": "**"
     },
     {
-      "testPath": "css/CSS2/zorder",
+      "testPath": "css/CSS2/zindex",
       "testFiles": "**"
     }
   ],
@@ -7171,18 +6766,6 @@
         "position-001.xht",
         "position-static-*.xht"
       ]
-    }
-  ],
-  "overscroll-behavior": [
-    {
-      "testPath": "css/css-overscroll-behavior",
-      "testFiles": "**"
-    }
-  ],
-  "paint": [
-    {
-      "testPath": "css/css-paint-api",
-      "testFiles": "**"
     }
   ],
   "target-text": [
@@ -7263,6 +6846,39 @@
       ]
     }
   ],
+  "text-decoration-selection": [
+    {
+      "testPath": "css/css-pseudo",
+      "testFiles": [
+        "active-selection-014.html",
+        "active-selection-021.html"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor",
+      "testFiles": [
+        "text-decoration-color-selection-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor/invalidation",
+      "testFiles": [
+        "selection-pseudo-with-decoration-invalidation-*"
+      ]
+    }
+  ],
+  "paint": [
+    {
+      "testPath": "css/css-paint-api",
+      "testFiles": "**"
+    }
+  ],
+  "overscroll-behavior": [
+    {
+      "testPath": "css/css-overscroll-behavior",
+      "testFiles": "**"
+    }
+  ],
   "page-orientation": [
     {
       "testPath": "css/css-page",
@@ -7286,95 +6902,199 @@
       ]
     }
   ],
-  "function": [
+  "individual-transforms": [
     {
-      "testPath": "css/css-mixins",
+      "testPath": "css/css-transforms",
       "testFiles": [
-        "at-function-*",
-        "dashed-function-*",
-        "function-*",
-        "local-*-substitution.html",
-        "function-parameter-types.tentative.html"
-      ]
-    }
-  ],
-  "mixin": [
-    {
-      "testPath": "css/css-mixins",
-      "testFiles": [
-        "mixin-basic.html",
-        "mixin-declarations.html",
-        "apply-within-mixin.html"
-      ]
-    }
-  ],
-  "masks": [
-    {
-      "testPath": "css/css-masking",
-      "testFiles": [
-        "mask-shorthand-subproperties-reset.html"
+        "transform-and-individual-transform-properties-computed-style.html"
       ]
     },
     {
-      "testPath": "css/css-masking/parsing",
+      "testPath": "css/css-transforms/parsing",
       "testFiles": [
-        "mask-composite-*",
-        "mask-computed.html",
-        "mask-invalid.html",
-        "mask-position-*",
-        "mask-repeat-*"
+        "rotate-parsing-computed.html",
+        "rotate-parsing-valid.html"
       ]
     },
     {
-      "testPath": "css/css-masking/mask-image",
+      "testPath": "css/css-transforms/individual-transform",
       "testFiles": "**"
     },
     {
-      "testPath": "css/css-masking/animations",
+      "testPath": "css/css-transforms/animation",
       "testFiles": [
-        "mask-image-interpolation.html",
-        "mask-no-interpolation.html",
-        "mask-position-interpolation.html"
+        "rotate-animation-on-svg.html",
+        "rotate-animation-with-will-change-transform-001.html",
+        "scale-and-rotate-both-specified-on-animation-keyframes.html",
+        "scale-animation-on-svg.html",
+        "translate-animation-on-svg.html"
       ]
     }
   ],
-  "logical-properties": [
+  "transforms3d": [
     {
-      "testPath": "css/css-logical",
-      "testFiles": "**"
+      "testPath": "css/css-transforms",
+      "testFiles": [
+        "*3d*",
+        "backface-visibility-*",
+        "perspective-*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/parsing",
+      "testFiles": [
+        "backface-visibility-*",
+        "perspective-*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/crashtests",
+      "testFiles": [
+        "large-scale3d-001.html",
+        "preserve3d-*",
+        "w-crossing-zero-001.html",
+        "w-negative-*",
+        "zero-perspective-001.html",
+        "fragmented-block-in-inline-with-perspective.html"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/animation",
+      "testFiles": [
+        "backface-visibility-*",
+        "perspective-*"
+      ]
     }
   ],
-  "line-height": [
+  "transforms2d": [
     {
-      "testPath": "css/css-inline",
+      "testPath": "css/css-transforms",
       "testFiles": [
-        "too-big-line-height-crash.html"
+        "*",
+        "!*3d*",
+        "!backface-visibility-*",
+        "!perspective-*",
+        "!transform-with-sign-function.html",
+        "!transform-and-individual-transform-properties-computed-style.html"
       ]
     },
     {
-      "testPath": "css/css-inline/parsing",
+      "testPath": "css/css-transforms/translate",
       "testFiles": [
-        "line-height-*"
+        "*"
       ]
     },
     {
-      "testPath": "css/css-display/run-in",
+      "testPath": "css/css-transforms/transform-list-separation",
       "testFiles": [
-        "line-height-applies-to-011.xht"
+        "*"
       ]
     },
     {
-      "testPath": "css/CSS2/linebox",
+      "testPath": "css/css-transforms/transform-origin",
       "testFiles": [
-        "fractional-line-height.html",
-        "line-box-height-*",
-        "line-height-*"
+        "*"
       ]
     },
     {
-      "testPath": "css/CSS2/linebox/animations",
+      "testPath": "css/css-transforms/skewY",
       "testFiles": [
-        "line-height-interpolation.html"
+        "*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/skewX",
+      "testFiles": [
+        "*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/scale",
+      "testFiles": [
+        "*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/rotate",
+      "testFiles": [
+        "*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/patternTransform",
+      "testFiles": [
+        "*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/parsing",
+      "testFiles": [
+        "*",
+        "!rotate-parsing-computed.html",
+        "!rotate-parsing-valid.html",
+        "!backface-visibility-*",
+        "!perspective-*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/inline-styles",
+      "testFiles": [
+        "*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/matrix",
+      "testFiles": [
+        "*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/gradientTransform",
+      "testFiles": [
+        "*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/external-styles",
+      "testFiles": [
+        "*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/group",
+      "testFiles": [
+        "*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/document-styles",
+      "testFiles": [
+        "*"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/crashtests",
+      "testFiles": [
+        "*",
+        "!large-scale3d-001.html",
+        "!preserve3d-*",
+        "!w-crossing-zero-001.html",
+        "!w-negative-*",
+        "!zero-perspective-001.html",
+        "!fragmented-block-in-inline-with-perspective.html"
+      ]
+    },
+    {
+      "testPath": "css/css-transforms/animation",
+      "testFiles": [
+        "*",
+        "!rotate-animation-on-svg.html",
+        "!rotate-animation-with-will-change-transform-001.html",
+        "!scale-and-rotate-both-specified-on-animation-keyframes.html",
+        "!scale-animation-on-svg.html",
+        "!translate-animation-on-svg.html",
+        "!backface-visibility-*",
+        "!perspective-*"
       ]
     }
   ],
@@ -7469,21 +7189,96 @@
       ]
     }
   ],
-  "highlight": [
+  "masks": [
     {
-      "testPath": "css/css-highlight-api",
+      "testPath": "css/css-masking",
       "testFiles": [
-        "*",
-        "!HighlightRegistry-highlightsFromPoint*"
+        "mask-shorthand-subproperties-reset.html"
       ]
     },
     {
-      "testPath": "css/css-highlight-api/crashtests",
+      "testPath": "css/css-masking/parsing",
+      "testFiles": [
+        "mask-composite-*",
+        "mask-computed.html",
+        "mask-invalid.html",
+        "mask-position-*",
+        "mask-repeat-*"
+      ]
+    },
+    {
+      "testPath": "css/css-masking/mask-image",
       "testFiles": "**"
     },
     {
-      "testPath": "css/css-highlight-api/painting",
+      "testPath": "css/css-masking/animations",
+      "testFiles": [
+        "mask-image-interpolation.html",
+        "mask-no-interpolation.html",
+        "mask-position-interpolation.html"
+      ]
+    }
+  ],
+  "function": [
+    {
+      "testPath": "css/css-mixins",
+      "testFiles": [
+        "at-function-*",
+        "dashed-function-*",
+        "function-*",
+        "local-*-substitution.html",
+        "function-parameter-types.tentative.html"
+      ]
+    }
+  ],
+  "mixin": [
+    {
+      "testPath": "css/css-mixins",
+      "testFiles": [
+        "mixin-basic.html",
+        "mixin-declarations.html",
+        "apply-within-mixin.html"
+      ]
+    }
+  ],
+  "logical-properties": [
+    {
+      "testPath": "css/css-logical",
       "testFiles": "**"
+    }
+  ],
+  "line-height": [
+    {
+      "testPath": "css/css-inline",
+      "testFiles": [
+        "too-big-line-height-crash.html"
+      ]
+    },
+    {
+      "testPath": "css/css-inline/parsing",
+      "testFiles": [
+        "line-height-*"
+      ]
+    },
+    {
+      "testPath": "css/css-display/run-in",
+      "testFiles": [
+        "line-height-applies-to-011.xht"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/linebox",
+      "testFiles": [
+        "fractional-line-height.html",
+        "line-box-height-*",
+        "line-height-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/linebox/animations",
+      "testFiles": [
+        "line-height-interpolation.html"
+      ]
     }
   ],
   "list-elements": [
@@ -7676,41 +7471,123 @@
       ]
     }
   ],
+  "highlight": [
+    {
+      "testPath": "css/css-highlight-api",
+      "testFiles": [
+        "*",
+        "!HighlightRegistry-highlightsFromPoint*"
+      ]
+    },
+    {
+      "testPath": "css/css-highlight-api/crashtests",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/css-highlight-api/painting",
+      "testFiles": "**"
+    }
+  ],
   "grid": [
     {
       "testPath": "css/css-grid",
       "testFiles": "**"
     }
   ],
+  "conic-gradients": [
+    {
+      "testPath": "css/css-images",
+      "testFiles": [
+        "*conic*"
+      ]
+    }
+  ],
+  "object-view-box": [
+    {
+      "testPath": "css/css-images",
+      "testFiles": [
+        "object-view-box-*"
+      ]
+    },
+    {
+      "testPath": "css/css-images/animation",
+      "testFiles": [
+        "object-view-box-*"
+      ]
+    }
+  ],
+  "crisp-edges": [
+    {
+      "testPath": "css/css-images",
+      "testFiles": [
+        "object-fit-*-png*",
+        "!object-fit-containcontainintrinsicsize-png-*",
+        "!object-fit-containsize-png-*"
+      ]
+    }
+  ],
+  "object-fit": [
+    {
+      "testPath": "css/css-images",
+      "testFiles": [
+        "image-fit-*",
+        "object-fit-*",
+        "!object-fit-*-png*"
+      ]
+    },
+    {
+      "testPath": "css/css-images/parsing",
+      "testFiles": [
+        "object-fit-*"
+      ]
+    }
+  ],
+  "object-position": [
+    {
+      "testPath": "css/css-images",
+      "testFiles": [
+        "object-position-*"
+      ]
+    },
+    {
+      "testPath": "css/css-images/parsing",
+      "testFiles": [
+        "object-position-*"
+      ]
+    },
+    {
+      "testPath": "css/css-images/animation",
+      "testFiles": [
+        "object-position-*"
+      ]
+    }
+  ],
+  "image-function": [
+    {
+      "testPath": "css/css-images",
+      "testFiles": [
+        "css-image-fallbacks-and-annotations*"
+      ]
+    }
+  ],
+  "image-rendering": [
+    {
+      "testPath": "css/css-images",
+      "testFiles": [
+        "image-rendering-*"
+      ]
+    },
+    {
+      "testPath": "css/css-images/parsing",
+      "testFiles": [
+        "image-rendering-*"
+      ]
+    }
+  ],
   "gap-decorations": [
     {
       "testPath": "css/css-gaps",
       "testFiles": "**"
-    }
-  ],
-  "font-loading": [
-    {
-      "testPath": "css/css-font-loading",
-      "testFiles": [
-        "*",
-        "!fontface-override-descriptor-getter-setter.sub.html"
-      ]
-    }
-  ],
-  "font-metric-overrides": [
-    {
-      "testPath": "css/css-font-loading",
-      "testFiles": [
-        "fontface-override-descriptor-getter-setter.sub.html"
-      ]
-    },
-    {
-      "testPath": "css/css-fonts",
-      "testFiles": [
-        "ascent-descent-override.html",
-        "line-gap-override.html",
-        "metrics-override-normal-keyword.html"
-      ]
     }
   ],
   "column-fill": [
@@ -7802,12 +7679,6 @@
       ]
     },
     {
-      "testPath": "css/css-multicol/table",
-      "testFiles": [
-        "table-cell-multicol-nested-*"
-      ]
-    },
-    {
       "testPath": "css/css-multicol/parsing",
       "testFiles": [
         "column-fill-*"
@@ -7860,6 +7731,12 @@
         "video-container-become-multicol.html",
         "zero-column-height.html",
         "!*spanner*"
+      ]
+    },
+    {
+      "testPath": "css/css-multicol/table",
+      "testFiles": [
+        "table-cell-multicol-nested-*"
       ]
     }
   ],
@@ -8005,6 +7882,31 @@
       ]
     }
   ],
+  "font-loading": [
+    {
+      "testPath": "css/css-font-loading",
+      "testFiles": [
+        "*",
+        "!fontface-override-descriptor-getter-setter.sub.html"
+      ]
+    }
+  ],
+  "font-metric-overrides": [
+    {
+      "testPath": "css/css-font-loading",
+      "testFiles": [
+        "fontface-override-descriptor-getter-setter.sub.html"
+      ]
+    },
+    {
+      "testPath": "css/css-fonts",
+      "testFiles": [
+        "ascent-descent-override.html",
+        "line-gap-override.html",
+        "metrics-override-normal-keyword.html"
+      ]
+    }
+  ],
   "safe-area-inset": [
     {
       "testPath": "css/css-env",
@@ -8068,6 +7970,259 @@
       "testFiles": [
         "display-list-item-*",
         "display-flow-root-list-item-*"
+      ]
+    }
+  ],
+  "attr-contents": [
+    {
+      "testPath": "css/css-content",
+      "testFiles": [
+        "attr-case-sensitivity-001.html",
+        "attr-case-sensitivity-002.html",
+        "attr-case-sensitivity-003.html"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/generated-content",
+      "testFiles": [
+        "content-037.xht",
+        "content-038.xht",
+        "content-039.xht",
+        "content-040.xht",
+        "content-041.xht",
+        "content-042.xht",
+        "content-043.xht",
+        "content-046.xht",
+        "content-047.xht",
+        "content-048.xht",
+        "content-049.xht",
+        "content-050.xht",
+        "content-051.xht",
+        "content-052.xht",
+        "content-053.xht",
+        "content-054.xht",
+        "content-056.xht",
+        "content-057.xht",
+        "content-063.xht",
+        "content-065.xht",
+        "content-066.xht",
+        "content-067.xht",
+        "content-068.xht",
+        "content-070.xht",
+        "content-072.xht",
+        "content-073.xht",
+        "content-075.xht",
+        "content-076.xht",
+        "content-077.xht",
+        "content-078.xht",
+        "content-080.xht",
+        "content-081.xht",
+        "content-082.xht",
+        "content-083.xht",
+        "content-085.xht",
+        "content-086.xht",
+        "content-089.xht",
+        "content-090.xht",
+        "content-091.xht",
+        "content-096.xht",
+        "content-097.xht",
+        "content-099.xht",
+        "content-100.xht",
+        "content-103.xht",
+        "content-105.xht",
+        "content-107.xht",
+        "content-108.xht",
+        "content-109.xht",
+        "content-110.xht",
+        "content-111.xht",
+        "content-112.xht",
+        "content-113.xht",
+        "content-114.xht",
+        "content-115.xht",
+        "content-116.xht",
+        "content-117.xht",
+        "content-118.xht",
+        "content-119.xht",
+        "content-121.xht",
+        "content-122.xht",
+        "content-123.xht",
+        "content-126.xht",
+        "content-127.xht",
+        "content-129.xht",
+        "content-130.xht",
+        "content-131.xht",
+        "content-132.xht",
+        "content-135.xht",
+        "content-136.xht",
+        "content-138.xht",
+        "content-140.xht",
+        "content-141.xht",
+        "content-142.xht",
+        "content-143.xht",
+        "content-144.xht",
+        "content-145.xht",
+        "content-146.xht",
+        "content-147.xht",
+        "content-149.xht",
+        "content-150.xht",
+        "content-151.xht",
+        "content-152.xht",
+        "content-153.xht",
+        "content-155.xht",
+        "content-attr-001.xht",
+        "content-attr-002.xht",
+        "content-attr-case-001.html",
+        "content-attr-case-002.xht",
+        "other-attribute-001.xht"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "testPath": "css/css-content",
+      "testFiles": [
+        "quotes-*"
+      ]
+    }
+  ],
+  "content": [
+    {
+      "testPath": "css/css-content",
+      "testFiles": [
+        "content-*",
+        "pseudo-element-inline-box.html"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/generated-content",
+      "testFiles": [
+        "*",
+        "!content-037.xht",
+        "!content-038.xht",
+        "!content-039.xht",
+        "!content-040.xht",
+        "!content-041.xht",
+        "!content-042.xht",
+        "!content-043.xht",
+        "!content-046.xht",
+        "!content-047.xht",
+        "!content-048.xht",
+        "!content-049.xht",
+        "!content-050.xht",
+        "!content-051.xht",
+        "!content-052.xht",
+        "!content-053.xht",
+        "!content-054.xht",
+        "!content-056.xht",
+        "!content-057.xht",
+        "!content-063.xht",
+        "!content-065.xht",
+        "!content-066.xht",
+        "!content-067.xht",
+        "!content-068.xht",
+        "!content-070.xht",
+        "!content-072.xht",
+        "!content-073.xht",
+        "!content-075.xht",
+        "!content-076.xht",
+        "!content-077.xht",
+        "!content-078.xht",
+        "!content-080.xht",
+        "!content-081.xht",
+        "!content-082.xht",
+        "!content-083.xht",
+        "!content-085.xht",
+        "!content-086.xht",
+        "!content-089.xht",
+        "!content-090.xht",
+        "!content-091.xht",
+        "!content-096.xht",
+        "!content-097.xht",
+        "!content-099.xht",
+        "!content-100.xht",
+        "!content-103.xht",
+        "!content-105.xht",
+        "!content-107.xht",
+        "!content-108.xht",
+        "!content-109.xht",
+        "!content-110.xht",
+        "!content-111.xht",
+        "!content-112.xht",
+        "!content-113.xht",
+        "!content-114.xht",
+        "!content-115.xht",
+        "!content-116.xht",
+        "!content-117.xht",
+        "!content-118.xht",
+        "!content-119.xht",
+        "!content-121.xht",
+        "!content-122.xht",
+        "!content-123.xht",
+        "!content-126.xht",
+        "!content-127.xht",
+        "!content-129.xht",
+        "!content-130.xht",
+        "!content-131.xht",
+        "!content-132.xht",
+        "!content-135.xht",
+        "!content-136.xht",
+        "!content-138.xht",
+        "!content-140.xht",
+        "!content-141.xht",
+        "!content-142.xht",
+        "!content-143.xht",
+        "!content-144.xht",
+        "!content-145.xht",
+        "!content-146.xht",
+        "!content-147.xht",
+        "!content-149.xht",
+        "!content-150.xht",
+        "!content-151.xht",
+        "!content-152.xht",
+        "!content-153.xht",
+        "!content-155.xht",
+        "!content-attr-001.xht",
+        "!content-attr-002.xht",
+        "!content-attr-case-001.html",
+        "!content-attr-case-002.xht",
+        "!other-attribute-001.xht",
+        "!content-005.xht",
+        "!content-006.xht",
+        "!content-007.xht",
+        "!content-008.xht",
+        "!content-009.xht",
+        "!content-010.xht",
+        "!content-011.xht",
+        "!content-012.xht",
+        "!content-013.xht",
+        "!content-014.xht",
+        "!content-015.xht",
+        "!content-016.xht",
+        "!content-017.xht",
+        "!content-018.xht",
+        "!content-019.xht",
+        "!content-020.xht",
+        "!content-021.xht",
+        "!content-022.xht",
+        "!content-023.xht",
+        "!content-024.xht",
+        "!content-025.xht",
+        "!content-026.xht",
+        "!content-027.xht",
+        "!content-028.xht",
+        "!content-029.xht",
+        "!content-030.xht",
+        "!content-031.xht",
+        "!content-032.xht",
+        "!content-033.xht",
+        "!content-034.xht",
+        "!content-035.xht",
+        "!content-036.xht",
+        "!content-auto-reset-001.xht",
+        "!content-counter-*",
+        "!content-counters-*",
+        "!counter-*",
+        "!counters-*"
       ]
     }
   ],
@@ -8583,259 +8738,6 @@
       ]
     }
   ],
-  "attr-contents": [
-    {
-      "testPath": "css/css-content",
-      "testFiles": [
-        "attr-case-sensitivity-001.html",
-        "attr-case-sensitivity-002.html",
-        "attr-case-sensitivity-003.html"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/generated-content",
-      "testFiles": [
-        "content-037.xht",
-        "content-038.xht",
-        "content-039.xht",
-        "content-040.xht",
-        "content-041.xht",
-        "content-042.xht",
-        "content-043.xht",
-        "content-046.xht",
-        "content-047.xht",
-        "content-048.xht",
-        "content-049.xht",
-        "content-050.xht",
-        "content-051.xht",
-        "content-052.xht",
-        "content-053.xht",
-        "content-054.xht",
-        "content-056.xht",
-        "content-057.xht",
-        "content-063.xht",
-        "content-065.xht",
-        "content-066.xht",
-        "content-067.xht",
-        "content-068.xht",
-        "content-070.xht",
-        "content-072.xht",
-        "content-073.xht",
-        "content-075.xht",
-        "content-076.xht",
-        "content-077.xht",
-        "content-078.xht",
-        "content-080.xht",
-        "content-081.xht",
-        "content-082.xht",
-        "content-083.xht",
-        "content-085.xht",
-        "content-086.xht",
-        "content-089.xht",
-        "content-090.xht",
-        "content-091.xht",
-        "content-096.xht",
-        "content-097.xht",
-        "content-099.xht",
-        "content-100.xht",
-        "content-103.xht",
-        "content-105.xht",
-        "content-107.xht",
-        "content-108.xht",
-        "content-109.xht",
-        "content-110.xht",
-        "content-111.xht",
-        "content-112.xht",
-        "content-113.xht",
-        "content-114.xht",
-        "content-115.xht",
-        "content-116.xht",
-        "content-117.xht",
-        "content-118.xht",
-        "content-119.xht",
-        "content-121.xht",
-        "content-122.xht",
-        "content-123.xht",
-        "content-126.xht",
-        "content-127.xht",
-        "content-129.xht",
-        "content-130.xht",
-        "content-131.xht",
-        "content-132.xht",
-        "content-135.xht",
-        "content-136.xht",
-        "content-138.xht",
-        "content-140.xht",
-        "content-141.xht",
-        "content-142.xht",
-        "content-143.xht",
-        "content-144.xht",
-        "content-145.xht",
-        "content-146.xht",
-        "content-147.xht",
-        "content-149.xht",
-        "content-150.xht",
-        "content-151.xht",
-        "content-152.xht",
-        "content-153.xht",
-        "content-155.xht",
-        "content-attr-001.xht",
-        "content-attr-002.xht",
-        "content-attr-case-001.html",
-        "content-attr-case-002.xht",
-        "other-attribute-001.xht"
-      ]
-    }
-  ],
-  "quotes": [
-    {
-      "testPath": "css/css-content",
-      "testFiles": [
-        "quotes-*"
-      ]
-    }
-  ],
-  "content": [
-    {
-      "testPath": "css/css-content",
-      "testFiles": [
-        "content-*",
-        "pseudo-element-inline-box.html"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/generated-content",
-      "testFiles": [
-        "*",
-        "!content-037.xht",
-        "!content-038.xht",
-        "!content-039.xht",
-        "!content-040.xht",
-        "!content-041.xht",
-        "!content-042.xht",
-        "!content-043.xht",
-        "!content-046.xht",
-        "!content-047.xht",
-        "!content-048.xht",
-        "!content-049.xht",
-        "!content-050.xht",
-        "!content-051.xht",
-        "!content-052.xht",
-        "!content-053.xht",
-        "!content-054.xht",
-        "!content-056.xht",
-        "!content-057.xht",
-        "!content-063.xht",
-        "!content-065.xht",
-        "!content-066.xht",
-        "!content-067.xht",
-        "!content-068.xht",
-        "!content-070.xht",
-        "!content-072.xht",
-        "!content-073.xht",
-        "!content-075.xht",
-        "!content-076.xht",
-        "!content-077.xht",
-        "!content-078.xht",
-        "!content-080.xht",
-        "!content-081.xht",
-        "!content-082.xht",
-        "!content-083.xht",
-        "!content-085.xht",
-        "!content-086.xht",
-        "!content-089.xht",
-        "!content-090.xht",
-        "!content-091.xht",
-        "!content-096.xht",
-        "!content-097.xht",
-        "!content-099.xht",
-        "!content-100.xht",
-        "!content-103.xht",
-        "!content-105.xht",
-        "!content-107.xht",
-        "!content-108.xht",
-        "!content-109.xht",
-        "!content-110.xht",
-        "!content-111.xht",
-        "!content-112.xht",
-        "!content-113.xht",
-        "!content-114.xht",
-        "!content-115.xht",
-        "!content-116.xht",
-        "!content-117.xht",
-        "!content-118.xht",
-        "!content-119.xht",
-        "!content-121.xht",
-        "!content-122.xht",
-        "!content-123.xht",
-        "!content-126.xht",
-        "!content-127.xht",
-        "!content-129.xht",
-        "!content-130.xht",
-        "!content-131.xht",
-        "!content-132.xht",
-        "!content-135.xht",
-        "!content-136.xht",
-        "!content-138.xht",
-        "!content-140.xht",
-        "!content-141.xht",
-        "!content-142.xht",
-        "!content-143.xht",
-        "!content-144.xht",
-        "!content-145.xht",
-        "!content-146.xht",
-        "!content-147.xht",
-        "!content-149.xht",
-        "!content-150.xht",
-        "!content-151.xht",
-        "!content-152.xht",
-        "!content-153.xht",
-        "!content-155.xht",
-        "!content-attr-001.xht",
-        "!content-attr-002.xht",
-        "!content-attr-case-001.html",
-        "!content-attr-case-002.xht",
-        "!other-attribute-001.xht",
-        "!content-005.xht",
-        "!content-006.xht",
-        "!content-007.xht",
-        "!content-008.xht",
-        "!content-009.xht",
-        "!content-010.xht",
-        "!content-011.xht",
-        "!content-012.xht",
-        "!content-013.xht",
-        "!content-014.xht",
-        "!content-015.xht",
-        "!content-016.xht",
-        "!content-017.xht",
-        "!content-018.xht",
-        "!content-019.xht",
-        "!content-020.xht",
-        "!content-021.xht",
-        "!content-022.xht",
-        "!content-023.xht",
-        "!content-024.xht",
-        "!content-025.xht",
-        "!content-026.xht",
-        "!content-027.xht",
-        "!content-028.xht",
-        "!content-029.xht",
-        "!content-030.xht",
-        "!content-031.xht",
-        "!content-032.xht",
-        "!content-033.xht",
-        "!content-034.xht",
-        "!content-035.xht",
-        "!content-036.xht",
-        "!content-auto-reset-001.xht",
-        "!content-counter-*",
-        "!content-counters-*",
-        "!counter-*",
-        "!counters-*"
-      ]
-    }
-  ],
   "supports": [
     {
       "testPath": "css/css-conditional",
@@ -9021,6 +8923,170 @@
       ]
     }
   ],
+  "text-emphasis": [
+    {
+      "testPath": "css/css-text-decor",
+      "testFiles": [
+        "text-emphasis-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor/parsing",
+      "testFiles": [
+        "*",
+        "!text-decoration-*",
+        "!text-underline-position-*"
+      ]
+    }
+  ],
+  "text-underline-offset": [
+    {
+      "testPath": "css/css-text-decor",
+      "testFiles": [
+        "text-underline-offset-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor/animations",
+      "testFiles": [
+        "text-underline-offset-*"
+      ]
+    }
+  ],
+  "text-decoration": [
+    {
+      "testPath": "css/css-text-decor",
+      "testFiles": [
+        "*text-decoration-*",
+        "!text-decoration-line-014.xht",
+        "!text-decoration-color-selection-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor/parsing",
+      "testFiles": [
+        "text-decoration-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor/invalidation",
+      "testFiles": [
+        "text-decoration-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor/decorating-box",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/css-text-decor/crashtests",
+      "testFiles": [
+        "*text-decoration-*"
+      ]
+    },
+    {
+      "testPath": "css/css-text-decor/animations",
+      "testFiles": [
+        "text-decoration-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/text",
+      "testFiles": [
+        "bidi-text-decoration-underline-001.xht",
+        "painting-order-underline-001.xht",
+        "text-decoration-001.xht",
+        "text-decoration-002.xht",
+        "text-decoration-003.xht",
+        "text-decoration-005.xht",
+        "text-decoration-006.xht",
+        "text-decoration-008.xht",
+        "text-decoration-009.xht",
+        "text-decoration-011.xht",
+        "text-decoration-012.xht",
+        "text-decoration-017.xht",
+        "text-decoration-019.xht",
+        "text-decoration-023.xht",
+        "text-decoration-025.xht",
+        "text-decoration-029.xht",
+        "text-decoration-031.xht",
+        "text-decoration-066.xht",
+        "text-decoration-067.xht",
+        "text-decoration-068.xht",
+        "text-decoration-069.xht",
+        "text-decoration-applies-to-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/css1",
+      "testFiles": [
+        "c543-txt-decor-000.xht"
+      ]
+    }
+  ],
+  "text-decoration-line-blink": [
+    {
+      "testPath": "css/css-text-decor",
+      "testFiles": [
+        "text-decoration-line-014.xht"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/text",
+      "testFiles": [
+        "text-decoration-004.xht",
+        "text-decoration-007.xht",
+        "text-decoration-010.xht",
+        "text-decoration-013.xht",
+        "text-decoration-014.xht",
+        "text-decoration-015.xht",
+        "text-decoration-016.xht",
+        "text-decoration-018.xht",
+        "text-decoration-020.xht",
+        "text-decoration-021.xht",
+        "text-decoration-022.xht",
+        "text-decoration-024.xht",
+        "text-decoration-026.xht",
+        "text-decoration-027.xht",
+        "text-decoration-028.xht",
+        "text-decoration-030.xht",
+        "text-decoration-032.xht",
+        "text-decoration-033.xht",
+        "text-decoration-034.xht",
+        "text-decoration-035.xht",
+        "text-decoration-036.xht",
+        "text-decoration-037.xht",
+        "text-decoration-038.xht",
+        "text-decoration-039.xht",
+        "text-decoration-040.xht",
+        "text-decoration-041.xht",
+        "text-decoration-042.xht",
+        "text-decoration-043.xht",
+        "text-decoration-044.xht",
+        "text-decoration-045.xht",
+        "text-decoration-046.xht",
+        "text-decoration-047.xht",
+        "text-decoration-048.xht",
+        "text-decoration-049.xht",
+        "text-decoration-050.xht",
+        "text-decoration-051.xht",
+        "text-decoration-052.xht",
+        "text-decoration-053.xht",
+        "text-decoration-054.xht",
+        "text-decoration-055.xht",
+        "text-decoration-056.xht",
+        "text-decoration-057.xht",
+        "text-decoration-058.xht",
+        "text-decoration-059.xht",
+        "text-decoration-060.xht",
+        "text-decoration-061.xht",
+        "text-decoration-062.xht",
+        "text-decoration-063.xht",
+        "text-decoration-064.xht",
+        "text-decoration-065.xht"
+      ]
+    }
+  ],
   "color-function": [
     {
       "testPath": "css/css-color",
@@ -9184,15 +9250,15 @@
       ]
     },
     {
-      "testPath": "css/css-color/parsing",
-      "testFiles": [
-        "opacity-*.html"
-      ]
-    },
-    {
       "testPath": "css/css-color/animation",
       "testFiles": [
         "opacity-interpolation.html"
+      ]
+    },
+    {
+      "testPath": "css/css-color/parsing",
+      "testFiles": [
+        "opacity-*.html"
       ]
     },
     {
@@ -9280,20 +9346,6 @@
       "testFiles": "**"
     }
   ],
-  "flexbox": [
-    {
-      "testPath": "css/css-flexbox",
-      "testFiles": "**"
-    }
-  ],
-  "flexbox-gap": [
-    {
-      "testPath": "css/css-flexbox",
-      "testFiles": [
-        "*gap*"
-      ]
-    }
-  ],
   "animation-composition": [
     {
       "testPath": "css/css-animations",
@@ -9351,360 +9403,6 @@
         "*",
         "!animation-composition-*",
         "!animation-timing-function-invalid.html"
-      ]
-    }
-  ],
-  "background": [
-    {
-      "testPath": "css/css-backgrounds",
-      "testFiles": [
-        "background-3*",
-        "background_color_padding_box.htm"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/parsing",
-      "testFiles": [
-        "background-shorthand-serialization.html"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/css1",
-      "testFiles": [
-        "c537-bgfxps-000.xht"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/backgrounds",
-      "testFiles": [
-        "background-0*",
-        "background-1*",
-        "background-2*",
-        "background-3*",
-        "background-alpha-*",
-        "background-animated-001.xht",
-        "background-applies-to-*",
-        "background-body-*",
-        "background-cover-*",
-        "background-html-body-001.xht",
-        "background-iframes-001.xht",
-        "background-intrinsic-*",
-        "background-reset-001.xht",
-        "background-root-*",
-        "!background-root-003.xht",
-        "background-transparency-001.xht"
-      ]
-    }
-  ],
-  "background-clip": [
-    {
-      "testPath": "css/css-backgrounds",
-      "testFiles": [
-        "background-clip*",
-        "css3-background-clip*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/parsing",
-      "testFiles": [
-        "background-clip-*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/background-clip",
-      "testFiles": [
-        "clip-border-box*",
-        "clip-content-box*",
-        "clip-padding-box*",
-        "clip-rounded-corner.html"
-      ]
-    }
-  ],
-  "border-image": [
-    {
-      "testPath": "css/css-backgrounds",
-      "testFiles": [
-        "border-image*",
-        "css3-border-image*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/parsing",
-      "testFiles": [
-        "border-image-*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/animations",
-      "testFiles": [
-        "border-image-*"
-      ]
-    }
-  ],
-  "background-attachment": [
-    {
-      "testPath": "css/css-backgrounds",
-      "testFiles": [
-        "background-attachment-*",
-        "local-attachment-content-box-scroll.html",
-        "table-cell-background-local*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/parsing",
-      "testFiles": [
-        "background-attachment-*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/background-attachment-local",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/CSS2/css1",
-      "testFiles": [
-        "c535-bg-fixd-000.xht"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/backgrounds",
-      "testFiles": [
-        "background-attachment-*"
-      ]
-    }
-  ],
-  "background-color": [
-    {
-      "testPath": "css/css-backgrounds",
-      "testFiles": [
-        "background-color-*",
-        "background-none-none-and-color.html",
-        "background_color_padding_box.htm",
-        "bg-color-with-gradient.html",
-        "color-behind-images.htm"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/parsing",
-      "testFiles": [
-        "background-color-*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/hidpi",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-backgrounds/animations",
-      "testFiles": [
-        "background-color-*",
-        "two-background-color-*"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/backgrounds",
-      "testFiles": [
-        "background-color-*",
-        "background-root-003.xht"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/animations/invalidation",
-      "testFiles": [
-        "background-color-*"
-      ]
-    }
-  ],
-  "background-image": [
-    {
-      "testPath": "css/css-backgrounds",
-      "testFiles": [
-        "background-image-0*",
-        "background-image-first-letter.html",
-        "background-image-first-line.html",
-        "background-image-large-with-auto.html",
-        "background-image-shared-stylesheet.html",
-        "background-image-table-cells-straddling-no-repeat.html",
-        "background-image-table-cells-zoomed.html",
-        "color-behind-images.htm",
-        "none-as-image-layer.htm",
-        "order-of-images.htm",
-        "scroll-positioned-multiple-background-images.html"
-      ]
-    },
-    {
-      "testPath": "css/compositing",
-      "testFiles": [
-        "root-element-background-image-*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/parsing",
-      "testFiles": [
-        "background-image-*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/animations",
-      "testFiles": [
-        "background-image-interpolation.html"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/tables",
-      "testFiles": [
-        "table-background*",
-        "table-layer-transparency-003.xht",
-        "table-layer-transparency-005.xht",
-        "table-layer-transparency-008.xht"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/css1",
-      "testFiles": [
-        "c533-bgimage-*"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/backgrounds",
-      "testFiles": [
-        "background-006.xht",
-        "background-006a.xht",
-        "background-image-*"
-      ]
-    }
-  ],
-  "background-origin": [
-    {
-      "testPath": "css/css-backgrounds",
-      "testFiles": [
-        "background-origin-*",
-        "css3-background-origin-*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/parsing",
-      "testFiles": [
-        "background-origin-*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/background-origin",
-      "testFiles": "**"
-    }
-  ],
-  "background-position": [
-    {
-      "testPath": "css/css-backgrounds",
-      "testFiles": [
-        "background-position-*",
-        "scroll-positioned-multiple-background-images.html"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/parsing",
-      "testFiles": [
-        "background-position-*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/background-position",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-backgrounds/animations",
-      "testFiles": [
-        "background-position-*"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/tables",
-      "testFiles": [
-        "table-backgrounds-*"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/colors",
-      "testFiles": [
-        "table-backgrounds-bs-row-002.xht"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/css1",
-      "testFiles": [
-        "c536-bgpos-*"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/backgrounds",
-      "testFiles": [
-        "background-position-*",
-        "background-bg-pos-*"
-      ]
-    }
-  ],
-  "background-repeat": [
-    {
-      "testPath": "css/css-backgrounds",
-      "testFiles": [
-        "background-repeat-*",
-        "background_repeat_*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/parsing",
-      "testFiles": [
-        "background-repeat-*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/background-repeat",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/CSS2/tables",
-      "testFiles": [
-        "background-table-*"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/css1",
-      "testFiles": [
-        "c534-bgre-*",
-        "c534-bgreps-*"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/backgrounds",
-      "testFiles": [
-        "background-repeat-*"
-      ]
-    }
-  ],
-  "background-size": [
-    {
-      "testPath": "css/css-backgrounds",
-      "testFiles": [
-        "background-image-cover-zoomed-1.html",
-        "background-image-large-with-auto.html",
-        "background-size-*",
-        "css3-background-size*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/parsing",
-      "testFiles": [
-        "background-size-*"
-      ]
-    },
-    {
-      "testPath": "css/css-backgrounds/background-size",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-backgrounds/animations",
-      "testFiles": [
-        "background-size-interpolation.html"
       ]
     }
   ],
@@ -10022,6 +9720,360 @@
       ]
     }
   ],
+  "background": [
+    {
+      "testPath": "css/css-backgrounds",
+      "testFiles": [
+        "background-3*",
+        "background_color_padding_box.htm"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/parsing",
+      "testFiles": [
+        "background-shorthand-serialization.html"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/css1",
+      "testFiles": [
+        "c537-bgfxps-000.xht"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/backgrounds",
+      "testFiles": [
+        "background-0*",
+        "background-1*",
+        "background-2*",
+        "background-3*",
+        "background-alpha-*",
+        "background-animated-001.xht",
+        "background-applies-to-*",
+        "background-body-*",
+        "background-cover-*",
+        "background-html-body-001.xht",
+        "background-iframes-001.xht",
+        "background-intrinsic-*",
+        "background-reset-001.xht",
+        "background-root-*",
+        "!background-root-003.xht",
+        "background-transparency-001.xht"
+      ]
+    }
+  ],
+  "background-clip": [
+    {
+      "testPath": "css/css-backgrounds",
+      "testFiles": [
+        "background-clip*",
+        "css3-background-clip*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/parsing",
+      "testFiles": [
+        "background-clip-*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/background-clip",
+      "testFiles": [
+        "clip-border-box*",
+        "clip-content-box*",
+        "clip-padding-box*",
+        "clip-rounded-corner.html"
+      ]
+    }
+  ],
+  "border-image": [
+    {
+      "testPath": "css/css-backgrounds",
+      "testFiles": [
+        "border-image*",
+        "css3-border-image*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/parsing",
+      "testFiles": [
+        "border-image-*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/animations",
+      "testFiles": [
+        "border-image-*"
+      ]
+    }
+  ],
+  "background-attachment": [
+    {
+      "testPath": "css/css-backgrounds",
+      "testFiles": [
+        "background-attachment-*",
+        "local-attachment-content-box-scroll.html",
+        "table-cell-background-local*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/parsing",
+      "testFiles": [
+        "background-attachment-*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/background-attachment-local",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/CSS2/css1",
+      "testFiles": [
+        "c535-bg-fixd-000.xht"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/backgrounds",
+      "testFiles": [
+        "background-attachment-*"
+      ]
+    }
+  ],
+  "background-color": [
+    {
+      "testPath": "css/css-backgrounds",
+      "testFiles": [
+        "background-color-*",
+        "background-none-none-and-color.html",
+        "background_color_padding_box.htm",
+        "bg-color-with-gradient.html",
+        "color-behind-images.htm"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/hidpi",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/css-backgrounds/parsing",
+      "testFiles": [
+        "background-color-*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/animations",
+      "testFiles": [
+        "background-color-*",
+        "two-background-color-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/backgrounds",
+      "testFiles": [
+        "background-color-*",
+        "background-root-003.xht"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/animations/invalidation",
+      "testFiles": [
+        "background-color-*"
+      ]
+    }
+  ],
+  "background-image": [
+    {
+      "testPath": "css/css-backgrounds",
+      "testFiles": [
+        "background-image-0*",
+        "background-image-first-letter.html",
+        "background-image-first-line.html",
+        "background-image-large-with-auto.html",
+        "background-image-shared-stylesheet.html",
+        "background-image-table-cells-straddling-no-repeat.html",
+        "background-image-table-cells-zoomed.html",
+        "color-behind-images.htm",
+        "none-as-image-layer.htm",
+        "order-of-images.htm",
+        "scroll-positioned-multiple-background-images.html"
+      ]
+    },
+    {
+      "testPath": "css/compositing",
+      "testFiles": [
+        "root-element-background-image-*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/parsing",
+      "testFiles": [
+        "background-image-*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/animations",
+      "testFiles": [
+        "background-image-interpolation.html"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/tables",
+      "testFiles": [
+        "table-background*",
+        "table-layer-transparency-003.xht",
+        "table-layer-transparency-005.xht",
+        "table-layer-transparency-008.xht"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/css1",
+      "testFiles": [
+        "c533-bgimage-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/backgrounds",
+      "testFiles": [
+        "background-006.xht",
+        "background-006a.xht",
+        "background-image-*"
+      ]
+    }
+  ],
+  "background-origin": [
+    {
+      "testPath": "css/css-backgrounds",
+      "testFiles": [
+        "background-origin-*",
+        "css3-background-origin-*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/parsing",
+      "testFiles": [
+        "background-origin-*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/background-origin",
+      "testFiles": "**"
+    }
+  ],
+  "background-position": [
+    {
+      "testPath": "css/css-backgrounds",
+      "testFiles": [
+        "background-position-*",
+        "scroll-positioned-multiple-background-images.html"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/parsing",
+      "testFiles": [
+        "background-position-*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/background-position",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/css-backgrounds/animations",
+      "testFiles": [
+        "background-position-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/tables",
+      "testFiles": [
+        "table-backgrounds-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/colors",
+      "testFiles": [
+        "table-backgrounds-bs-row-002.xht"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/css1",
+      "testFiles": [
+        "c536-bgpos-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/backgrounds",
+      "testFiles": [
+        "background-position-*",
+        "background-bg-pos-*"
+      ]
+    }
+  ],
+  "background-repeat": [
+    {
+      "testPath": "css/css-backgrounds",
+      "testFiles": [
+        "background-repeat-*",
+        "background_repeat_*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/parsing",
+      "testFiles": [
+        "background-repeat-*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/background-repeat",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/CSS2/tables",
+      "testFiles": [
+        "background-table-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/css1",
+      "testFiles": [
+        "c534-bgre-*",
+        "c534-bgreps-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/backgrounds",
+      "testFiles": [
+        "background-repeat-*"
+      ]
+    }
+  ],
+  "background-size": [
+    {
+      "testPath": "css/css-backgrounds",
+      "testFiles": [
+        "background-image-cover-zoomed-1.html",
+        "background-image-large-with-auto.html",
+        "background-size-*",
+        "css3-background-size*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/parsing",
+      "testFiles": [
+        "background-size-*"
+      ]
+    },
+    {
+      "testPath": "css/css-backgrounds/background-size",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/css-backgrounds/animations",
+      "testFiles": [
+        "background-size-interpolation.html"
+      ]
+    }
+  ],
   "mix-blend-mode": [
     {
       "testPath": "css/compositing",
@@ -10054,6 +10106,50 @@
       "testFiles": "**"
     }
   ],
+  "arianotify": [
+    {
+      "testPath": "core-aam/arianotify",
+      "testFiles": "**"
+    }
+  ],
+  "partitioned-cookies": [
+    {
+      "testPath": "cookies/partitioned-cookies",
+      "testFiles": "**"
+    }
+  ],
+  "flexbox": [
+    {
+      "testPath": "css/css-flexbox",
+      "testFiles": "**"
+    }
+  ],
+  "flexbox-gap": [
+    {
+      "testPath": "css/css-flexbox",
+      "testFiles": [
+        "*gap*"
+      ]
+    }
+  ],
+  "state": [
+    {
+      "testPath": "custom-elements/state",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/selectors/parsing",
+      "testFiles": [
+        "parse-state.html"
+      ]
+    },
+    {
+      "testPath": "css/selectors/invalidation",
+      "testFiles": [
+        "state-in-has.html"
+      ]
+    }
+  ],
   "anchor-positioning": [
     {
       "testPath": "css/css-anchor-position",
@@ -10066,105 +10162,9 @@
       "testFiles": "**"
     }
   ],
-  "partitioned-cookies": [
+  "form-associated-custom-elements": [
     {
-      "testPath": "cookies/partitioned-cookies",
-      "testFiles": "**"
-    }
-  ],
-  "conic-gradients": [
-    {
-      "testPath": "css/css-images",
-      "testFiles": [
-        "*conic*"
-      ]
-    }
-  ],
-  "object-view-box": [
-    {
-      "testPath": "css/css-images",
-      "testFiles": [
-        "object-view-box-*"
-      ]
-    },
-    {
-      "testPath": "css/css-images/animation",
-      "testFiles": [
-        "object-view-box-*"
-      ]
-    }
-  ],
-  "crisp-edges": [
-    {
-      "testPath": "css/css-images",
-      "testFiles": [
-        "object-fit-*-png*",
-        "!object-fit-containcontainintrinsicsize-png-*",
-        "!object-fit-containsize-png-*"
-      ]
-    }
-  ],
-  "object-fit": [
-    {
-      "testPath": "css/css-images",
-      "testFiles": [
-        "image-fit-*",
-        "object-fit-*",
-        "!object-fit-*-png*"
-      ]
-    },
-    {
-      "testPath": "css/css-images/parsing",
-      "testFiles": [
-        "object-fit-*"
-      ]
-    }
-  ],
-  "object-position": [
-    {
-      "testPath": "css/css-images",
-      "testFiles": [
-        "object-position-*"
-      ]
-    },
-    {
-      "testPath": "css/css-images/parsing",
-      "testFiles": [
-        "object-position-*"
-      ]
-    },
-    {
-      "testPath": "css/css-images/animation",
-      "testFiles": [
-        "object-position-*"
-      ]
-    }
-  ],
-  "image-function": [
-    {
-      "testPath": "css/css-images",
-      "testFiles": [
-        "css-image-fallbacks-and-annotations*"
-      ]
-    }
-  ],
-  "image-rendering": [
-    {
-      "testPath": "css/css-images",
-      "testFiles": [
-        "image-rendering-*"
-      ]
-    },
-    {
-      "testPath": "css/css-images/parsing",
-      "testFiles": [
-        "image-rendering-*"
-      ]
-    }
-  ],
-  "arianotify": [
-    {
-      "testPath": "core-aam/arianotify",
+      "testPath": "custom-elements/form-associated",
       "testFiles": "**"
     }
   ],
@@ -10230,10 +10230,6 @@
       ]
     },
     {
-      "testPath": "webvtt/rendering/cues-with-video/processing-model",
-      "testFiles": "**"
-    },
-    {
       "testPath": "webvtt/parsing/file-parsing/tests",
       "testFiles": [
         "arrows.html",
@@ -10266,6 +10262,10 @@
         "timings-too-short.html",
         "whitespace-chars.html"
       ]
+    },
+    {
+      "testPath": "webvtt/rendering/cues-with-video/processing-model",
+      "testFiles": "**"
     },
     {
       "testPath": "webvtt/parsing/cue-text-parsing/tests",
@@ -10302,11 +10302,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region_function",
+      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region",
       "testFiles": "**"
     },
     {
-      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region",
+      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue-region_function",
       "testFiles": "**"
     }
   ],
@@ -10389,11 +10389,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-iirfilternode-interface",
+      "testPath": "webaudio/the-audio-api/the-gainnode-interface",
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-gainnode-interface",
+      "testPath": "webaudio/the-audio-api/the-iirfilternode-interface",
       "testFiles": "**"
     },
     {
@@ -10429,19 +10429,19 @@
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-audioparam-interface",
-      "testFiles": "**"
-    },
-    {
       "testPath": "webaudio/the-audio-api/the-audionode-interface",
       "testFiles": "**"
     },
     {
-      "testPath": "webaudio/the-audio-api/the-audiocontext-interface",
+      "testPath": "webaudio/the-audio-api/the-audioparam-interface",
       "testFiles": "**"
     },
     {
       "testPath": "webaudio/the-audio-api/the-audiobuffersourcenode-interface",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "webaudio/the-audio-api/the-audiocontext-interface",
       "testFiles": "**"
     },
     {
@@ -10527,12 +10527,6 @@
       ]
     }
   ],
-  "wasm-simd-relaxed": [
-    {
-      "testPath": "wasm/core/relaxed-simd",
-      "testFiles": "**"
-    }
-  ],
   "wasm-simd": [
     {
       "testPath": "wasm/core/simd",
@@ -10543,15 +10537,21 @@
       "testFiles": "**"
     }
   ],
-  "wasm-multi-memory": [
+  "wasm-simd-relaxed": [
     {
-      "testPath": "wasm/core/multi-memory",
+      "testPath": "wasm/core/relaxed-simd",
       "testFiles": "**"
     }
   ],
   "wasm-memory64": [
     {
       "testPath": "wasm/core/memory64",
+      "testFiles": "**"
+    }
+  ],
+  "wasm-multi-memory": [
+    {
+      "testPath": "wasm/core/multi-memory",
       "testFiles": "**"
     }
   ],
@@ -11288,15 +11288,15 @@
       "testFiles": "**"
     },
     {
-      "testPath": "html/canvas/element/compositing",
-      "testFiles": "**"
-    },
-    {
       "testPath": "html/canvas/element/fill-and-stroke-styles",
       "testFiles": [
         "*",
         "!2d.gradient.conic.*"
       ]
+    },
+    {
+      "testPath": "html/canvas/element/compositing",
+      "testFiles": "**"
     },
     {
       "testPath": "html/canvas/element/color-type",
@@ -11311,10 +11311,6 @@
       "testFiles": "**"
     },
     {
-      "testPath": "html/canvas/element/manual/the-canvas-state",
-      "testFiles": "**"
-    },
-    {
       "testPath": "html/canvas/element/manual/shadows",
       "testFiles": "**"
     },
@@ -11323,11 +11319,15 @@
       "testFiles": "**"
     },
     {
+      "testPath": "html/canvas/element/manual/line-styles",
+      "testFiles": "**"
+    },
+    {
       "testPath": "html/canvas/element/manual/layers",
       "testFiles": "**"
     },
     {
-      "testPath": "html/canvas/element/manual/line-styles",
+      "testPath": "html/canvas/element/manual/the-canvas-state",
       "testFiles": "**"
     },
     {
@@ -11358,14 +11358,14 @@
       "testFiles": "**"
     },
     {
+      "testPath": "html/canvas/element/manual/compositing",
+      "testFiles": "**"
+    },
+    {
       "testPath": "html/canvas/element/manual/context-attributes",
       "testFiles": [
         "getContextAttributes.html"
       ]
-    },
-    {
-      "testPath": "html/canvas/element/manual/compositing",
-      "testFiles": "**"
     },
     {
       "testPath": "html/canvas/element/manual/building-paths",
@@ -11386,11 +11386,11 @@
       "testFiles": "**"
     },
     {
-      "testPath": "html/browsers/the-window-object/open-close",
+      "testPath": "html/browsers/the-window-object/named-access-on-the-window-object",
       "testFiles": "**"
     },
     {
-      "testPath": "html/browsers/the-window-object/named-access-on-the-window-object",
+      "testPath": "html/browsers/the-window-object/open-close",
       "testFiles": "**"
     },
     {
@@ -11407,9 +11407,29 @@
       ]
     }
   ],
+  "scrollend": [
+    {
+      "testPath": "dom/events/scrolling",
+      "testFiles": [
+        "scrollend-*"
+      ]
+    }
+  ],
+  "move-before": [
+    {
+      "testPath": "dom/nodes/moveBefore",
+      "testFiles": "**"
+    }
+  ],
   "zstd": [
     {
       "testPath": "fetch/content-encoding/zstd",
+      "testFiles": "**"
+    }
+  ],
+  "abortable-fetch": [
+    {
+      "testPath": "fetch/api/abort",
       "testFiles": "**"
     }
   ],
@@ -11437,26 +11457,6 @@
       ]
     }
   ],
-  "abortable-fetch": [
-    {
-      "testPath": "fetch/api/abort",
-      "testFiles": "**"
-    }
-  ],
-  "scrollend": [
-    {
-      "testPath": "dom/events/scrolling",
-      "testFiles": [
-        "scrollend-*"
-      ]
-    }
-  ],
-  "move-before": [
-    {
-      "testPath": "dom/nodes/moveBefore",
-      "testFiles": "**"
-    }
-  ],
   "lang": [
     {
       "testPath": "css/selectors/selectors-4",
@@ -11465,17 +11465,17 @@
       ]
     },
     {
-      "testPath": "css/selectors/old-tests",
-      "testFiles": [
-        "css3-modsel-22.xml",
-        "css3-modsel-67.xml"
-      ]
-    },
-    {
       "testPath": "css/selectors/i18n",
       "testFiles": [
         "css3-selectors-lang-*",
         "lang-pseudo-class-*"
+      ]
+    },
+    {
+      "testPath": "css/selectors/old-tests",
+      "testFiles": [
+        "css3-modsel-22.xml",
+        "css3-modsel-67.xml"
       ]
     },
     {
@@ -11531,18 +11531,18 @@
       ]
     }
   ],
-  "zoom": [
-    {
-      "testPath": "css/css-viewport/zoom",
-      "testFiles": "**"
-    }
-  ],
   "filter-function": [
     {
       "testPath": "css/filter-effects/filter-function",
       "testFiles": [
         "*"
       ]
+    }
+  ],
+  "zoom": [
+    {
+      "testPath": "css/css-viewport/zoom",
+      "testFiles": "**"
     }
   ],
   "view-transitions-element-scoped": [
@@ -11588,6 +11588,16 @@
       "testPath": "css/css-values/calc-size/animation",
       "testFiles": [
         "calc-size-*"
+      ]
+    }
+  ],
+  "vertical-form-controls": [
+    {
+      "testPath": "css/css-writing-modes/forms",
+      "testFiles": [
+        "*vertical*",
+        "*vlr*",
+        "*vrl*"
       ]
     }
   ],
@@ -11766,24 +11776,6 @@
       ]
     }
   ],
-  "tab-size": [
-    {
-      "testPath": "css/css-text/tab-size",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "css/css-text/parsing",
-      "testFiles": [
-        "tab-size-*"
-      ]
-    },
-    {
-      "testPath": "css/css-text/animations",
-      "testFiles": [
-        "tab-size-interpolation.html"
-      ]
-    }
-  ],
   "text-align": [
     {
       "testPath": "css/css-text/text-align",
@@ -11830,22 +11822,21 @@
       ]
     }
   ],
-  "overflow-wrap": [
+  "tab-size": [
     {
-      "testPath": "css/css-text/overflow-wrap",
+      "testPath": "css/css-text/tab-size",
       "testFiles": "**"
     },
     {
       "testPath": "css/css-text/parsing",
       "testFiles": [
-        "overflow-wrap*",
-        "word-wrap*"
+        "tab-size-*"
       ]
     },
     {
-      "testPath": "css/css-typed-om/the-stylepropertymap/properties",
+      "testPath": "css/css-text/animations",
       "testFiles": [
-        "overflow-wrap.html"
+        "tab-size-interpolation.html"
       ]
     }
   ],
@@ -11927,6 +11918,25 @@
       "testFiles": "**"
     }
   ],
+  "overflow-wrap": [
+    {
+      "testPath": "css/css-text/parsing",
+      "testFiles": [
+        "overflow-wrap*",
+        "word-wrap*"
+      ]
+    },
+    {
+      "testPath": "css/css-text/overflow-wrap",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "css/css-typed-om/the-stylepropertymap/properties",
+      "testFiles": [
+        "overflow-wrap.html"
+      ]
+    }
+  ],
   "text-wrap-pretty": [
     {
       "testPath": "css/css-text/parsing",
@@ -11956,16 +11966,6 @@
       "testPath": "css/css-text/hyphens",
       "testFiles": [
         "hyphenate-limit-chars-*"
-      ]
-    }
-  ],
-  "vertical-form-controls": [
-    {
-      "testPath": "css/css-writing-modes/forms",
-      "testFiles": [
-        "*vertical*",
-        "*vlr*",
-        "*vrl*"
       ]
     }
   ],
@@ -12000,12 +12000,16 @@
       ]
     }
   ],
-  "transform-box": [
+  "stretch": [
     {
-      "testPath": "css/css-transforms/transform-box",
-      "testFiles": [
-        "*"
-      ]
+      "testPath": "css/css-sizing/stretch",
+      "testFiles": "**"
+    }
+  ],
+  "contain-intrinsic-size": [
+    {
+      "testPath": "css/css-sizing/contain-intrinsic-size",
+      "testFiles": "**"
     }
   ],
   "scroll-snap-events": [
@@ -12022,32 +12026,6 @@
     },
     {
       "testPath": "css/css-scroll-snap/snap-events/scrollsnapchange",
-      "testFiles": "**"
-    }
-  ],
-  "scroll-initial-target": [
-    {
-      "testPath": "css/css-scroll-snap/scroll-initial-target",
-      "testFiles": "**"
-    }
-  ],
-  "color-contrast": [
-    {
-      "testPath": "css/css-properties-values-api/crashtests",
-      "testFiles": [
-        "consume-color-contrast-crash.html"
-      ]
-    }
-  ],
-  "stretch": [
-    {
-      "testPath": "css/css-sizing/stretch",
-      "testFiles": "**"
-    }
-  ],
-  "contain-intrinsic-size": [
-    {
-      "testPath": "css/css-sizing/contain-intrinsic-size",
       "testFiles": "**"
     }
   ],
@@ -12089,10 +12067,18 @@
       "testFiles": "**"
     }
   ],
-  "sticky-positioning": [
+  "scroll-initial-target": [
     {
-      "testPath": "css/css-position/sticky",
+      "testPath": "css/css-scroll-snap/scroll-initial-target",
       "testFiles": "**"
+    }
+  ],
+  "color-contrast": [
+    {
+      "testPath": "css/css-properties-values-api/crashtests",
+      "testFiles": [
+        "consume-color-contrast-crash.html"
+      ]
     }
   ],
   "position": [
@@ -12115,134 +12101,18 @@
       "testFiles": "**"
     }
   ],
-  "mask-type": [
+  "sticky-positioning": [
     {
-      "testPath": "css/css-masking/parsing",
-      "testFiles": [
-        "mask-type-*"
-      ]
-    },
-    {
-      "testPath": "css/css-masking/mask-svg-content",
-      "testFiles": [
-        "mask-type-*"
-      ]
-    }
-  ],
-  "clip-path-boxes": [
-    {
-      "testPath": "css/css-masking/hit-test",
-      "testFiles": [
-        "clip-path-svg-geometry-box.html"
-      ]
-    },
-    {
-      "testPath": "css/css-masking/clip-path-svg-content",
-      "testFiles": [
-        "clip-path-inset-stroke-001.svg",
-        "clip-path-inset-stroke-002.svg",
-        "clip-path-shape-circle-003.svg",
-        "clip-path-shape-circle-004.svg",
-        "clip-path-shape-circle-005.svg"
-      ]
-    },
-    {
-      "testPath": "css/css-masking/clip-path",
-      "testFiles": [
-        "clip-path-fillBox-1a.html",
-        "clip-path-fillBox-1b.html",
-        "clip-path-strokeBox-1a.html",
-        "clip-path-strokeBox-1b.html",
-        "clip-path-strokeBox-1c.html",
-        "clip-path-viewBox-1a.html",
-        "clip-path-viewBox-1b.html",
-        "clip-path-viewBox-1c.html",
-        "clip-path-viewBox-1d.html"
-      ]
-    }
-  ],
-  "mask-border": [
-    {
-      "testPath": "css/css-masking/animations",
-      "testFiles": [
-        "mask-border-*"
-      ]
-    }
-  ],
-  "clip-path": [
-    {
-      "testPath": "css/css-masking/clip-path",
+      "testPath": "css/css-position/sticky",
       "testFiles": "**"
     }
   ],
-  "clip-path-animatable": [
+  "transform-box": [
     {
-      "testPath": "css/css-masking/clip-path",
+      "testPath": "css/css-transforms/transform-box",
       "testFiles": [
-        "interpolation.html"
+        "*"
       ]
-    },
-    {
-      "testPath": "css/css-masking/clip-path/animations",
-      "testFiles": "**"
-    }
-  ],
-  "alignment-baseline": [
-    {
-      "testPath": "css/css-inline/parsing",
-      "testFiles": [
-        "alignment-baseline-*"
-      ]
-    },
-    {
-      "testPath": "css/css-inline/animation",
-      "testFiles": [
-        "alignment-baseline-*"
-      ]
-    }
-  ],
-  "baseline-shift": [
-    {
-      "testPath": "css/css-inline/parsing",
-      "testFiles": [
-        "baseline-shift-*"
-      ]
-    },
-    {
-      "testPath": "css/css-inline/baseline-shift",
-      "testFiles": "**"
-    }
-  ],
-  "vertical-align": [
-    {
-      "testPath": "css/css-inline/parsing",
-      "testFiles": [
-        "vertical-align-*"
-      ]
-    },
-    {
-      "testPath": "css/CSS2/linebox",
-      "testFiles": [
-        "vertical-align-*"
-      ]
-    }
-  ],
-  "text-box": [
-    {
-      "testPath": "css/css-inline/text-box-trim",
-      "testFiles": "**"
-    }
-  ],
-  "baseline-source": [
-    {
-      "testPath": "css/css-inline/baseline-source",
-      "testFiles": "**"
-    }
-  ],
-  "initial-letter": [
-    {
-      "testPath": "css/css-inline/initial-letter",
-      "testFiles": "**"
     }
   ],
   "scroll-markers": [
@@ -12322,9 +12192,133 @@
       ]
     }
   ],
-  "subgrid": [
+  "mask-type": [
     {
-      "testPath": "css/css-grid/subgrid",
+      "testPath": "css/css-masking/parsing",
+      "testFiles": [
+        "mask-type-*"
+      ]
+    },
+    {
+      "testPath": "css/css-masking/mask-svg-content",
+      "testFiles": [
+        "mask-type-*"
+      ]
+    }
+  ],
+  "clip-path-boxes": [
+    {
+      "testPath": "css/css-masking/hit-test",
+      "testFiles": [
+        "clip-path-svg-geometry-box.html"
+      ]
+    },
+    {
+      "testPath": "css/css-masking/clip-path-svg-content",
+      "testFiles": [
+        "clip-path-inset-stroke-001.svg",
+        "clip-path-inset-stroke-002.svg",
+        "clip-path-shape-circle-003.svg",
+        "clip-path-shape-circle-004.svg",
+        "clip-path-shape-circle-005.svg"
+      ]
+    },
+    {
+      "testPath": "css/css-masking/clip-path",
+      "testFiles": [
+        "clip-path-fillBox-1a.html",
+        "clip-path-fillBox-1b.html",
+        "clip-path-strokeBox-1a.html",
+        "clip-path-strokeBox-1b.html",
+        "clip-path-strokeBox-1c.html",
+        "clip-path-viewBox-1a.html",
+        "clip-path-viewBox-1b.html",
+        "clip-path-viewBox-1c.html",
+        "clip-path-viewBox-1d.html"
+      ]
+    }
+  ],
+  "clip-path": [
+    {
+      "testPath": "css/css-masking/clip-path",
+      "testFiles": "**"
+    }
+  ],
+  "clip-path-animatable": [
+    {
+      "testPath": "css/css-masking/clip-path",
+      "testFiles": [
+        "interpolation.html"
+      ]
+    },
+    {
+      "testPath": "css/css-masking/clip-path/animations",
+      "testFiles": "**"
+    }
+  ],
+  "mask-border": [
+    {
+      "testPath": "css/css-masking/animations",
+      "testFiles": [
+        "mask-border-*"
+      ]
+    }
+  ],
+  "alignment-baseline": [
+    {
+      "testPath": "css/css-inline/parsing",
+      "testFiles": [
+        "alignment-baseline-*"
+      ]
+    },
+    {
+      "testPath": "css/css-inline/animation",
+      "testFiles": [
+        "alignment-baseline-*"
+      ]
+    }
+  ],
+  "baseline-shift": [
+    {
+      "testPath": "css/css-inline/parsing",
+      "testFiles": [
+        "baseline-shift-*"
+      ]
+    },
+    {
+      "testPath": "css/css-inline/baseline-shift",
+      "testFiles": "**"
+    }
+  ],
+  "vertical-align": [
+    {
+      "testPath": "css/css-inline/parsing",
+      "testFiles": [
+        "vertical-align-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/linebox",
+      "testFiles": [
+        "vertical-align-*"
+      ]
+    }
+  ],
+  "text-box": [
+    {
+      "testPath": "css/css-inline/text-box-trim",
+      "testFiles": "**"
+    }
+  ],
+  "initial-letter": [
+    {
+      "testPath": "css/css-inline/initial-letter",
+      "testFiles": "**"
+    }
+  ],
+  "baseline-source": [
+    {
+      "testPath": "css/css-inline/baseline-source",
       "testFiles": "**"
     }
   ],
@@ -12341,9 +12335,43 @@
       "testFiles": "**"
     }
   ],
+  "subgrid": [
+    {
+      "testPath": "css/css-grid/subgrid",
+      "testFiles": "**"
+    }
+  ],
   "grid-animation": [
     {
       "testPath": "css/css-grid/animation",
+      "testFiles": "**"
+    }
+  ],
+  "gradient-interpolation": [
+    {
+      "testPath": "css/css-images/parsing",
+      "testFiles": [
+        "gradient-interpolation-*"
+      ]
+    }
+  ],
+  "image-orientation": [
+    {
+      "testPath": "css/css-images/parsing",
+      "testFiles": [
+        "image-orientation-*"
+      ]
+    },
+    {
+      "testPath": "css/css-images/image-orientation",
+      "testFiles": [
+        "*"
+      ]
+    }
+  ],
+  "image-set": [
+    {
+      "testPath": "css/css-images/image-set",
       "testFiles": "**"
     }
   ],
@@ -12397,6 +12425,14 @@
       ]
     }
   ],
+  "font-display": [
+    {
+      "testPath": "css/css-fonts/font-display",
+      "testFiles": [
+        "*"
+      ]
+    }
+  ],
   "font-family": [
     {
       "testPath": "css/css-fonts/parsing",
@@ -12416,14 +12452,6 @@
       "testPath": "css/css-fonts/parsing",
       "testFiles": [
         "font-width-*"
-      ]
-    }
-  ],
-  "font-display": [
-    {
-      "testPath": "css/css-fonts/font-display",
-      "testFiles": [
-        "*"
       ]
     }
   ],
@@ -12450,36 +12478,6 @@
       "testPath": "css/css-conditional/js",
       "testFiles": [
         "supports-at-rule.html"
-      ]
-    }
-  ],
-  "color-scheme": [
-    {
-      "testPath": "css/css-color-adjust/parsing",
-      "testFiles": [
-        "color-scheme-*"
-      ]
-    },
-    {
-      "testPath": "css/css-color-adjust/animation",
-      "testFiles": [
-        "color-scheme-*"
-      ]
-    },
-    {
-      "testPath": "css/css-color-adjust/rendering/dark-color-scheme",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/semantics/document-metadata/the-meta-element/color-scheme",
-      "testFiles": "**"
-    }
-  ],
-  "print-color-adjust": [
-    {
-      "testPath": "css/css-color-adjust/parsing",
-      "testFiles": [
-        "print-color-adjust.html"
       ]
     }
   ],
@@ -12636,6 +12634,36 @@
       ]
     }
   ],
+  "color-scheme": [
+    {
+      "testPath": "css/css-color-adjust/animation",
+      "testFiles": [
+        "color-scheme-*"
+      ]
+    },
+    {
+      "testPath": "css/css-color-adjust/parsing",
+      "testFiles": [
+        "color-scheme-*"
+      ]
+    },
+    {
+      "testPath": "css/css-color-adjust/rendering/dark-color-scheme",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/semantics/document-metadata/the-meta-element/color-scheme",
+      "testFiles": "**"
+    }
+  ],
+  "print-color-adjust": [
+    {
+      "testPath": "css/css-color-adjust/parsing",
+      "testFiles": [
+        "print-color-adjust.html"
+      ]
+    }
+  ],
   "content-visibility": [
     {
       "testPath": "css/css-contain/content-visibility",
@@ -12655,13 +12683,6 @@
       ]
     },
     {
-      "testPath": "css/CSS2/floats",
-      "testFiles": [
-        "float-root.html",
-        "inheritance.html"
-      ]
-    },
-    {
       "testPath": "css/CSS2/floats-clear",
       "testFiles": [
         "clear-0*",
@@ -12669,6 +12690,13 @@
         "clear-default-inheritance-001.xht",
         "clear-initial-001.xht",
         "float-applies-to-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/floats",
+      "testFiles": [
+        "float-root.html",
+        "inheritance.html"
       ]
     }
   ],
@@ -12690,13 +12718,6 @@
       ]
     },
     {
-      "testPath": "css/CSS2/css1",
-      "testFiles": [
-        "*-imrgn-*",
-        "*-mrgn-*"
-      ]
-    },
-    {
       "testPath": "css/CSS2/normal-flow",
       "testFiles": [
         "auto-margins-*",
@@ -12714,6 +12735,13 @@
       "testFiles": [
         "margin-*",
         "!margin-border-padding-*"
+      ]
+    },
+    {
+      "testPath": "css/CSS2/css1",
+      "testFiles": [
+        "*-imrgn-*",
+        "*-mrgn-*"
       ]
     }
   ],
@@ -12757,22 +12785,6 @@
       "testFiles": "**"
     }
   ],
-  "background-clip-text": [
-    {
-      "testPath": "css/css-backgrounds/background-clip",
-      "testFiles": [
-        "clip-text-*"
-      ]
-    }
-  ],
-  "background-clip-border-area": [
-    {
-      "testPath": "css/css-backgrounds/background-clip",
-      "testFiles": [
-        "clip-border-area*"
-      ]
-    }
-  ],
   "justify-self-block": [
     {
       "testPath": "css/css-align/self-alignment",
@@ -12794,6 +12806,22 @@
       "testPath": "css/css-align/blocks",
       "testFiles": [
         "align-content-block-*"
+      ]
+    }
+  ],
+  "background-clip-text": [
+    {
+      "testPath": "css/css-backgrounds/background-clip",
+      "testFiles": [
+        "clip-text-*"
+      ]
+    }
+  ],
+  "background-clip-border-area": [
+    {
+      "testPath": "css/css-backgrounds/background-clip",
+      "testFiles": [
+        "clip-border-area*"
       ]
     }
   ],
@@ -12918,6 +12946,15 @@
       ]
     }
   ],
+  "page-breaks": [
+    {
+      "testPath": "css/CSS2/page-box",
+      "testFiles": [
+        "page-container-003.xht",
+        "page-selectors-001.xht"
+      ]
+    }
+  ],
   "physical-properties": [
     {
       "testPath": "css/CSS2/positioning",
@@ -12937,46 +12974,9 @@
       ]
     }
   ],
-  "page-breaks": [
-    {
-      "testPath": "css/CSS2/page-box",
-      "testFiles": [
-        "page-container-003.xht",
-        "page-selectors-001.xht"
-      ]
-    }
-  ],
   "container-anchor-position-queries": [
     {
       "testPath": "css/css-anchor-position/container-queries",
-      "testFiles": "**"
-    }
-  ],
-  "gradient-interpolation": [
-    {
-      "testPath": "css/css-images/parsing",
-      "testFiles": [
-        "gradient-interpolation-*"
-      ]
-    }
-  ],
-  "image-orientation": [
-    {
-      "testPath": "css/css-images/parsing",
-      "testFiles": [
-        "image-orientation-*"
-      ]
-    },
-    {
-      "testPath": "css/css-images/image-orientation",
-      "testFiles": [
-        "*"
-      ]
-    }
-  ],
-  "image-set": [
-    {
-      "testPath": "css/css-images/image-set",
       "testFiles": "**"
     }
   ],
@@ -13042,13 +13042,13 @@
   ],
   "document-write": [
     {
-      "testPath": "html/webappapis/dynamic-markup-insertion/document-writeln",
+      "testPath": "html/webappapis/dynamic-markup-insertion/opening-the-input-stream",
       "testFiles": [
         "*"
       ]
     },
     {
-      "testPath": "html/webappapis/dynamic-markup-insertion/opening-the-input-stream",
+      "testPath": "html/webappapis/dynamic-markup-insertion/document-writeln",
       "testFiles": [
         "*"
       ]
@@ -13076,10 +13076,29 @@
       "testFiles": "**"
     }
   ],
-  "wbr": [
+  "autofill": [
     {
-      "testPath": "html/semantics/text-level-semantics/the-wbr-element",
-      "testFiles": "**"
+      "testPath": "html/semantics/selectors/pseudo-classes",
+      "testFiles": [
+        "autofill.html"
+      ]
+    }
+  ],
+  "default": [
+    {
+      "testPath": "html/semantics/selectors/pseudo-classes",
+      "testFiles": [
+        "default.html"
+      ]
+    }
+  ],
+  "indeterminate": [
+    {
+      "testPath": "html/semantics/selectors/pseudo-classes",
+      "testFiles": [
+        "checked-indeterminate.window.js",
+        "indeterminate*"
+      ]
     }
   ],
   "time": [
@@ -13118,29 +13137,30 @@
       ]
     }
   ],
-  "autofill": [
+  "wbr": [
     {
-      "testPath": "html/semantics/selectors/pseudo-classes",
-      "testFiles": [
-        "autofill.html"
-      ]
+      "testPath": "html/semantics/text-level-semantics/the-wbr-element",
+      "testFiles": "**"
     }
   ],
-  "default": [
+  "a": [
     {
-      "testPath": "html/semantics/selectors/pseudo-classes",
-      "testFiles": [
-        "default.html"
-      ]
+      "testPath": "html/semantics/links/links-created-by-a-and-area-elements",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/semantics/links/following-hyperlinks",
+      "testFiles": "**"
     }
   ],
-  "indeterminate": [
+  "ping": [
     {
-      "testPath": "html/semantics/selectors/pseudo-classes",
-      "testFiles": [
-        "checked-indeterminate.window.js",
-        "indeterminate*"
-      ]
+      "testPath": "html/semantics/links/hyperlink-auditing",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/semantics/links/downloading-resources",
+      "testFiles": "**"
     }
   ],
   "script": [
@@ -13157,11 +13177,11 @@
       ]
     },
     {
-      "testPath": "html/semantics/scripting-1/the-script-element/microtasks",
+      "testPath": "html/semantics/scripting-1/the-script-element/moving-between-documents",
       "testFiles": "**"
     },
     {
-      "testPath": "html/semantics/scripting-1/the-script-element/moving-between-documents",
+      "testPath": "html/semantics/scripting-1/the-script-element/microtasks",
       "testFiles": "**"
     },
     {
@@ -13181,6 +13201,13 @@
       ]
     },
     {
+      "testPath": "html/syntax/speculative-parsing/generated/page-load",
+      "testFiles": [
+        "script-src-module.tentative.html",
+        "script-src-nomodule.tentative.html"
+      ]
+    },
+    {
       "testPath": "html/syntax/speculative-parsing/generated/document-write",
       "testFiles": [
         "script-src-module.tentative.sub.html",
@@ -13191,13 +13218,6 @@
       "testPath": "html/semantics/scripting-1/the-script-element/module",
       "testFiles": [
         "*"
-      ]
-    },
-    {
-      "testPath": "html/syntax/speculative-parsing/generated/page-load",
-      "testFiles": [
-        "script-src-module.tentative.html",
-        "script-src-nomodule.tentative.html"
       ]
     },
     {
@@ -13226,74 +13246,12 @@
       ]
     }
   ],
-  "ping": [
-    {
-      "testPath": "html/semantics/links/hyperlink-auditing",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/semantics/links/downloading-resources",
-      "testFiles": "**"
-    }
-  ],
-  "a": [
-    {
-      "testPath": "html/semantics/links/links-created-by-a-and-area-elements",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/semantics/links/following-hyperlinks",
-      "testFiles": "**"
-    }
-  ],
   "details-name": [
     {
       "testPath": "html/semantics/interactive-elements/the-details-element",
       "testFiles": [
         "name-attribute.html"
       ]
-    }
-  ],
-  "pre": [
-    {
-      "testPath": "html/semantics/grouping-content/the-pre-element",
-      "testFiles": "**"
-    }
-  ],
-  "p": [
-    {
-      "testPath": "html/semantics/grouping-content/the-p-element",
-      "testFiles": "**"
-    }
-  ],
-  "hr": [
-    {
-      "testPath": "html/semantics/grouping-content/the-hr-element",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/rendering/non-replaced-elements/the-hr-element-0",
-      "testFiles": "**"
-    }
-  ],
-  "description-list": [
-    {
-      "testPath": "html/semantics/grouping-content/the-dt-element",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/semantics/grouping-content/the-dl-element",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/semantics/grouping-content/the-dd-element",
-      "testFiles": "**"
-    }
-  ],
-  "div": [
-    {
-      "testPath": "html/semantics/grouping-content/the-div-element",
-      "testFiles": "**"
     }
   ],
   "dialog": [
@@ -13338,51 +13296,13 @@
       ]
     }
   ],
-  "progress": [
-    {
-      "testPath": "html/semantics/forms/the-progress-element",
-      "testFiles": "**"
-    }
-  ],
-  "select": [
-    {
-      "testPath": "html/semantics/forms/the-select-element",
-      "testFiles": [
-        "*",
-        "!select-setcustomvalidity.html",
-        "!select-validity.html",
-        "!select-willvalidate-readonly-attribute.html",
-        "!show-picker-*"
-      ]
-    },
-    {
-      "testPath": "html/semantics/forms/the-option-element",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/semantics/forms/the-optgroup-element",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/rendering/widgets/the-select-element",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/rendering/replaced-elements/the-select-element",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/rendering/replaced-elements/the-option-element",
-      "testFiles": "**"
-    }
-  ],
   "constraint-validation": [
     {
-      "testPath": "html/semantics/forms/the-select-element",
+      "testPath": "html/semantics/forms/the-textarea-element",
       "testFiles": [
-        "select-setcustomvalidity.html",
-        "select-validity.html",
-        "select-willvalidate-readonly-attribute.html"
+        "textarea-setcustomvalidity.html",
+        "textarea-validity-clone.html",
+        "textarea-validity-valueMissing-inside-datalist.html"
       ]
     },
     {
@@ -13441,20 +13361,18 @@
       ]
     },
     {
-      "testPath": "html/semantics/forms/the-textarea-element",
+      "testPath": "html/semantics/forms/the-select-element",
       "testFiles": [
-        "textarea-setcustomvalidity.html",
-        "textarea-validity-clone.html",
-        "textarea-validity-valueMissing-inside-datalist.html"
+        "select-setcustomvalidity.html",
+        "select-validity.html",
+        "select-willvalidate-readonly-attribute.html"
       ]
     }
   ],
-  "show-picker-select": [
+  "progress": [
     {
-      "testPath": "html/semantics/forms/the-select-element",
-      "testFiles": [
-        "show-picker-*"
-      ]
+      "testPath": "html/semantics/forms/the-progress-element",
+      "testFiles": "**"
     }
   ],
   "output": [
@@ -13465,6 +13383,38 @@
         "!output-setcustomvalidity.html",
         "!output-validity.html"
       ]
+    }
+  ],
+  "select": [
+    {
+      "testPath": "html/semantics/forms/the-optgroup-element",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/semantics/forms/the-option-element",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/rendering/widgets/the-select-element",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/semantics/forms/the-select-element",
+      "testFiles": [
+        "*",
+        "!select-setcustomvalidity.html",
+        "!select-validity.html",
+        "!select-willvalidate-readonly-attribute.html",
+        "!show-picker-*"
+      ]
+    },
+    {
+      "testPath": "html/rendering/replaced-elements/the-select-element",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/rendering/replaced-elements/the-option-element",
+      "testFiles": "**"
     }
   ],
   "meter": [
@@ -13611,39 +13561,6 @@
       ]
     }
   ],
-  "ins": [
-    {
-      "testPath": "html/semantics/edits/the-ins-element",
-      "testFiles": "**"
-    }
-  ],
-  "del": [
-    {
-      "testPath": "html/semantics/edits/the-del-element",
-      "testFiles": "**"
-    }
-  ],
-  "object": [
-    {
-      "testPath": "html/semantics/embedded-content/the-object-element",
-      "testFiles": [
-        "*",
-        "!object-setcustomvalidity.html"
-      ]
-    },
-    {
-      "testPath": "html/rendering/replaced-elements/embedded-content",
-      "testFiles": [
-        "object-*"
-      ]
-    },
-    {
-      "testPath": "html/rendering/replaced-elements/attributes-for-embedded-content-and-images",
-      "testFiles": [
-        "object_*"
-      ]
-    }
-  ],
   "video": [
     {
       "testPath": "html/semantics/embedded-content/the-video-element",
@@ -13665,6 +13582,27 @@
       "testPath": "html/rendering/replaced-elements/attributes-for-embedded-content-and-images",
       "testFiles": [
         "video-*"
+      ]
+    }
+  ],
+  "object": [
+    {
+      "testPath": "html/semantics/embedded-content/the-object-element",
+      "testFiles": [
+        "*",
+        "!object-setcustomvalidity.html"
+      ]
+    },
+    {
+      "testPath": "html/rendering/replaced-elements/embedded-content",
+      "testFiles": [
+        "object-*"
+      ]
+    },
+    {
+      "testPath": "html/rendering/replaced-elements/attributes-for-embedded-content-and-images",
+      "testFiles": [
+        "object_*"
       ]
     }
   ],
@@ -13721,6 +13659,15 @@
       "testFiles": [
         "iframe-loading-lazy*",
         "!iframe-loading-lazy-base-url*"
+      ]
+    }
+  ],
+  "embed": [
+    {
+      "testPath": "html/semantics/embedded-content/the-embed-element",
+      "testFiles": [
+        "*",
+        "!*-ref.*"
       ]
     }
   ],
@@ -13834,15 +13781,6 @@
       ]
     }
   ],
-  "embed": [
-    {
-      "testPath": "html/semantics/embedded-content/the-embed-element",
-      "testFiles": [
-        "*",
-        "!*-ref.*"
-      ]
-    }
-  ],
   "audio": [
     {
       "testPath": "html/semantics/embedded-content/the-audio-element",
@@ -13887,6 +13825,18 @@
       "testFiles": "**"
     }
   ],
+  "ins": [
+    {
+      "testPath": "html/semantics/edits/the-ins-element",
+      "testFiles": "**"
+    }
+  ],
+  "del": [
+    {
+      "testPath": "html/semantics/edits/the-del-element",
+      "testFiles": "**"
+    }
+  ],
   "preserves-pitch": [
     {
       "testPath": "html/semantics/embedded-content/media-elements",
@@ -13903,6 +13853,48 @@
       ]
     }
   ],
+  "pre": [
+    {
+      "testPath": "html/semantics/grouping-content/the-pre-element",
+      "testFiles": "**"
+    }
+  ],
+  "p": [
+    {
+      "testPath": "html/semantics/grouping-content/the-p-element",
+      "testFiles": "**"
+    }
+  ],
+  "hr": [
+    {
+      "testPath": "html/semantics/grouping-content/the-hr-element",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/rendering/non-replaced-elements/the-hr-element-0",
+      "testFiles": "**"
+    }
+  ],
+  "description-list": [
+    {
+      "testPath": "html/semantics/grouping-content/the-dt-element",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/semantics/grouping-content/the-dl-element",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/semantics/grouping-content/the-dd-element",
+      "testFiles": "**"
+    }
+  ],
+  "div": [
+    {
+      "testPath": "html/semantics/grouping-content/the-div-element",
+      "testFiles": "**"
+    }
+  ],
   "title": [
     {
       "testPath": "html/semantics/document-metadata/the-title-element",
@@ -13915,12 +13907,6 @@
       ]
     }
   ],
-  "meta": [
-    {
-      "testPath": "html/semantics/document-metadata/the-meta-element",
-      "testFiles": "**"
-    }
-  ],
   "style": [
     {
       "testPath": "html/semantics/document-metadata/the-style-element",
@@ -13931,10 +13917,24 @@
       "testFiles": "**"
     }
   ],
+  "meta": [
+    {
+      "testPath": "html/semantics/document-metadata/the-meta-element",
+      "testFiles": "**"
+    }
+  ],
   "link": [
     {
       "testPath": "html/semantics/document-metadata/the-link-element",
       "testFiles": "**"
+    }
+  ],
+  "show-picker-select": [
+    {
+      "testPath": "html/semantics/forms/the-select-element",
+      "testFiles": [
+        "show-picker-*"
+      ]
     }
   ],
   "sizes-auto": [
@@ -14018,15 +14018,15 @@
       "testFiles": "**"
     }
   ],
-  "autocapitalize": [
-    {
-      "testPath": "html/editing/editing-0/autocapitalization",
-      "testFiles": "**"
-    }
-  ],
   "autocorrect": [
     {
       "testPath": "html/editing/editing-0/autocorrection",
+      "testFiles": "**"
+    }
+  ],
+  "autocapitalize": [
+    {
+      "testPath": "html/editing/editing-0/autocapitalization",
       "testFiles": "**"
     }
   ],
@@ -14117,14 +14117,6 @@
       "testFiles": "**"
     }
   ],
-  "beforeunload": [
-    {
-      "testPath": "html/browsers/browsing-the-web/unloading-documents",
-      "testFiles": [
-        "*beforeunload*"
-      ]
-    }
-  ],
   "location": [
     {
       "testPath": "html/browsers/history/the-location-interface",
@@ -14181,10 +14173,6 @@
       "testFiles": "**"
     },
     {
-      "testPath": "html/browsers/browsing-the-web/history-traversal/pageswap",
-      "testFiles": "**"
-    },
-    {
       "testPath": "html/browsers/browsing-the-web/history-traversal/persisted-user-state-restoration",
       "testFiles": "**"
     },
@@ -14193,9 +14181,21 @@
       "testFiles": "**"
     },
     {
+      "testPath": "html/browsers/browsing-the-web/history-traversal/pageswap",
+      "testFiles": "**"
+    },
+    {
       "testPath": "html/browsers/browsing-the-web/history-traversal/event-order",
       "testFiles": [
         "pushState-inside-popstate.html"
+      ]
+    }
+  ],
+  "beforeunload": [
+    {
+      "testPath": "html/browsers/browsing-the-web/unloading-documents",
+      "testFiles": [
+        "*beforeunload*"
       ]
     }
   ],
@@ -14225,27 +14225,6 @@
       "testFiles": "**"
     }
   ],
-  "customizable-select": [
-    {
-      "testPath": "html/semantics/forms/the-select-element/customizable-select-multiple-popup",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/semantics/forms/the-select-element/customizable-select-listbox",
-      "testFiles": "**"
-    },
-    {
-      "testPath": "html/semantics/forms/the-select-element/customizable-select",
-      "testFiles": [
-        "*",
-        "!select-pseudo-open.html"
-      ]
-    },
-    {
-      "testPath": "html/rendering/replaced-elements/the-select-element/customizable-select",
-      "testFiles": "**"
-    }
-  ],
   "source": [
     {
       "testPath": "html/semantics/embedded-content/the-img-element/srcset",
@@ -14265,6 +14244,27 @@
         "resource-selection-*source*.html",
         "resource-selection-currentSrc.html",
         "resource-selection-candidate-remove-*.html"
+      ]
+    }
+  ],
+  "customizable-select": [
+    {
+      "testPath": "html/semantics/forms/the-select-element/customizable-select-multiple-popup",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/semantics/forms/the-select-element/customizable-select-listbox",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/rendering/replaced-elements/the-select-element/customizable-select",
+      "testFiles": "**"
+    },
+    {
+      "testPath": "html/semantics/forms/the-select-element/customizable-select",
+      "testFiles": [
+        "*",
+        "!select-pseudo-open.html"
       ]
     }
   ],
@@ -14304,11 +14304,11 @@
       ]
     },
     {
-      "testPath": "html/semantics/embedded-content/media-elements/interfaces/TrackEvent",
+      "testPath": "html/semantics/embedded-content/media-elements/interfaces/TextTrackList",
       "testFiles": "**"
     },
     {
-      "testPath": "html/semantics/embedded-content/media-elements/interfaces/TextTrackList",
+      "testPath": "html/semantics/embedded-content/media-elements/interfaces/TrackEvent",
       "testFiles": "**"
     },
     {
@@ -14351,14 +14351,14 @@
       ]
     },
     {
-      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue_function/class_object",
+      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue_function/italic_object",
       "testFiles": [
         "*_past*",
         "*_future*"
       ]
     },
     {
-      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue_function/italic_object",
+      "testPath": "webvtt/rendering/cues-with-video/processing-model/selectors/cue_function/class_object",
       "testFiles": [
         "*_past*",
         "*_future*"
